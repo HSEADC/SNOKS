@@ -415,13 +415,14 @@
 
 #articleImg5 {
   background-image: url("../images/5.png");
-  background-size: 110% 100%;
+  background-size: 55vw 65vw;
+  background-position: -10vw -10vw;
   height: 55vw;
 }
 
 #articleImg6 {
   background-image: url("../images/6.png");
-  background-size: 100% 100%;
+  background-size: 45vw 100%;
   height: 35vw;
 }
 
@@ -431,7 +432,7 @@
   height: 24vw;
   background-position: 0 -2vw;
 }
-
+    
 .passiveArt {
   opacity: 0.5 !important;
   transition: all 0.5s ease;
