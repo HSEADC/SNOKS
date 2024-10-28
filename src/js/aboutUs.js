@@ -28,7 +28,7 @@ AOS.init({
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", (e) => {
 
     const pages = {
         1: "./aboutUs.html",
@@ -189,6 +189,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let article = e.target;
         if (article.className == "articleImg" ) {
             let num = article.id.split("")[10]
+
+            document.getElementById(`sortText${num}`).style.display="block"
+
             document.getElementById(`textImg${num}`).classList.add("biggerText");
             document.getElementById(`circle${num}`).classList.add("bigCircle");
 
@@ -201,7 +204,8 @@ document.addEventListener("DOMContentLoaded", () => {
             })
 
         } else {
-            for (let i = 1; i <= 8; i++) {
+            for (let i = 1; i <= 7; i++) {
+                 document.getElementById(`sortText${i}`).style.display="none"
                 if (document.querySelector(`#circle${i}`).className.includes("bigCircle")) {
                     document.querySelector(`#circle${i}`).classList.remove("bigCircle")
                     document.querySelector(`#textImg${i}`).classList.remove("biggerText")

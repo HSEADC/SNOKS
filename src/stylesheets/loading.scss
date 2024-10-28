@@ -1,0 +1,327 @@
+
+input {
+    all: unset;
+  } 
+body {
+    background-color: black;
+      overflow-x: hidden;
+      cursor: none;
+  }
+
+  body::-webkit-scrollbar { width: 0; }
+
+.main {
+    height: 90vh;
+
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: black;
+    }
+
+    .wayLine {
+        font-size: 1.5vw;
+        margin: 0.5vw;
+    }
+
+    .aboutUsBtn {
+        margin-left: 40vw;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+      
+
+.wayContainer {
+    padding: 0.85vw 3vw;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: azure;
+    border-radius: 1vw;
+    border: black solid 0.1vw;
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-family: "druktextwidecyr";
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    font-weight: bolder;
+  
+    margin: 2vw auto;
+  }
+  
+  .mainTitle {
+    font-family: "druktextwidecyr";
+    color: azure;
+    font-size: 10vw;
+    text-transform: uppercase;
+    text-align: center;
+  
+    margin: 10vw auto 1vw auto;
+  }
+  
+  .contact {
+    text-transform: capitalize;
+  }
+
+.socialMedia {
+    margin-left: 90%;
+    margin-top: -2vw;
+}
+
+  .vk {
+    width: 3vw;
+    height: 3vw;
+    background-image: url("../images/vk.svg");
+    background-size: 100% 100%;
+    margin-bottom: 1vw;
+  }
+
+  .tg {
+    width: 3vw;
+    height: 3vw;
+    background-image: url("../images/tg.svg");
+    background-size: 100% 100%;
+  }
+
+  .zaglText {
+    width: 90%;
+    margin: 1vw auto 0 auto;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 1.3vw;
+    padding: 1.5vw;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: azure;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    border-radius: 2vw;
+    z-index: -1;
+  }
+
+  .email {
+    z-index: 11111111111;
+    border-radius: 2vw;
+    width: 25vw;
+    height: 3vw;
+    border: 0.2vw solid azure;
+  }
+
+  .email::placeholder {
+    font-size: 1.3vw;
+  }
+
+  #my-form-button {
+    margin-left: -8vw;
+    background-color: azure;
+    color: black;
+    padding: 1.03vw;
+    border-radius: 2vw;
+
+  }
+
+  #my-form {
+    margin-top: 0.2vw;
+  }
+
+  .zaglTextBlock {
+    width: 50%;
+  }
+  /* background*/
+
+.texture {
+    position: fixed;
+    width: 100vw;
+    height: 95vh;
+    background-image: url("../images/noise.gif");
+    opacity: 0.05;
+    pointer-events: none;
+    top: 0;
+    z-index: 99999999999999999;
+  }
+  
+  :root {
+    --color1: 142, 109, 216;
+    --color2: 221, 74, 255;
+    --color3: 100, 220, 255;
+    --color4: 207, 70, 218;
+    --color5: 208, 102, 217;
+    --color6: 221, 74, 255;
+    --color7: 100, 220, 255;
+    --color8: 207, 70, 218;
+    --color-interactive: 140, 100, 255;
+    --circle-size: 45vw;
+    --circle-sizeMin: 40vw;
+    --blending: hard-light;
+  }
+  
+    .gradientBg {
+      position: absolute;
+      width: 100vw;
+      height: 95vh;
+      pointer-events: none;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    
+    svg {
+      display: none;
+    }
+    
+    .gradientContainer {
+      filter: url(#goo) blur(40px);
+      width: 100%;
+      height: 100%;
+      margin-top: -20vw;
+    }
+    
+    .g1 {
+      position: absolute;
+      background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(252, 231, 251) 13.803%,rgba(235, 197, 240, 0.89) 34.795%,rgba(193, 151, 238, 0.79) 51.527%,rgba(172, 124, 217, 0.65) 62.216%,rgba(140, 87, 186, 0.29) 79.607%,rgba(140, 87, 186, 0) 100%);
+      width: var(--circle-size);
+      height: var(--circle-size);
+      opacity: 1;
+      top: calc(60% - var(--circle-size) / 2 - 20%);
+      left: calc(30% - var(--circle-size) / 2);
+    
+      opacity: 1;
+      transform-origin: center center;
+      animation: moveVertical 35s ease infinite;
+      filter: blur(10px)
+    }
+    
+    .g2 {
+      position: absolut;
+      background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(253, 253, 253) 13.803%,rgba(235, 197, 240, 0.89) 34.795%,rgba(193, 151, 238, 0.79) 51.527%,rgba(172, 124, 217, 0.65) 62.216%,rgba(140, 87, 186, 0.29) 79.607%,rgba(140, 87, 186, 0) 100%);
+      width: var(--circle-size);
+      height: var(--circle-size);
+      opacity: 1;
+      top: calc(50% - var(--circle-size) / 2 - 10%);
+      left: calc(50% - var(--circle-size) / 2 + 10%);
+    
+      opacity: 0.9;
+      transform-origin: calc(50% + 10%);
+      animation: moveInCircle 20s ease infinite;
+      filter: blur(10px)
+    }
+    
+    .g3 {
+      position: absolute;
+      background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(253, 253, 253) 13.803%,rgba(235, 197, 240, 0.89) 34.795%,rgba(193, 151, 238, 0.79) 51.527%,rgba(172, 124, 217, 0.65) 62.216%,rgba(140, 87, 186, 0.29) 79.607%,rgba(140, 87, 186, 0) 100%);
+      width: var(--circle-size);
+      height: var(--circle-size);
+      opacity: 1;
+      top: calc(50% - var(--circle-size) / 2 - 20%);
+      left: calc(50% - var(--circle-size) / 2 + 20%);
+    
+      opacity: 0.8;
+      transform-origin: calc(50% - 20%);
+      animation: moveInCircle 40s reverse infinite;
+      filter: blur(10px)
+    }
+    
+    .g4 {
+      position: absolute;
+      background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+      width: var(--circle-size);
+      height: var(--circle-size);
+      opacity: 1;
+      top: calc(50% - var(--circle-size) / 2 - 20%);
+      left: calc(50% - var(--circle-size) / 2 - 10%);
+    
+      opacity: 1;
+      transform-origin: calc(50% + 15%);
+      animation: moveInCircle 40s reverse infinite;
+      filter: blur(10px)
+    }
+    
+    .g5 {
+      position: absolute;
+      background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(251, 219, 235) 13.803%,rgba(230, 156, 239, 0.89) 34.795%,rgba(185, 142, 231, 0.79) 51.527%,rgba(183, 128, 215, 0.551) 62.216%,rgba(140, 87, 186, 0.29) 79.607%,rgba(140, 87, 186, 0) 100%);
+      width: var(--circle-size);
+      height: var(--circle-size);
+      opacity: 1;
+      top: calc(50% - var(--circle-size) / 2 - 10%);
+      left: calc(50% - var(--circle-size) / 2 - 100px);
+    
+      opacity: 0.8;
+      transform-origin: calc(50% - 30%);
+      animation: moveInCircle 40s linear infinite;
+      filter: blur(10px)
+    }
+    
+    @keyframes moveInCircle {
+      0% {
+      transform: rotate(0deg);
+      }
+    
+      50% {
+      transform: rotate(180deg);
+      }
+    
+      100% {
+      transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes moveVertical {
+      0% {
+      transform: translateY(-50%);
+      }
+    
+      50% {
+      transform: translateY(10%);
+      }
+    
+      100% {
+      transform: translateY(-10%);
+      }
+    }
+    
+      @keyframes moveHorizontal {
+      0% {transform: translateX(-50%) translateY(-10%);}
+    
+      50% {transform: translateX(56%) translateY(16%);}
+      
+      100% {transform: translateX(-50%) translateY(-10%);}
+    }
+    
+    .interactive {
+      position: absolute;
+      background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat; mix-blend-mode: var(--blending);
+      width: 100%;
+      height: 100%;
+      top: -50%;
+      left: -50%;
+      opacity: 1;
+    }
+
+    .underTitleText {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1vw;
+        color: azure;
+
+        text-align: center;
+        margin-top: 2vw;
+    }
+      
+
+}

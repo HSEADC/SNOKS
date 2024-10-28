@@ -98,7 +98,7 @@ module.exports = {
     // Index
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html',
     }),
 
       // страницы разделов
@@ -135,6 +135,11 @@ module.exports = {
       new HtmlWebpackPlugin({
         template: './src/dreamBook/advices.html',
         filename: './dreamBook/advices.html'
+      }),
+
+      new HtmlWebpackPlugin({
+        template: './src/loading.html',
+        filename: './loading.html'
       }),
 
     

@@ -1,5 +1,4 @@
 import AOS from 'aos';
-import TypeIt from "typeit";
 import 'aos/dist/aos.css'; 
 
 
@@ -26,9 +25,71 @@ AOS.init({
 
 });
 
+document.addEventListener("DOMContentLoaded", (e) => {
+    let item = document.querySelector(".slider");
+
+  window.addEventListener("wheel", function (e) {
+    let cl = e.target.className
+    console.log(e.deltaY)
+    if (cl == "slider" || cl == "sliderBlock" || cl == "sliderInner" || cl == "slideBack" || cl == "slideH")  {
+         if (e.deltaY > 0) {item.scrollLeft += 100;}
+         else {item.scrollLeft -= 100;}
+    }
+  });
+
+    document.querySelector(".articlesContainer").addEventListener("mousemove", (e) => {
+        if (e.target.className.includes("articleImg")) {
+            let idArt = Number(e.target.id.split("")[10]);
+            for (let i = 1; i <= 7; i++) {
+                if (i != idArt) {
+                    document.getElementById(`articleImg${i}`).classList.add("passiveArt")
+                }
+            }
+            document.getElementById(`articleImg${idArt}`).addEventListener("mouseleave", (e) => {
+                for (let i = 1; i <= 7; i++) {
+                    if (i != idArt) {
+                        document.getElementById(`articleImg${i}`).classList.remove("passiveArt")
+                    }
+                }
+                document.getElementById(`articleImg${idArt}`).removeEventListener("mouseleave", (e) => {})
+            })
+        }
+    })
+
+    
+
+    document.querySelector(".articlesContainer").addEventListener("click", (e) => {
+        if (e.target.className.includes("articleImg")) {
+            let idArt = Number(e.target.id.split("")[10]);
+            document.querySelector(".artBlock").style.left="50%";
+            document.querySelector(".background").style.opacity="0.6";
+            document.querySelector(".background").style.pointerEvents="all";
+            document.querySelector(`.aArticle${idArt}`).style.display="block";
+            document.querySelector(`.articlesBody`).style.overflow="hidden";
+            document.querySelector(`.artBlock`).style.overflow="scroll";
+
+            document.querySelector(".background").addEventListener("click",  (e) => {
+                document.querySelector(".artBlock").style.left="100%";
+                document.querySelector(".background").style.opacity="0";
+                document.querySelector(".background").style.pointerEvents="none";
+                document.querySelector(`.articlesBody`).style.overflow="scroll";
+                document.querySelector(`.artBlock`).style.overflow="hidden";
+                for (let i = 1; i <= 7; i++) {
+                    document.querySelector(`.aArticle${i}`).style.display="none";
+                }
+                document.querySelector(".background").removeEventListener("click",  (e) => {})
+            })
+        }
+    })
+
+    window.addEventListener('scroll', (e) => {
+        if (window.pageYOffset >= 0 && window.pageYOffset < 200) {
+            document.querySelector(".mainTitle").style.fontSize=`${12 + window.pageYOffset / 18}vw`
+        }
+      });
 
 
-document.addEventListener("DOMContentLoaded", () => {
+
 
     const interBubble = document.querySelector(".interactive");
     let curX = 0;
@@ -44,8 +105,22 @@ document.addEventListener("DOMContentLoaded", () => {
             move()
         })
     }
+
+
+    function back(x, timeFraction) {
+        return Math.pow(timeFraction, 2) * ((x + 1) * timeFraction - x)
+      }
+
+    document.querySelector(".mainNav").addEventListener("click", (e) => {
+        let click = e.target;
+        if (click.classList[0] == "navChoose") {
+            navChoose(click.id)
+        }
+    })
+
     let cursorDot = document.querySelector(".cursorDot");
     let cursorOutline = document.querySelector(".cursorOutline");
+    
     window.addEventListener("mousemove", (e) => {
         tgX = e.clientX;
         tgY = e.clientY;
@@ -69,4 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
     move()
 
 
+
+
+    
+
+    
 })

@@ -10,7 +10,7 @@
     <meta property="og:image" content="{картинка}">
     <title>snok(s)</title>
   </head>
-  <body>
+  <body class="main"><!--
     <nav>
       <a href="index.html">главная</a>
       <a href="./aboutUs.html">о нас</a>
@@ -18,48 +18,97 @@
       <a href="./articles.html">статьи</a>
       <a href="./tests.html">тесты</a>
     </nav>
-    <!-- modify this form HTML and place wherever you want your form -->
-     <!--
-<form id="my-form" action="https://formspree.io/f/xpwzakpz" method="POST">
-  <label>Email:</label>
-  <input type="email" name="email" />
-  <button id="my-form-button">Submit</button>
-  <p id="my-form-status"></p>
-</form>
 -->
-<!-- 
-<script>
-  var form = document.getElementById("my-form");
-  
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-          'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        status.innerHTML = "Thanks for your submission!";
-        form.reset()
-      } else {
-        response.json().then(data => {
-          if (Object.hasOwn(data, 'errors')) {
-            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-          } else {
-            status.innerHTML = "Oops! There was a problem submitting your form"
+<div class="gradientBg">
+
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="gradientContainer">
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3"></div>
+    <div class="g4"></div>
+    <div class="g5"></div>
+    <div class="interactive"></div>
+
+  </div>
+</div>
+
+<div class="wayContainer">
+  <p class="wayLine">snok(s)</p>
+  <a class="aboutUsBtn" href="./aboutUs.html">о нас</a>
+  <button class="contact">en/ru</button>
+</div>
+
+<div class="mainTitleBlock">
+  <h1 class="mainTitle" data-aos="fade-up"  data-aos-duration="900"  data-aos-delay="300">snok(s)</h1>
+  <p class="underTitleText">@snoks_media<br>
+    HSEADC 2024</p>
+    <div class="socialMedia">
+      <div class="vk"></div>
+      <div class="tg"></div>
+    </div>
+</div>
+
+<div class="zaglText">
+  <div class="back"></div>
+  <p class="zaglTextBlock">Мы готовим новый медиа-сервис про сон и сновидения.
+    Оставь свою электронную почту, чтобы узнать о запуске самым первым!</p>
+
+    <form id="my-form" action="https://formspree.io/f/xpwzakpz" method="POST">
+      <input class="email" type="email" name="email" placeholder="&nbsp;&nbsp;&nbsp;Snoks@gmail.com"/>
+      <button id="my-form-button">отправить</button>
+      <p id="my-form-status"></p>
+    </form>
+</div>
+<!--
+    <div class="timerContainer">
+    </div>
+-->
+    
+    <div class="cursorDot"></div>
+    <div class="cursorOutline"></div>
+    
+    <script>
+      var form = document.getElementById("my-form");
+      
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+              'Accept': 'application/json'
           }
-        })
+        }).then(response => {
+          if (response.ok) {
+            status.innerHTML = "Спасибо за внимание!";
+            form.reset()
+          } else {
+            response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+              } else {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+              }
+            })
+          }
+        }).catch(error => {
+          status.innerHTML = "Oops! There was a problem submitting your form"
+        });
       }
-    }).catch(error => {
-      status.innerHTML = "Oops! There was a problem submitting your form"
-    });
-  }
-  form.addEventListener("submit", handleSubmit)
-</script>
--->
+      form.addEventListener("submit", handleSubmit)
+    </script>
+  
   </body>
 </html>
