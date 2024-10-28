@@ -9,19 +9,21 @@
   url("../fonts/druktextwidecyr-medium.eot") format("eot");
 }
 
-.montserrat {
+@font-face {
   font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
+
+
 
 @font-face {
   font-family: "LexendZetta";
   font-style: normal;
   font-weight: 400;
   src: local("Lexend Zetta"),
-  url("../fonts/LexendZetta-VariableFont_wght.ttf") format("ttf");
+  url("../fonts/LexendZetta-VariableFont_wght.ttf") format("ttf"),
+  url("../fonts/LexendZetta-VariableFont_wght.woff") format("woff");
 }
   
 
