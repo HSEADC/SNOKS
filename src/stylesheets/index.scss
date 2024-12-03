@@ -1,0 +1,167 @@
+input {
+    all: unset;
+  } 
+  body {
+    background-color: black;
+      overflow-x: hidden;
+  }
+  
+  body::-webkit-scrollbar { width: 0; }
+  
+  .main {
+    height: 90vh;
+  
+    a {
+        text-decoration: none;
+    }
+  
+    a:visited {
+        color: black;
+    }
+  
+    .wayLine {
+        font-size: 1.5vw;
+        margin: 0.5vw;
+    }
+  
+    .aboutUsBtn {
+        margin-left: 20vw;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+      
+  
+  .wayContainer {
+    padding: 0.85vw 3vw;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: azure;
+    border-radius: 1vw;
+    border: black solid 0.1vw;
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-family: "druktextwidecyr";
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    font-weight: bolder;
+  
+    margin: 2vw auto;
+  }
+  
+  .mainTitle {
+    font-family: "druktextwidecyr";
+    color: azure;
+    font-size: 10vw;
+    text-transform: uppercase;
+    text-align: center;
+  
+    margin: 10vw auto 1vw auto;
+  }
+  
+  .contact {
+    text-transform: capitalize;
+  }
+  
+  .socialMedia {
+    margin-left: 90%;
+    margin-top: -2vw;
+  }
+  
+  .vk {
+    width: 3vw;
+    height: 3vw;
+    background-image: url("../images/vk.svg");
+    background-size: 100% 100%;
+    margin-bottom: 1vw;
+  }
+  
+  .tg {
+    width: 3vw;
+    height: 3vw;
+    background-image: url("../images/tg.svg");
+    background-size: 100% 100%;
+  }
+  
+  .zaglText {
+    width: 90%;
+    margin: 1vw auto 0 auto;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 1.3vw;
+    padding: 1.5vw;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+  }
+  
+  .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: azure;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    border-radius: 2vw;
+    z-index: -1;
+  }
+  
+  .email {
+    z-index: 11111111111;
+    border-radius: 2vw;
+    width: 25vw;
+    height: 3vw;
+    border: 0.2vw solid azure;
+  }
+  
+  .email::placeholder {
+    font-size: 1.3vw;
+  }
+  
+  #my-form-button {
+    margin-left: -8vw;
+    background-color: azure;
+    color: black;
+    padding: 1.03vw;
+    border-radius: 2vw;
+  
+  }
+  
+  #my-form {
+    margin-top: 0.2vw;
+  }
+  
+  .zaglTextBlock {
+    width: 50%;
+  }
+  /* background*/
+  
+  .texture {
+    position: fixed;
+    width: 100vw;
+    height: 95vh;
+    background-image: url("../images/noise.gif");
+    opacity: 0.05;
+    pointer-events: none;
+    top: 0;
+    z-index: 99999999999999999;
+  }
+  
+    .underTitleText {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1vw;
+        color: azure;
+  
+        text-align: center;
+        margin-top: 2vw;
+    }
+      
+  
+  }
