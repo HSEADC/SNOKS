@@ -1,1 +1,88 @@
-<head><script defer src="index.cd9d8c139923dc10c82d.js"></script></head>
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SNOK(S)"/>
+    <link rel="icon" href="images/e669487eb3946e45af3c.png" type="image/png">
+    <meta property="og:description" content="следите за проектом SNOK(S)"/>
+    <meta property="og:image" content="https://avatars.mds.yandex.net/i?id=081e78321804a9a64e6b9103274d857b_l-5170901-images-thumbs&n=13"/>
+    <meta property="og:type" content="preview"/>
+    <meta property="og:url" content= "https://hseadc.github.io/SNOKS/" />
+    <title>snok(s)</title>
+
+    <link rel="preload"href="8051de0f4c80a1b49797.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload"href="0cc3ecce9a047fdd1ac1.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script defer src="index.54ab26fa7bb31f0ce5cc.js"></script><link href="index.88590a0a6437443283d5.css" rel="stylesheet"></head>
+
+  <body class="preview">
+    <video class="backgroundVideo pc" src="bef49b292c6225903a39.webm" muted autoplay loop></video>
+    <video class="backgroundVideo tel" src="b4a18ded42b489222d6b.webm" muted autoplay loop></video>
+    <video class="backgroundVideo telMin" src="6f73cfd9738d40a60636.webm" muted autoplay loop></video>
+
+    <nav class="navigation">
+      <ul>
+        <li><div class="logo"></div></li>
+        <li><a href="./tests.html">тесты</a></li>
+        <li><a href="./preview.html">о нас</a></li>
+        <li><a href="./article.html">статьи</a></li>
+        <li><a href="./article.html">превью</a></li>
+      </ul>
+    </nav>
+
+    <div class="socialMedia">
+      <div class="icon vk"></div>
+      <div class="icon tg"></div>
+    </div>
+
+  <section class="textAndEmail">
+    <div class="back"></div>
+    <p class="zaglTextBlock">Мы готовим новый медиа-сервис про сон <br>и сновидения.
+      Оставь свою электронную почту, чтобы узнать о запуске самым первым!</p>
+
+      <form id="my-form" action="https://formspree.io/f/xpwzakpz" method="POST">
+        <input class="email" type="email" name="email" placeholder="&nbsp;&nbsp;&nbsp;Snoks@gmail.com"/>
+        <button id="my-form-button">отправить</button>
+        <p id="my-form-status"></p>
+      </form>
+  </section>
+<!--
+    <div class="timerContainer">
+    </div>
+-->
+    
+    <script>
+      var form = document.getElementById("my-form");
+      
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+              'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            status.innerHTML = "Спасибо за внимание!";
+            form.reset()
+          } else {
+            response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+              } else {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+              }
+            })
+          }
+        }).catch(error => {
+          status.innerHTML = "Oops! There was a problem submitting your form"
+        });
+      }
+      form.addEventListener("submit", handleSubmit)
+    </script>
+  
+  </body>
+</html>

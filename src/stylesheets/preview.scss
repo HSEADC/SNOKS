@@ -1,654 +1,381 @@
+input {
+  all: unset;
+} 
+
 body {
-    background-color: black;
-      overflow-x: hidden;
-  }
-  
-  body::-webkit-scrollbar { width: 0; }
-  
-  ::selection {
-    background: #9682cd; /* Safari */
-  }
-  
-  /* background*/
-  
-  .texture {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../images/noise.gif");
-    opacity: 0.05;
-    pointer-events: none;
-    top: 0;
-    z-index: 99999999999999999;
-  }
-  
+    overflow-x: hidden;
+}
 
-  
-  .aboutUs {
-    .gradientBg {
-      position: absolute;
-      width: 100vw;
-      height: 150vh;
-      pointer-events: none;
-      overflow: hidden;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-    
-    svg {
-      display: none;
-    }
-    
-   
-      
-    /*header*/
-    
-    
-    header {
-      width: 90%;
-      margin: 3vw auto;
-    }
-    
-    .black {
-      width: 100vw;
-      height: 5vw;
-      background-color: black;
-      position: absolute;
-    }
-    
-    .wayContainer {
-      padding: 0.85vw 3vw;
-      width: 95%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: azure;
-      border-radius: 1vw;
-      border: black solid 0.1vw;
-      font-size: 1vw;
-      text-transform: uppercase;
-      font-family: "druktextwidecyr";
-      color: rgb(0, 0, 0);
-      font-style: normal;
-      font-weight: bolder;
-    
-      margin: 2vw auto;
-    }
-    
-    .mainTitle {
-      font-family: "druktextwidecyr";
-      color: azure;
-      font-size: 12vw;
-      text-transform: uppercase;
-      text-align: center;
-    
-      margin: 25vw auto 15vw auto;
-    }
-    
-    .contact {
-      text-transform: capitalize;
-    }
-    
-    
-    /*navigation*/
-    
-    .mainNavContainer { 
-      width: 88%;
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      margin: 1vw auto;
-    
-      position: relative;
-    }
-    
-    .mainNav {
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-    }
-    
-    .navChoose {
-      color: azure;
-      text-decoration: none;
-      font-family: "druktextwidecyr";
-      color: azure;
-      font-size: 2vw;
-      text-transform: capitalize;
-      margin-bottom: 3vw;
-      opacity: 0.4;
-      transition: all 0.6s ease-in-out;
-    }
-    
-    .borderChoose {
-      width: 100%;
-      height: 4vw;
-      background-color: azure;
-      opacity: 0.3;
-      border-radius: 1vw;
-      margin-right: -1vw ;
-      top: -0.8vw;
-      pointer-events: none;
-      position: absolute;
-    
-      transition: all 0.3s ease-in-out;
-    
-    }
-    
-    .activeNav {
-      transition: all 0.3s ease-in-out;
-      opacity: 1 !important;
-    }
-    
-    /*articels*/ 
-    
-    .sortsOfArticles {
-      width: 88%;
-      margin: 4vw auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-    
-    .sortOfArticle {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      width: 8vw;
-      height: 8vw;
-      margin: 4vw 6vw;
-    }
-    
-    .articleImg {
-      width: 8vw;
-      height: 8vw;
-      background-size: 100% 100%;
-    }
 
-    
-    .circle {
-      position: absolute;
-      width: 1vw;
-      height: 1vw;
-      background-color: azure;
-      border-radius: 100%;
-      transition: all 0.5s;
-      pointer-events: none;
-      opacity: 0;
-    }
-    
-    .bigCircle {
-      width: 8vw;
-      height: 8vw;
-      transition: all 0.5s;
-      opacity: 1;
-    }
-    
-    .textImg {
-      pointer-events: none;
-      position: absolute;
-      width: 4vw;
-      height: 4vw;
-      transition: all 0.3s;
-      opacity: 0;
-    }
-    
-    .biggerText {
-      width: 14vw;
-      height: 14vw;
-      transition: all 0.3s;
-      opacity: 1;
-    } 
-    
-    /*cursor*/
-    
-    
-    .allSorts {
-      font-family: "druktextwidecyr";
-      color: azure;
-      font-size: 2vw;
-      text-transform: uppercase;
-      line-height: 3vw;
-      color: azure;
-      width: 30%;
-    }
-    
-    .allSortsContainer {
-      margin: 10vw auto;
-      width: 88%;
-    }
-    
-    /*about us*/
-    .aboutUsText {
-      width: 88%;
-      margin: 5vw auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .aboutUsMini {
-      font-family: "druktextwidecyr";
-      color: azure;
-      font-size: 1.1vw;
-      width: 30%;
-      line-height: 1.4vw;
-      z-index:99999999999;
-      margin-top: -20vw;
-    }
-    
-    .aboutUsBigText{
-      font-family: "druktextwidecyr";
-      color: azure;
-      font-size: 3vw;
-      width: 50%;
-      height: 30vw;
-      line-height: 3.6vw;
-      margin-bottom: 8vw;
-      z-index:99999999999;
-    }
-    
-    .left {
-      text-align: left;
-    }
-    
-    .right {
-      text-align: right;
-    }
-    
-    .center {
-      text-align: center;
-    }
-  
-    .firstTextContainer {
-      width: 90%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 2vw auto;
-    }
-  
-    .secondTextContainer {
-      width: 90%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 5vw auto;
-    }
-  
-    
-    .thirdTextContainer {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 5vw auto;
-    }
-  
-  
-  
-  
-    #sec {
-      margin-left: 25vw;
-    }
-  
-    .secondTextImages {
-      width: 40%;
-    }
-  
-    .secondImg {
-      width: 25vw;
-    }
-  
-    .thirdImg {
-      width: 28vw;
-    }
-  
-    #th {
-      margin-left: 5vw;
-    }
-  
-    #fth {
-      margin-right:  10vw;
-    }
-  
-    .thirdTextBlock {
-      z-index: 45;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 5vw;
-    }
-  
-    .firstTextH {
-      font-family: "druktextwidecyr";
-      color: azure;
-      font-size: 3vw;
-      width: 90%;
-      margin-bottom: 5vw;
-    }
-  
-    .firstImg {
-      width: 30%;
-      margin-right: -5vw;
-    }
-  
-    .firstText {
-      width: 30%;
-      font-family: "Montserrat";
-      color: azure;
-      font-size: 1.8vw;
-      font-weight: 200;
-    }
-    
-    /*tests*/
-    
-    .tests {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      position: relative;
-    }
-  
-    .sortsMessage {
-      width: 25vw;
-      height: 13vw;
-      border-radius: 1vw;
-      background-color: rgb(84, 84, 84);
-      margin-top: 1vw;
-      padding: 1vw;
-    }
-    
-    .sortText{
-      display: none;
-      color: azure;
-      font-size: 1vw;
-      font-weight: 400;
-      font-family: "Montserrat";
-    }
-  
-    .sortText h3 {
-      font-size: 1.3vw;
-      margin-bottom: 1vw;
-      font-weight: 500;
-    }
-    
-    .testsContainer {
-      position: relative;
-      height: 50vw;
-      width: 30%;
-    }
-  
-  
-    .testsText {
-      font-family: "druktextwidecyr";
-      color: azure;
-      font-size: 2.5vw;
-    }
-    
-    .movingTestsBox {
-      display: flex;
-      flex-direction: column;
-      transition: all 1s;
-      position: absolute;
-      left: 0;
-      top: -8vw
-    }
-  
-    .testBlock {
-      margin-bottom: 2vw;
-    }
-    
-    .testBlockImg {
-      background-color: azure;
-      width: 35vw;
-      height: 4vw;
-      opacity: 0.1;
-    
-      margin-bottom: 1vw;
-      transition: all 1s;
-    }
-    
-    .testBlockText {
-      font-size: 1vw;
-      font-family: "Lexend Zetta";
-      font-style: normal;
-      font-weight: 500;
-      text-align: left;
-      opacity: 0;
-      transition: all 1s;
-      width: 35vw;
-    }
-    
-    .activeTestImgFull {
-      width: 35vw;
-      height: 20vw;
-      opacity: 1;
-      transition: all 1s;
-    }
-    
-    .activeTestImgMiddle {
-      width: 35vw;
-      height: 9vw;
-      opacity: 0.3;
-      transition: all 1s;
-    }
-    
-    .activeTestText {
-      color: azure;
-      opacity: 1;
-      transition: all 1s;
-    }
-    
-    .testNums {
-      width: 30%;
-    }
-    
-    .nusNumbers {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1vw;
-    }
-    
-    .num {
-      font-family: "druktextwidecyr";
-      color: azure;
+.aboutUs {
+  background-color: var(--white);
+  padding: 1vw 0;
+
+  /* TitleText */
+
+  .TitleBlock {
+    width: 90%;
+    margin: 7vw auto 0 auto;
+
+    h1 {
       font-size: 5vw;
-      margin-left: 2vw;
-      transition: all 0.5s ease-in-out;
+      font-weight: 600;
     }
-    
-    .underNumsLine {
-      width: 110%;
-      border-bottom: 0.2vw solid azure;
-      margin-left: 3vw;
-    }
-    
-    .num:hover {
-      opacity: 1 !important;
-      transition: all 0.5s ease-in-out;
-    }
-    
-    .numClicked {
-      opacity: 1 !important;
-    }
-    
-    .blackGradient {
-      width: 35vw;
-      background: linear-gradient(180.00deg, rgb(0, 0, 0) 90.673%,rgba(0, 0, 0, 0) 95.587%);
-      height: 36vw;
-      position: absolute;
-      top: -33vw;
-      z-index: 40;
-      pointer-events: none;
-    }
-    
-    .reverse {
-      background: linear-gradient(180.00deg, rgb(0, 0, 0) 90.673%,rgba(0, 0, 0, 0) 95.587%);
-      transform: rotate(180deg);
-      top: 49vw;
-      height: 30vw;
-    }
-    
-    .g6 {
-      position: absolute;
-      background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(251, 219, 235) 13.803%,rgba(230, 156, 239, 0.89) 34.795%,rgba(185, 142, 231, 0.79) 51.527%,rgba(183, 128, 215, 0.551) 62.216%,rgba(140, 87, 186, 0.29) 79.607%,rgba(140, 87, 186, 0) 100%);
-      width: var( --circle-sizeMin);
-      height: var( --circle-sizeMin);
-      opacity: 1;
-      top: calc(50% - var(--circle-size) / 2 + 45%);
-      left: calc(50% - var(--circle-size) / 2 - 50%);
-    
-      opacity: 0.8;
-      transform-origin: calc(50% - 30%);
-      animation: moveVerticalSec 40s linear infinite;
-      filter: blur(10px)
-    }
-    
-    .g7 {
-      position: absolute;
-      background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(251, 219, 235) 13.803%,rgba(230, 156, 239, 0.89) 34.795%,rgba(185, 142, 231, 0.79) 51.527%,rgba(183, 128, 215, 0.551) 62.216%,rgba(140, 87, 186, 0.29) 79.607%,rgba(140, 87, 186, 0) 100%);
-      width: var( --circle-sizeMin);
-      height: var( --circle-sizeMin);
-      opacity: 1;
-      top: calc(50% - var(--circle-size) / 2 + 40%);
-      left: calc(50% - var(--circle-size) / 2 - 50%);
-    
-      opacity: 0.8;
-      transform-origin: calc(50% - 30%);
-      animation: moveInCircleSec 40s linear infinite;
-      filter: blur(10px)
-    }
-    
-    .g8 {
-      position: absolute;
-      background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(251, 219, 235) 13.803%,rgba(230, 156, 239, 0.89) 34.795%,rgba(185, 142, 231, 0.79) 51.527%,rgba(183, 128, 215, 0.551) 62.216%,rgba(140, 87, 186, 0.29) 79.607%,rgba(140, 87, 186, 0) 100%);
-      width: var(--circle-size);
-      height: var(--circle-size);
-      opacity: 1;
-      top: calc(50% - var( --circle-sizeMin) / 2 + 20%);
-      left: calc(50% - var( --circle-sizeMin) / 2 + 42%);
-    
-      opacity: 0.8;
-      transform-origin: calc(50% - 30%);
-      animation: moveInCircleSec 40s linear infinite;
-      filter: blur(10px)
-    }
-    .g9 {
-      position: absolute;
-      background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(251, 219, 235) 13.803%,rgba(230, 156, 239, 0.89) 34.795%,rgba(185, 142, 231, 0.79) 51.527%,rgba(183, 128, 215, 0.551) 62.216%,rgba(140, 87, 186, 0.29) 79.607%,rgba(140, 87, 186, 0) 100%);
-      width: var(--circle-size);
-      height: var(--circle-size);
-      opacity: 1;
-      top: calc(50% - var( --circle-sizeMin) / 2 + 25%);
-      left: calc(50% - var( --circle-sizeMin) / 2 + 35%);
-    
-      opacity: 0.8;
-      transform-origin: calc(50% - 30%);
-      animation: moveVerticalSec 40s linear infinite;
-      filter: blur(10px)
-    }
-    
-    .gradientBgSec {
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      overflow: hidden;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-    
-    svg {
-      display: none;
-    }
-    
-    .gradientContainerSec {
-      filter: url(#goo) blur(40px);
-      width: 120%;
-      height: 100%;
-      margin-top: -20vw;
-    }
-    
-    @keyframes moveVerticalSec {
-      0% {
-      transform: translateY(0%);
-      }
-    
-      50% {
-      transform: translateY(30%);
-      }
-    
-      100% {
-      transform: translateY(0%);
-      }
-    }
-    
-    @keyframes moveInCircleSec {
-      0% {
-      transform: rotate(0deg);
-      }
-    
-      50% {
-      transform: rotate(10deg);
-      }
-    
-      100% {
-      transform: rotate(0deg);
-      }
-    }
-    
-    /*footer*/
-    
-    footer {
-      width: 90%;
-      margin: 8vw auto 0 auto;
+
+    .underTitleTextContainer {
       display: flex;
       justify-content: space-between;
-      align-items: end;
-    }
-  
-    .social {
-      width: 5vw;
-  
-    }
-    
-    .footerText {
-      margin-top: 10vw;
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 500;
-      margin-bottom: 2vw;
-      text-align: left;
-      color: azure;
-      line-height: 1.5vw;
-      z-index: 999;
-    }
-    
-    .tgBtn {
-      width: 3vw;
-      height: 3vw;
-      background-image: url("../images/tg.svg");
-      background-size: 100% 100%;
-      margin-bottom: 2vw;
-    }
-  
-      
-    .vkBtn {
-      width: 3vw;
-      height: 3vw;
-      background-image: url("../images/vk.svg");
-      background-size: 100% 100%;
-      margin-bottom: 1vw;
-    }
-    
-    .em {
-      width: 15vw;
-      margin-left: -5vw;
+      margin-top: 3vw;
+      p {
+        font-size: 1.3vw;
+       }
     }
   }
-  
+
+  .blueText {
+    color: var(--blue);
+  }
+
+  .backgroundBorderRadius {
+    background-color: var(--white);
+    height: 5vw;
+    width: 100vw;
+  }
+
+  /* */
+
+  /* roundedBlockStyle */
+
+  .upRound {
+    border-bottom-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+  }
+
+  .downRound {
+    border-top-right-radius: 3vw;
+    border-top-left-radius: 3vw;
+    margin-top: -3vw;
+  }
+
+  /* */
+
+  /* 3dLogoScreen */
+
+  .LogoScreenContainer {
+    z-index: -1;
+    width: 100vw;
+    height: 50vw;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    margin-top: -4vw;
+
+    video {
+      position: absolute;
+      width: 110vw;
+      top: -10vw;
+      left: -5vw;
+    }
+
+    .newCard {
+      width: 25vw;
+      height: 25vw;
+      border-radius: var(--borderRadius);
+	    background: var(--blue);
+      position: absolute;
+      right: 10vw;
+      top: 15vw;
+      padding: 1.3vw;
+
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);	
+	    background-color: rgba(183, 194, 218, 0.41);
+	
+	    backdrop-filter: blur(8px);
+    }
+
+    h4 {
+      font-size: 3vw;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 2vw;
+    }
+
+    p {
+      font-size: 0.9vw;
+      font-weight: 400;
+      color: var(--white);
+    }
+
+    .link {
+      font-weight: 600;
+      margin-top: 13.5vw;
+      text-align: end;
+    }
+
+  }
+
+  /* */
+
+  /* H2TitleBlock */
+
+  .WhyDreamsContainer {
+    width: 100%;
+    margin-top: 2vw;
+    position: relative;
+    
+    h2 {
+      text-align: center;
+      line-height: 5vw;
+      font-size: 5vw;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    img {
+      width: 6vw;
+      height: 6vw;
+      position: absolute;
+    }
+
+    #o {
+      top: -0.5vw;
+      left: 14vw;
+      opacity: 0.8;
+    }
+
+    #h {
+      top: -0.5vw;
+      left: 41.5vw;
+    }
+
+    #m {
+      top: 5vw;
+      left: 70vw;
+      opacity: 0.9;
+    }
+
+    #a {
+      top: 10vw;
+      left: 59vw;
+    }
+
+  }
+
+  /* */
+
+  /*mini Text*/
+
+  .miniText {
+    width: 34vw;
+    font-size: var(--textP);
+    color: var(--black);
+    margin-left: 8vw;
+    margin-top: 12vw;
+  }
+
+  /* */
+
+  /* missionText */
+
+  .missionText {
+    width: 58vw;
+    margin: 22vw auto;
+    position: relative;
+
+    p {
+      font-size: 3vw;
+    }
+
+    img {
+      position: absolute;
+      width: 17vw;
+    }
+
+    #leftPillow {
+      left: -17vw;
+      top: -13vw;
+    }
+
+    #rightPillow {
+      left: 57vw;
+      top: -12vw;
+    }
+  }
+
+  /* */
+
+  /* facts */
+
+  .factsContainer {
+    width: 90%;
+    margin: 5vw auto;
+
+    .factsBtns {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 9vw;
+
+      .btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btnCircle {
+          width: 7vw;
+          height: 7vw;
+          border-radius: 100%;
+          opacity: 0.8;
+          background-image: url("../images/aboutUs/blueTexture2.webp");
+          background-size: 140% 140%;
+        }
+
+        img {
+          width: 6vw;
+          height: 6vw; 
+          position: absolute;
+          z-index: -1;
+        }
+        
+      }
+
+    }
+
+    .factsReview {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+
+      h3 {
+        font-size: 6vw;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+
+      .factCard {
+        width: 30vw;
+        height: 18vw;
+        border-radius: var(--borderRadius);
+        background-color: rgb(218, 226, 235);
+        padding: 1.8vw;
+
+        h4 {
+          font-size: 2vw;
+          font-weight: 600;
+          text-transform: capitalize;
+          margin-bottom: 2vw;
+        }
+
+        p {
+           font-size: 1vw;
+        }
+      }
+    }
+
+  }
+
+  /* */
+
+  /* 3dTextScreen */
+
+  .ThreeScreenContainer {
+    z-index: -1;
+    width: 100vw;
+    height: 50vw;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    margin-top: -4vw;
+
+    video {
+      position: absolute;
+      width: 115vw;
+      top: -13vw;
+      left: -10vw;
+    }
+
+    p {
+      position: absolute;
+      font-size: 1vw;
+      font-weight: 600;
+      color: var(--white);
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .first3DTExt {
+      top: 35vw;
+      left: 14.5vw;
+    }
+
+    .second3DTExt {
+      top: 14vw;
+      left: 68vw;
+      text-align: end;
+    }
+
+
+  }
+
+  /* */
+
+  /* articles */
+
+  .articles {
+    width: 90%;
+    margin: 0vw auto;
+
+    h3 {
+      font-size: 6vw;
+      font-weight: 600;
+      text-transform: capitalize;
+      margin-bottom: 5vw;
+    }
+
+    .articlesContainer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    img {
+      width: 7vw;
+      height: 16vw;
+    }
+
+    button {
+      width: 50vw;
+      height: 30vw;
+      border-radius: var(--borderRadius);
+      background-image: url("../images/aboutUs/article1.webp");
+      background-size: 100% 100%;
+    }
+
+    .circlesGroup {
+      width: 10vw;
+      display: flex;
+      justify-content: space-between;
+      margin: 2vw auto;
+
+      div {
+        width: 1.2vw;
+        height: 1.2vw;
+        opacity: 0.6;
+        background-image: url("../images/aboutUs/blueTexture2.webp");
+        background-size: 100% 100%;
+        border-radius: 100%;
+      }
+
+      .picked {
+        opacity: 0.8;
+        background-image: url("../images/aboutUs/blackTexture2.webp");
+      }
+    }
+
+  }
+
+  /* */
+
+}
