@@ -1,0 +1,19 @@
+:root {
+    --white: #F2F1F1;
+    --black: #232323;
+    --blue: #7DA6FF;
+    --textP: 1.2vw;
+    --textH1: 3vw;
+    --fontP: "Unbounded";
+    --fontH1: "druktextwidecyr";
+    --borderRadius: 1vw;
+    --hoverWhite: #bec1d0;
+  }
+
+
+body {
+  font-family: var(--fontP);
+  font-size: var(--textP);
+  color: var(--black);
+}
+

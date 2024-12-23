@@ -1,0 +1,456 @@
+input {
+    all: unset;
+  } 
+
+  body {
+      overflow-x: hidden;
+  }
+
+  
+  .preview {
+    background-color: var(--blue);
+    padding: 2vw 4vw;
+    overflow: hidden;
+
+
+
+    /* background */
+
+    .backgroundVideo {
+      position: absolute;
+      z-index: -1;
+      opacity: 0.95;
+      display: none;
+    }
+
+    .pc {
+      width: 113vw;
+      left: -4.1vw;
+      top: -14vw;
+      display: none;
+    }
+
+    .tel {
+      display: none;
+    }
+
+    .telMIn {
+      display: none;
+    }
+
+    /* */
+
+     /* navigation */
+
+     .navigation {
+      width: 100%;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      a {
+        font-family:  "unbounded";
+        color: var(--white);
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: 1.5vw;
+      }
+    }
+
+    /* */
+
+    /* logotip */
+
+    .logo {
+      width: 6vw;
+      height: 6vw;
+      background-image: url("../images/preview/logo.svg");
+      background-size: 6vw 6vw
+    }
+
+    /* */
+
+
+
+    /* socialmaedia */
+  
+    .socialMedia {
+      margin-left: 96.5%;
+      
+      .icon {
+        width: 3.5vw;
+        height: 3.5vw;
+        background-size: 100% 100%;
+        margin-bottom: 1vw;
+      }
+    
+      .vk {
+        background-image: url("../images/vk.svg");
+      }
+    
+      .tg {
+        background-image: url("../images/tg.svg");
+      }
+  
+    }
+    
+    /* */
+
+    /* email block */
+
+    #my-form {
+      display: flex;
+    }
+
+    .textAndEmail {
+      width: 93vw;
+      height: 25vh;
+      border-radius: var(--borderRadius);
+	    background: var(--blue);
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);	
+	    background-color: rgba(183, 194, 218, 0.41);
+	
+	    backdrop-filter: blur(8px);
+
+      .zaglTextBlock {
+        font-family: "Unbounded";
+        font-size: 1.6vw;
+        color: var(--white);
+        width: 54%;
+        margin-left: -5vw;
+
+      }
+
+      .email {
+        padding: 0.6vw 2vw 0.6vw 0.2vw;
+        width: 60%;
+        border-radius: 1.3vw;
+        border: 0.2vw solid var(--white);
+      }
+
+      .email::placeholder {
+        opacity: 0.4;
+        color: var(--white);
+      }
+
+      button {
+        background-color: var(--white);
+        color: var(--black);
+        padding: 0.95vw 0.6vw;
+        font-size: 1.1vw;
+        font-weight: 600;
+        border-radius: 1.2vw;
+
+        margin-left: -3vw;
+
+      }
+
+      #my-form-status {
+        margin-top: 0.5vw;
+        font-size: 1vw;
+        opacity: 0.6;
+        color: var(--white);
+      }
+    }
+
+  /* */
+
+  /* adaptive */
+
+    @media (min-width: 1250px) {
+      .pc {
+        width: 113vw;
+        left: -4.1vw;
+        display: block;
+      }
+
+      .socialMedia {
+        margin-top: 33vh;
+        margin-left: 97%;
+      }
+      
+    }
+
+    @media (max-width: 1250px) and (min-width: 1000px) {
+      .pc {
+        width: 135vw;
+        left: -14vw;
+        display: block;
+      }
+
+      .socialMedia {
+        margin-top: 40vh;
+      }
+
+      .textAndEmail {
+        height: 30vh;
+
+        .zaglTextBlock {
+          font-size: 1.9vw;
+        }
+
+        .email {
+          padding: 1.2vw 2vw 1.2vw 0.2vw;
+          width: 63%;
+          border-radius: 2.3vw;
+        }
+
+        button {
+          padding: 1.6vw 1vw;
+          font-size: 1.1vw;
+          border-radius: 2.3vw;
+  
+          margin-left: -3.5vw;
+  
+        }
+      }
+
+
+    }
+
+    @media (max-width: 1000px) and (min-width: 808px){
+      .pc {
+        width: 165vw;
+        left: -33vw;
+        display: block;
+        top: -15vw;
+      }
+
+      .socialMedia {
+        margin-top: 45vh;
+      }
+
+      .textAndEmail {
+        height: 30vh;
+
+        .zaglTextBlock {
+          font-size: 1.9vw;
+        }
+
+        .email {
+          padding: 1.2vw 2vw 1.2vw 0.2vw;
+          width: 63%;
+          border-radius: 2.3vw;
+        }
+
+        button {
+          padding: 1.6vw 1vw;
+          font-size: 1.1vw;
+          border-radius: 2.3vw;
+  
+          margin-left: -3.5vw;
+  
+        }
+      }
+
+
+      
+    }
+
+    @media (max-width: 808px) and (min-width: 600px) {
+      .pc {
+        display: none;
+      }
+
+      .tel {
+        width: 133vw;
+        left: -19vw;
+        top: -52vw;
+        display: block;
+      }
+
+      .socialMedia {
+        margin-top: 44vh;
+        margin-left: 95%;
+
+        .icon {
+          width: 4.5vw;
+          height: 4.5vw; 
+          margin-bottom: 2vw;
+        }
+      }
+
+      .textAndEmail {
+        height: 30vh;
+
+        .zaglTextBlock {
+          font-size: 2.6vw; 
+          margin-left: -5vw;   
+        }
+
+        .email {
+          padding: 2vw 2.2vw 2vw 0.2vw;
+          width: 80%;
+          border-radius: 2.6vw;
+          margin-left: -5vw;
+        }
+
+        button {
+          padding: 2.3vw 1vw;
+          font-size: 1.1vw;
+          border-radius: 2.6vw;
+  
+          margin-left: -4.5vw;
+  
+        }
+      }
+
+
+
+    }
+
+    @media (max-width: 600px) and (min-width: 420px) {
+      .pc {
+        display: none;
+      }
+
+      .telMin {
+        width: 160vw;
+        left: -30vw;
+        top: -76vw;
+        display: block;
+      }
+
+      .socialMedia {
+        margin-top: 48vh;
+        margin-left: 93%;
+
+        .icon {
+          width: 7vw;
+          height: 7vw; 
+          margin-bottom: 2.5vw;
+        }
+      }
+
+      .textAndEmail {
+        height: 27vh;
+
+        .zaglTextBlock {
+          font-size: 2.5vw;
+          margin-left: -8vw;
+        }
+
+        .email {
+          padding: 3vw 4vw 3vw 0.2vw;
+          margin-left: -8vw;
+          width: 85%;
+          border-radius: 3.5vw;
+        }
+
+        button {
+          padding: 3.3vw 1.2vw;
+          font-size: 1.1vw;
+          border-radius: 3.5vw;
+  
+          margin-left: -5vw;
+  
+        }
+      }
+    }
+
+    @media (max-width: 420px) and (min-width: 350px) {
+      .pc {
+        display: none;
+      }
+
+      .tel {
+        display:  none;
+      }
+
+      .telMin {
+        display: block;
+        width: 164vw;
+        left: -30vw;
+        top: -75vw;
+      }
+
+      .socialMedia {
+        margin-top: 44vh;
+        margin-left: 92%;
+
+        .icon {
+          width: 8vw;
+          height: 8vw; 
+          margin-bottom: 2.5vw;
+        }
+      }
+
+      .textAndEmail {
+        height: 30vh;
+
+        .zaglTextBlock {
+          font-size: 3vw;
+          margin-left: -8vw;
+        }
+
+        .email {
+          padding: 3vw 4vw 3vw 0.2vw;
+          margin-left: -8vw;
+          width: 85%;
+          border-radius: 3.5vw;
+        }
+
+        button {
+          padding: 3.3vw 1.2vw;
+          font-size: 1.1vw;
+          border-radius: 3.5vw;
+  
+          margin-left: -5vw;
+  
+        }
+      }
+    }
+
+    @media (max-width: 350px) {
+      .socialMedia {
+        margin-top: 53vh;
+        margin-left: 90%;
+
+        .icon {
+          width: 10vw;
+          height: 10vw; 
+          margin-bottom: 2.5vw;
+        }
+      }
+
+      .textAndEmail {
+        height: 30vh;
+
+        .zaglTextBlock {
+          font-size: 3vw;
+          margin-left: -8vw;
+        }
+
+        .email {
+          padding: 3vw 4vw 3vw 0.2vw;
+          margin-left: -8vw;
+          width: 85%;
+          border-radius: 3.5vw;
+        }
+
+        button {
+          padding: 3.3vw 1.2vw;
+          font-size: 1.1vw;
+          border-radius: 3.5vw;
+  
+          margin-left: -5vw;
+  
+        }
+      }
+    }
+
+    /* */
+
+  
+  
+  
+  }

@@ -1,0 +1,146 @@
+body {
+    background-color: black;
+      overflow-x: hidden;
+  }
+  
+  body::-webkit-scrollbar { width: 0; }
+  
+  ::selection {
+    background: #9682cd; /* Safari */
+  }
+  
+  /* background*/
+  
+  .texture {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/noise.gif");
+    opacity: 0.05;
+    pointer-events: none;
+    top: 0;
+    z-index: 99999999999999999;
+  }
+  
+  :root {
+    --color1: 142, 109, 216;
+    --color2: 221, 74, 255;
+    --color3: 100, 220, 255;
+    --color4: 207, 70, 218;
+    --color5: 208, 102, 217;
+    --color6: 221, 74, 255;
+    --color7: 100, 220, 255;
+    --color8: 207, 70, 218;
+    --color-interactive: 140, 100, 255;
+    --circle-size: 45vw;
+    --circle-sizeMin: 40vw;
+    --blending: hard-light;
+  }
+  
+  .test {
+
+    svg {
+      display: none;
+    }
+    
+   
+      
+    /*header*/
+    
+    
+    header {
+      width: 85%;
+      margin: 3vw auto;
+    }
+    
+    .black {
+      width: 100vw;
+      height: 5vw;
+      background-color: black;
+      position: absolute;
+    }
+    
+    .wayContainer {
+      padding: 0.85vw 3vw;
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: azure;
+      border-radius: 1vw;
+      border: black solid 0.1vw;
+      font-size: 1vw;
+      text-transform: uppercase;
+      font-family: "druktextwidecyr";
+      color: rgb(0, 0, 0);
+      font-style: normal;
+      font-weight: bolder;
+    
+      margin: 2vw auto;
+    }
+    
+    .mainTitle {
+      font-family: "druktextwidecyr";
+      color: azure;
+      font-size: 12vw;
+      text-transform: uppercase;
+      text-align: center;
+    
+      margin: 25vw auto 15vw auto;
+    }
+    
+    .contact {
+      text-transform: capitalize;
+    }
+    
+ 
+    /*footer*/
+    
+    footer {
+      width: 90%;
+      margin: 8vw auto 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+    }
+  
+    .social {
+      width: 5vw;
+  
+    }
+    
+    .footerText {
+      margin-top: 10vw;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 2vw;
+      text-align: left;
+      color: azure;
+      line-height: 1.5vw;
+      z-index: 999;
+    }
+    
+    .tgBtn {
+      width: 3vw;
+      height: 3vw;
+      background-image: url("../images/tg.svg");
+      background-size: 100% 100%;
+      margin-bottom: 2vw;
+    }
+  
+      
+    .vkBtn {
+      width: 3vw;
+      height: 3vw;
+      background-image: url("../images/vk.svg");
+      background-size: 100% 100%;
+      margin-bottom: 1vw;
+    }
+    
+    .em {
+      width: 15vw;
+      margin-left: -5vw;
+    }
+  }
+  

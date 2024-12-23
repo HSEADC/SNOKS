@@ -1,0 +1,36 @@
+/*DrukCyr*/
+
+@font-face {
+  font-family: 'druktextwidecyr';
+  font-style: normal;
+  font-weight: 400;
+  src: local('druktextwidecyr'),
+       url('../fonts/druktextwidecyr/druktextwidecyr-medium.woff') format('woff'),
+       url('../fonts/druktextwidecyr/druktextwidecyr-medium.woff2') format('woff2'),
+       url('../fonts/druktextwidecyr/druktextwidecyr-medium.eot') format('eot'),
+       url('../fonts/druktextwidecyr/druktextwidecyr-medium.ttf') format('truetype');
+}
+
+/*Unbounded*/
+
+@font-face {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Unbounded'),
+       url('../fonts/Unbounded/regular/Unbounded-Regular.woff') format('woff'),
+       url('../fonts/Unbounded/regular/Unbounded-Regular.woff2') format('woff2'),
+       url('../fonts/Unbounded/regular/Unbounded-Regular.eot') format('eot'),
+       url('../fonts/Unbounded/regular/Unbounded-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Unbounded'),
+       url('../fonts/Unbounded/bold/Unbounded-Bold.woff') format('woff'),
+       url('../fonts/Unbounded/bold/Unbounded-Bold.woff2') format('woff2'),
+       url('../fonts/Unbounded/bold/Unbounded-Bold.eot') format('eot'),
+       url('../fonts/Unbounded/bold/Unbounded-Bold.ttf') format('truetype');
+}
