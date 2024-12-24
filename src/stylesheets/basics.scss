@@ -61,6 +61,8 @@ body::-webkit-scrollbar { width: 0; }
   height: 7vw;
   background-image: url("../images/aboutUs/logoHeader.webp");
   background-size: 120% 100%;
+  transition: all 0.3s ease;
+
 }
 
 /* */
@@ -121,4 +123,5 @@ footer {
 }
 
 /* */
+
 
