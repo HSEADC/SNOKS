@@ -1,456 +1,447 @@
 input {
-    all: unset;
-  } 
+  all: unset;
+} 
 
-  body {
-      overflow-x: hidden;
+body {
+    overflow-x: hidden;
+}
+
+
+.aboutUs {
+  background-color: var(--white);
+  padding: 1vw 0;
+
+  /* TitleText */
+
+  .TitleBlock {
+    width: 90%;
+    margin: 7vw auto 0 auto;
+
+    h1 {
+      font-size: 5vw;
+      font-weight: 600;
+    }
+
+    .underTitleTextContainer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3vw;
+      p {
+        font-size: 1.3vw;
+       }
+    }
   }
 
-  
-  .preview {
-    background-color: var(--blue);
-    padding: 2vw 4vw;
+  .blueText {
+    color: var(--blue);
+  }
+
+  .backgroundBorderRadius {
+    background-color: var(--white);
+    height: 5vw;
+    width: 100vw;
+  }
+
+  /* */
+
+  /* roundedBlockStyle */
+
+  .upRound {
+    border-bottom-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+  }
+
+  .downRound {
+    border-top-right-radius: 3vw;
+    border-top-left-radius: 3vw;
+    margin-top: -3vw;
+  }
+
+  /* */
+
+  /* 3dLogoScreen */
+
+  .LogoScreenContainer {
+    z-index: -1;
+    width: 100vw;
+    height: 50vw;
     overflow: hidden;
+    position: relative;
+    z-index: -1;
+    margin-top: -4vw;
 
-
-
-    /* background */
-
-    .backgroundVideo {
+    video {
       position: absolute;
-      z-index: -1;
-      opacity: 0.95;
-      display: none;
+      width: 110vw;
+      top: -10vw;
+      left: -5vw;
     }
 
-    .pc {
-      width: 113vw;
-      left: -4.1vw;
-      top: -14vw;
-      display: none;
-    }
-
-    .tel {
-      display: none;
-    }
-
-    .telMIn {
-      display: none;
-    }
-
-    /* */
-
-     /* navigation */
-
-     .navigation {
-      width: 100%;
-
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      a {
-        font-family:  "unbounded";
-        color: var(--white);
-        font-weight: 600;
-        text-transform: capitalize;
-        font-size: 1.5vw;
-      }
-    }
-
-    /* */
-
-    /* logotip */
-
-    .logo {
-      width: 6vw;
-      height: 6vw;
-      background-image: url("../images/preview/logo.svg");
-      background-size: 6vw 6vw
-    }
-
-    /* */
-
-
-
-    /* socialmaedia */
-  
-    .socialMedia {
-      margin-left: 96.5%;
-      
-      .icon {
-        width: 3.5vw;
-        height: 3.5vw;
-        background-size: 100% 100%;
-        margin-bottom: 1vw;
-      }
-    
-      .vk {
-        background-image: url("../images/vk.svg");
-      }
-    
-      .tg {
-        background-image: url("../images/tg.svg");
-      }
-  
-    }
-    
-    /* */
-
-    /* email block */
-
-    #my-form {
-      display: flex;
-    }
-
-    .textAndEmail {
-      width: 93vw;
-      height: 25vh;
+    .newCard {
+      width: 25vw;
+      height: 25vw;
       border-radius: var(--borderRadius);
 	    background: var(--blue);
-
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-
+      position: absolute;
+      right: 10vw;
+      top: 15vw;
+      padding: 1.3vw;
 
       box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);	
 	    background-color: rgba(183, 194, 218, 0.41);
 	
 	    backdrop-filter: blur(8px);
-
-      .zaglTextBlock {
-        font-family: "Unbounded";
-        font-size: 1.6vw;
-        color: var(--white);
-        width: 54%;
-        margin-left: -5vw;
-
-      }
-
-      .email {
-        padding: 0.6vw 2vw 0.6vw 0.2vw;
-        width: 60%;
-        border-radius: 1.3vw;
-        border: 0.2vw solid var(--white);
-      }
-
-      .email::placeholder {
-        opacity: 0.4;
-        color: var(--white);
-      }
-
-      button {
-        background-color: var(--white);
-        color: var(--black);
-        padding: 0.95vw 0.6vw;
-        font-size: 1.1vw;
-        font-weight: 600;
-        border-radius: 1.2vw;
-
-        margin-left: -3vw;
-
-      }
-
-      #my-form-status {
-        margin-top: 0.5vw;
-        font-size: 1vw;
-        opacity: 0.6;
-        color: var(--white);
-      }
     }
+
+    h4 {
+      font-size: 3vw;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 2vw;
+    }
+
+    p {
+      font-size: 0.9vw;
+      font-weight: 400;
+      color: var(--white);
+    }
+
+    .link {
+      font-weight: 600;
+      margin-top: 13.5vw;
+      text-align: end;
+    }
+
+  }
 
   /* */
 
-  /* adaptive */
+  /* H2TitleBlock */
 
-    @media (min-width: 1250px) {
-      .pc {
-        width: 113vw;
-        left: -4.1vw;
-        display: block;
-      }
-
-      .socialMedia {
-        margin-top: 33vh;
-        margin-left: 97%;
-      }
-      
+  .WhyDreamsContainer {
+    width: 100%;
+    margin-top: 2vw;
+    position: relative;
+    
+    h2 {
+      text-align: center;
+      line-height: 5vw;
+      font-size: 5vw;
+      font-weight: 600;
+      color: var(--black);
     }
 
-    @media (max-width: 1250px) and (min-width: 1000px) {
-      .pc {
-        width: 135vw;
-        left: -14vw;
-        display: block;
-      }
-
-      .socialMedia {
-        margin-top: 40vh;
-      }
-
-      .textAndEmail {
-        height: 30vh;
-
-        .zaglTextBlock {
-          font-size: 1.9vw;
-        }
-
-        .email {
-          padding: 1.2vw 2vw 1.2vw 0.2vw;
-          width: 63%;
-          border-radius: 2.3vw;
-        }
-
-        button {
-          padding: 1.6vw 1vw;
-          font-size: 1.1vw;
-          border-radius: 2.3vw;
-  
-          margin-left: -3.5vw;
-  
-        }
-      }
-
-
+    img {
+      width: 6vw;
+      height: 6vw;
+      position: absolute;
     }
 
-    @media (max-width: 1000px) and (min-width: 808px){
-      .pc {
-        width: 165vw;
-        left: -33vw;
-        display: block;
-        top: -15vw;
-      }
-
-      .socialMedia {
-        margin-top: 45vh;
-      }
-
-      .textAndEmail {
-        height: 30vh;
-
-        .zaglTextBlock {
-          font-size: 1.9vw;
-        }
-
-        .email {
-          padding: 1.2vw 2vw 1.2vw 0.2vw;
-          width: 63%;
-          border-radius: 2.3vw;
-        }
-
-        button {
-          padding: 1.6vw 1vw;
-          font-size: 1.1vw;
-          border-radius: 2.3vw;
-  
-          margin-left: -3.5vw;
-  
-        }
-      }
-
-
-      
+    #o {
+      top: -0.5vw;
+      left: 14vw;
+      opacity: 0.8;
     }
 
-    @media (max-width: 808px) and (min-width: 600px) {
-      .pc {
-        display: none;
-      }
-
-      .tel {
-        width: 133vw;
-        left: -19vw;
-        top: -52vw;
-        display: block;
-      }
-
-      .socialMedia {
-        margin-top: 44vh;
-        margin-left: 95%;
-
-        .icon {
-          width: 4.5vw;
-          height: 4.5vw; 
-          margin-bottom: 2vw;
-        }
-      }
-
-      .textAndEmail {
-        height: 30vh;
-
-        .zaglTextBlock {
-          font-size: 2.6vw; 
-          margin-left: -5vw;   
-        }
-
-        .email {
-          padding: 2vw 2.2vw 2vw 0.2vw;
-          width: 80%;
-          border-radius: 2.6vw;
-          margin-left: -5vw;
-        }
-
-        button {
-          padding: 2.3vw 1vw;
-          font-size: 1.1vw;
-          border-radius: 2.6vw;
-  
-          margin-left: -4.5vw;
-  
-        }
-      }
-
-
-
+    #h {
+      top: -0.5vw;
+      left: 41.5vw;
     }
 
-    @media (max-width: 600px) and (min-width: 420px) {
-      .pc {
-        display: none;
-      }
-
-      .telMin {
-        width: 160vw;
-        left: -30vw;
-        top: -76vw;
-        display: block;
-      }
-
-      .socialMedia {
-        margin-top: 48vh;
-        margin-left: 93%;
-
-        .icon {
-          width: 7vw;
-          height: 7vw; 
-          margin-bottom: 2.5vw;
-        }
-      }
-
-      .textAndEmail {
-        height: 27vh;
-
-        .zaglTextBlock {
-          font-size: 2.5vw;
-          margin-left: -8vw;
-        }
-
-        .email {
-          padding: 3vw 4vw 3vw 0.2vw;
-          margin-left: -8vw;
-          width: 85%;
-          border-radius: 3.5vw;
-        }
-
-        button {
-          padding: 3.3vw 1.2vw;
-          font-size: 1.1vw;
-          border-radius: 3.5vw;
-  
-          margin-left: -5vw;
-  
-        }
-      }
+    #m {
+      top: 5vw;
+      left: 70vw;
+      opacity: 0.9;
     }
 
-    @media (max-width: 420px) and (min-width: 350px) {
-      .pc {
-        display: none;
-      }
-
-      .tel {
-        display:  none;
-      }
-
-      .telMin {
-        display: block;
-        width: 164vw;
-        left: -30vw;
-        top: -75vw;
-      }
-
-      .socialMedia {
-        margin-top: 44vh;
-        margin-left: 92%;
-
-        .icon {
-          width: 8vw;
-          height: 8vw; 
-          margin-bottom: 2.5vw;
-        }
-      }
-
-      .textAndEmail {
-        height: 30vh;
-
-        .zaglTextBlock {
-          font-size: 3vw;
-          margin-left: -8vw;
-        }
-
-        .email {
-          padding: 3vw 4vw 3vw 0.2vw;
-          margin-left: -8vw;
-          width: 85%;
-          border-radius: 3.5vw;
-        }
-
-        button {
-          padding: 3.3vw 1.2vw;
-          font-size: 1.1vw;
-          border-radius: 3.5vw;
-  
-          margin-left: -5vw;
-  
-        }
-      }
+    #a {
+      top: 10vw;
+      left: 59vw;
     }
 
-    @media (max-width: 350px) {
-      .socialMedia {
-        margin-top: 53vh;
-        margin-left: 90%;
+    /* littleAnimation */
 
-        .icon {
-          width: 10vw;
-          height: 10vw; 
-          margin-bottom: 2.5vw;
-        }
-      }
+    .letterPuffy {
+      transition: all 0.2s ease-in-out;
+    }
 
-      .textAndEmail {
-        height: 30vh;
-
-        .zaglTextBlock {
-          font-size: 3vw;
-          margin-left: -8vw;
-        }
-
-        .email {
-          padding: 3vw 4vw 3vw 0.2vw;
-          margin-left: -8vw;
-          width: 85%;
-          border-radius: 3.5vw;
-        }
-
-        button {
-          padding: 3.3vw 1.2vw;
-          font-size: 1.1vw;
-          border-radius: 3.5vw;
-  
-          margin-left: -5vw;
-  
-        }
-      }
+    .letterPuffy:hover {
+      width: 6.3vw;
+      height: 6.3vw;
+      transition: all 0.2s ease-in-out;
     }
 
     /* */
 
-  
-  
-  
   }
+
+  /* */
+
+  /*miniText*/
+
+  .miniText {
+    width: 34vw;
+    font-size: var(--textP);
+    color: var(--black);
+    margin-left: 8vw;
+    margin-top: 12vw;
+
+    span {
+      color: var(--blue);
+      font-weight: 600;;
+    }
+  }
+
+  /* */
+
+  /* missionText */
+
+  .missionText {
+    width: 58vw;
+    margin: 22vw auto;
+    position: relative;
+
+    p {
+      font-size: 3vw;
+    }
+
+    img {
+      position: absolute;
+      width: 17vw;
+    }
+
+    #leftPillow {
+      left: -17vw;
+      top: -13vw;
+    }
+
+    #rightPillow {
+      left: 57vw;
+      top: -12vw;
+    }
+  }
+
+  /* */
+
+  /* facts */
+
+  .factsContainer {
+    width: 90%;
+    margin: 0vw auto;
+    padding: 5vw;
+    position: relative;
+
+    .factsBtns {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8vw;
+      left: 0;
+
+      .btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btnCircle {
+          width: 7vw;
+          height: 7vw;
+          border-radius: 100%;
+          filter: brightness(110%);
+          background-image: url("../images/aboutUs/blueTexture2.webp");
+          background-size: 140% 140%;
+          transition: all 0.5s;
+        }
+
+        .bigCircle {
+          width: 8vw;
+          height: 8vw;
+          background-image: url("../images/aboutUs/blackTexture2.webp");
+          transition: all 0.5s;
+        }
+
+        img {
+          width: 6vw;
+          height: 6vw; 
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          transition: all 0.3s;
+        }
+
+        .biggerText {
+          width: 12vw;
+          height: 12vw; 
+          opacity: 1;
+          transition: all 0.3s;
+        }
+        
+      }
+
+      #btn1 {
+        left: 5.5%;
+      }
+
+      #btn2 {
+        left: 25.5%;
+      }
+
+      #btn3 {
+        left: 45.5%;
+      }
+
+      #btn4 {
+        left: 65.5%;
+      }
+
+      #btn5 {
+        left: 85.5%;
+      }
+
+    }
+
+    .factsReview {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin-top: 20vw;
+
+      h3 {
+        font-size: 6vw;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+
+      .factCard {
+        width: 30vw;
+        height: 18vw;
+        border-radius: var(--borderRadius);
+        background-color: rgb(218, 226, 235);
+        padding: 1.8vw;
+
+        .factText {
+          display: none;
+          opacity: 0;
+          transition: all 0.5s ease-in-out;
+        }
+
+        h4 {
+          font-size: 2vw;
+          font-weight: 600;
+          text-transform: capitalize;
+          margin-bottom: 2vw;
+        }
+
+        p {
+           font-size: 1vw;
+        }
+      }
+    }
+
+  }
+
+  /* */
+
+  /* 3dTextScreen */
+
+  .ThreeScreenContainer {
+    z-index: -1;
+    width: 100vw;
+    height: 50vw;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    margin-top: -4vw;
+
+    video {
+      position: absolute;
+      width: 115vw;
+      top: -13vw;
+      left: -10vw;
+    }
+
+    p {
+      position: absolute;
+      font-size: 1vw;
+      font-weight: 600;
+      color: var(--white);
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .first3DTExt {
+      top: 35vw;
+      left: 14.5vw;
+    }
+
+    .second3DTExt {
+      top: 14vw;
+      left: 68vw;
+      text-align: end;
+    }
+
+  }
+
+  /* */
+
+  /* articles */
+
+  .articles {
+    width: 90%;
+    margin: 0vw auto;
+
+    h3 {
+      font-size: 6vw;
+      font-weight: 600;
+      text-transform: capitalize;
+      margin-bottom: 5vw;
+    }
+
+    .articlesContainer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    img {
+      width: 7vw;
+      height: 16vw;
+    }
+
+    button {
+      width: 50vw;
+      height: 30vw;
+      border-radius: var(--borderRadius);
+      background-image: url("../images/aboutUs/article1.webp");
+      background-size: 100% 100%;
+    }
+
+    .circlesGroup {
+      width: 10vw;
+      display: flex;
+      justify-content: space-between;
+      margin: 2vw auto;
+
+      div {
+        width: 1.2vw;
+        height: 1.2vw;
+        opacity: 0.6;
+        background-image: url("../images/aboutUs/blueTexture2.webp");
+        background-size: 100% 100%;
+        border-radius: 100%;
+      }
+
+      .picked {
+        opacity: 0.8;
+        background-image: url("../images/aboutUs/blackTexture2.webp");
+      }
+    }
+
+  }
+
+  /* */
+
+
+}
