@@ -1,0 +1,49 @@
+input {
+    all: unset;
+  } 
+  
+  body {
+      overflow-x: hidden;
+  }
+  
+  .tests {
+    width: 100vw;
+    background-color: var(--white);
+    padding: 2vw 4vw;
+  
+  
+     /* titleBlock */
+  
+     .titleContainer {
+      width: 80%;
+      margin: 13vw auto 20vw;
+      position: relative;
+  
+      h1 {
+        font-size: 9vw;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-align: center;
+      }
+  
+      img {
+        width: 15vw;
+        height: 33vw;
+        position: absolute;
+      }
+  
+      #leftPillow {
+        top: -11vw;
+        left: -6vw;
+      }
+  
+      #rightPillow {
+        top: -10.5vw;
+        left: 64vw;
+      }
+    }
+  
+    /* */
+  
+  
+  }
