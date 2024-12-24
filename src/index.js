@@ -149,8 +149,32 @@ document.addEventListener("DOMContentLoaded", (e) => {
     articlesContainer.addEventListener("click", (e) => {
         if (e.target.classList[0] == "arrow") {
             if (e.target.classList[1] == "arLeft") {
+                document.querySelector(`.arLeft`).animate(
+                    [
+                        { transform: "translateX(0px)" },
+                        { transform: "translateX(-30px)" },
+                        { transform: "translateX(0px)" },
+                    ]
+                , {
+                    duration:300,
+                    fill: "forwards",
+                    iterations: 1,
+                    
+                })
                 previousArticle(Number(findActiveArticle()))
             } else {
+                document.querySelector(`.arRight`).animate(
+                    [
+                        { transform: "translateX(0px)" },
+                        { transform: "translateX(+30px)" },
+                        { transform: "translateX(0px)" },
+                    ]
+                , {
+                    duration:300,
+                    fill: "forwards",
+                    iterations: 1,
+                    
+                })
                 nextArticle(Number(findActiveArticle()))
             }
         }
