@@ -39,6 +39,16 @@ body::-webkit-scrollbar { width: 0; }
     font-weight: 600;
     text-transform: lowercase;
     font-size: 1.5vw;
+    transition: all 0.25s ease;
+  }
+
+  a:hover {
+    color: var(--blue);
+    transition: all 0.25s ease;
+  }
+
+  .choosenA {
+    color: var(--blue);
   }
 }
 
@@ -87,4 +97,27 @@ footer {
 
 /* */
 
+
+/* preloader */
+
+#preloader {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: var(--white); 
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease-in-out;
+
+  video {
+    width: 40vw;
+  }
+
+}
+
+/* */
 
