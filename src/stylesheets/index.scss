@@ -308,10 +308,19 @@ body {
       width: 90%;
       margin-top: 20vw;
 
-      h3 {
-        font-size: 6vw;
-        font-weight: 600;
-        text-transform: capitalize;
+      .factsTitleContainer {
+        h3 {
+          font-size: 6vw;
+          font-weight: 600;
+          text-transform: capitalize;
+          margin-bottom: 2vw;
+        }
+
+        p {
+          font-size: 1.5vw;
+          opacity: 0.3;
+          font-weight: 400;
+        }
       }
 
       .factCard {
@@ -408,6 +417,7 @@ body {
     img {
       width: 7vw;
       height: 16vw;
+      transition: all 0.2s ease-in-out;
     }
 
     button {
