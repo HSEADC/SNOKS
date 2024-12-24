@@ -11,7 +11,10 @@ module.exports = {
     index: './src/index.js',
     articles: './src/js/articles.js',
     preview: './src/js/preview.js',
-    tests: '/src/js/tests.js'
+    tests: '/src/js/tests.js',
+    styleguide: "./src/js/styleguide.js",
+    dreambook: "./src/js/dreambook.js",
+    shop: "./src/js/shop.js"
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -124,9 +127,23 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/styleguid.html',
-      filename: './styleguid.html',
+      template: './src/styleguide.html',
+      filename: './styleguide.html',
+      chunks: ["styleguide"],
     }),
+
+    new HtmlWebpackPlugin({
+      template: './src/dreambook.html',
+      filename: './dreambook.html',
+      chunks: ["dreambook"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/shop.html',
+      filename: './shop.html',
+      chunks: ["shop"],
+    }),
+
 
     
     // Article
