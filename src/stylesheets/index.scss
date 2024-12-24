@@ -36,27 +36,6 @@ body {
     color: var(--blue);
   }
 
-  .backgroundBorderRadius {
-    background-color: var(--white);
-    height: 5vw;
-    width: 100vw;
-  }
-
-  /* */
-
-  /* roundedBlockStyle */
-
-  .upRound {
-    border-bottom-right-radius: 3vw;
-    border-bottom-left-radius: 3vw;
-  }
-
-  .downRound {
-    border-top-right-radius: 3vw;
-    border-top-left-radius: 3vw;
-    margin-top: -3vw;
-  }
-
   /* */
 
   /* 3dLogoScreen */
@@ -452,6 +431,28 @@ body {
   }
 
   /* */
+
+
+   /* roundedBlockStyle */
+
+.backgroundBorderRadius {
+  background-color: var(--white);
+  height: 5vw;
+  width: 100vw;
+}
+
+.upRound {
+  border-bottom-right-radius: 3vw;
+  border-bottom-left-radius: 3vw;
+}
+
+.downRound {
+  border-top-right-radius: 3vw;
+  border-top-left-radius: 3vw;
+  margin-top: -3vw;
+}
+
+/* */
 
 
 }
