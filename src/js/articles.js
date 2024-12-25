@@ -137,15 +137,35 @@ document.addEventListener("DOMContentLoaded", (e) => {
         },
 
 
-
     }
-    
+ 
 
-const sizes = {
+let sizes = {
     small: "24 22 1.1",
     middle: "32 35 1.2",
     big: "100 25 1.4"
 }
+
+/* articles adaptive */
+
+if (window.innerHeight > window.innerWidth) {
+     sizes = {
+        small: "48 34 1.3",
+        middle: "32 35 1.2",
+        big: "100 30 1.4"
+    }
+
+  } else if (window.innerHeight <= window.innerWidth) {
+    const sizes = {
+        small: "24 22 1.1",
+        middle: "32 35 1.2",
+        big: "100 25 1.4"
+    }
+
+}
+
+/* */
+
 
 let container = document.querySelector(".articlesBlock")
 
@@ -196,5 +216,8 @@ for (let elem in data) {
   time.textContent=`${data[elem].time} мин`;
   section.append(time);
 }
+
+//
+
 
 })
