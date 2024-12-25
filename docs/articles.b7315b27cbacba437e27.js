@@ -195,6 +195,25 @@ document.addEventListener("DOMContentLoaded", function (e) {
     middle: "32 35 1.2",
     big: "100 25 1.4"
   };
+
+  /* articles adaptive */
+
+  if (window.innerHeight > window.innerWidth) {
+    sizes = {
+      small: "48 34 1.3",
+      middle: "32 35 1.2",
+      big: "100 30 1.4"
+    };
+  } else if (window.innerHeight <= window.innerWidth) {
+    var _sizes = {
+      small: "24 22 1.1",
+      middle: "32 35 1.2",
+      big: "100 25 1.4"
+    };
+  }
+
+  /* */
+
   var container = document.querySelector(".articlesBlock");
 
   // generation of article cards
@@ -238,6 +257,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
     time.textContent = "".concat(data[elem].time, " \u043C\u0438\u043D");
     section.append(time);
   }
+
+  //
 });
 /******/ })()
 ;
