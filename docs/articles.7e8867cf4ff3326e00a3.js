@@ -69,7 +69,10 @@ const article12_namespaceObject = __webpack_require__.p + "images/9479674c365a59
 const arrow_namespaceObject = __webpack_require__.p + "images/c1fdab9d045a9ea228e1.svg";
 ;// ./src/images/articles/tt.svg
 const tt_namespaceObject = __webpack_require__.p + "images/9c4204d4ab9efd459355.svg";
+;// ./src/images/arrows.svg
+const arrows_namespaceObject = __webpack_require__.p + "images/d138086608d09c5fd31e.svg";
 ;// ./src/js/articles.js
+
 
 
 
@@ -92,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
       document.getElementById("preloader").style.pointerEvents = "none";
     }, 1200);
   };
+  document.getElementById("arrows").src = arrows_namespaceObject;
   var data = {
     1: {
       name: "\u041F\u043E\u0447\u0435\u043C\u0443 \u0434\u0435\u0442\u0438 \r\n \u043F\u043B\u043E\u0445\u043E \u0441\u043F\u044F\u0442?",
@@ -102,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
       img: article1_namespaceObject
     },
     2: {
-      name: "Как помочь ребенку спать лучше??",
+      name: "Как помочь ребенку спать лучше?",
       time: "6 — 7",
       text: "Качественный сон — залог здоровья ребёнка. Разбираем эффективные подходы, чтобы малыш засыпал быстро и спал крепко всю ночь.",
       size: "middle",

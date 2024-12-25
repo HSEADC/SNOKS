@@ -13,6 +13,7 @@ import imgArt11 from '../images/articles/article11.webp';
 import imgArt12 from '../images/articles/article12.webp';
 import svgArrow from '../images/articles/arrow.svg'
 import svgTT from '../images/articles/tt.svg'
+import svgArrows from '../images/arrows.svg'
 
 
 
@@ -24,7 +25,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.getElementById("preloader").style.pointerEvents="none"
         }
         , 1200)
-      };
+    };
+
+    document.getElementById("arrows").src=svgArrows
 
     const data = {
         1: {
@@ -37,7 +40,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         },
     
         2: {
-            name: "Как помочь ребенку спать лучше??",
+            name: "Как помочь ребенку спать лучше?",
             time: "6 — 7",
             text: "Качественный сон — залог здоровья ребёнка. Разбираем эффективные подходы, чтобы малыш засыпал быстро и спал крепко всю ночь.",
             size: "middle",

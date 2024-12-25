@@ -80,10 +80,11 @@
     }
 
     p {
-      font-size: 1.1vw;
+      font-size: 1.4vw;
       width: 40vw;
       margin-top: 8vw;
       margin-left: -41vw;
+      line-height: 1.6vw;
 
       span {
         color: var(--blue);
@@ -325,6 +326,18 @@
   }
 
   /* */
+
+/*adaptive */
+
+@media (max-width: 650px) {
+  .mainTextContainer {
+    p {
+      font-size: 2vw;
+      line-height: 2.2vw;
+    }
+  }
+}
+/* */
 
 
 }
