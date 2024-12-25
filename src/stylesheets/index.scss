@@ -159,8 +159,8 @@ body {
   /*miniText*/
 
   .miniText {
-    width: 34vw;
-    font-size: var(--textP);
+    width: 39vw;
+    font-size: 1.4vw;
     color: var(--black);
     margin-left: 8vw;
     margin-top: 12vw;
@@ -495,6 +495,144 @@ body {
 }
 
 /* */
+
+/*adaptive */
+
+@media (max-width: 650px) {
+  .miniText {
+    font-size: 1.8vw;
+    width: 50vw;
+  }
+
+  .factsContainer {
+    width: 90%;
+    margin: 0vw auto;
+    padding: 5vw 2vw;
+    position: relative;
+
+    .factsBtns {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8vw;
+      left: 0;
+
+      .btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btnCircle {
+          width: 10vw;
+          height: 10vw;
+          border-radius: 100%;
+          filter: brightness(110%);
+          background-image: url("../images/aboutUs/blueTexture2.webp");
+          background-size: 140% 140%;
+          transition: all 0.5s;
+        }
+
+        .bigCircle {
+          width: 11vw;
+          height: 11vw;
+          background-image: url("../images/aboutUs/blackTexture2.webp");
+          transition: all 0.5s;
+        }
+
+        img {
+          width: 8vw;
+          height: 8vw; 
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          transition: all 0.3s;
+        }
+
+        .biggerText {
+          width: 16vw;
+          height: 16vw; 
+          opacity: 1;
+          transition: all 0.3s;
+        }
+        
+      }
+
+    }
+
+    .factsReview {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin-top: 20vw;
+
+      .factsTitleContainer {
+        h3 {
+          font-size: 6vw;
+          font-weight: 600;
+          text-transform: capitalize;
+          margin-bottom: 2vw;
+        }
+
+        p {
+          font-size: 1.5vw;
+          opacity: 0.3;
+          font-weight: 400;
+        }
+      }
+
+      .factCard {
+        width: 38vw;
+        height: 18vw;
+        border-radius: var(--borderRadius);
+        background-color: rgb(218, 226, 235);
+        padding: 1.8vw;
+
+        .factText {
+          display: none;
+          opacity: 0;
+          transition: all 0.5s ease-in-out;
+        }
+
+        h4 {
+          font-size: 2vw;
+          font-weight: 600;
+          text-transform: capitalize;
+          margin-bottom: 2vw;
+        }
+
+        p {
+           font-size: 1.4vw;
+        }
+      }
+    }
+
+  }
+
+  #btn1 {
+    left: 5.5%;
+  }
+
+  #btn2 {
+    left: 25.5%;
+  }
+
+  #btn3 {
+    left: 45.5%;
+  }
+
+  #btn4 {
+    left: 65.5%;
+  }
+
+  #btn5 {
+    left: 85.5%;
+  }
+
+}
+/* */
+
 
 
 }
