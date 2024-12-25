@@ -1,4 +1,19 @@
 import '../articles.css';
+import imgArt1 from '../images/articles/article1.webp';
+import imgArt2 from '../images/articles/article2.webp';
+import imgArt3 from '../images/articles/article3.webp';
+import imgArt4 from '../images/articles/article4.webp';
+import imgArt5 from '../images/articles/article5.webp';
+import imgArt6 from '../images/articles/article6.webp';
+import imgArt7 from '../images/articles/article7.webp';
+import imgArt8 from '../images/articles/article8.webp';
+import imgArt9 from '../images/articles/article9.webp';
+import imgArt10 from '../images/articles/article10.webp';
+import imgArt11 from '../images/articles/article11.webp';
+import imgArt12 from '../images/articles/article12.webp';
+import svgArrow from '../images/articles/arrow.svg'
+import svgTT from '../images/articles/tt.svg'
+
 
 
 document.addEventListener("DOMContentLoaded", (e) => {
@@ -18,6 +33,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Нарушения режима сна у детей — частая проблема для родителей. Узнай, какие факторы могут мешать  ребёнку спокойно засыпать и как можно справиться с ними!",
             size: "middle",
             tag: ["дети", "сон"],
+            img: imgArt1,
         },
     
         2: {
@@ -26,6 +42,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Качественный сон — залог здоровья ребёнка. Разбираем эффективные подходы, чтобы малыш засыпал быстро и спал крепко всю ночь.",
             size: "middle",
             tag: ["дети", "сон"],
+            img: imgArt2,
         },
     
         3: {
@@ -34,6 +51,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Дневной сон может быть важным в развитии ребёнка. Однако когда он необходим, а когда можно отказаться от него? Попробуем разобраться!",
             size: "middle",
             tag: ["дети", "сон"],
+            img: imgArt3,
         },
     
         4: {
@@ -42,6 +60,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Многие дети боятся оставаться одни в темноте, и это абсолютно нормально. В этой статье вы узнаете, как создать спокойную атмосферу перед сном, научить ребёнка справляться с тревогой и сделать процесс засыпания комфортным.",
             size: "big",
             tag: ["дети", "сон"],
+            img: imgArt4,
         },
 
         5: {
@@ -50,6 +69,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Разбираем самые распространённые факторы, которые лишают нас сна: от кофеина и гаджетов до тревожных мыслей, и делимся советами по их устранению.",
             size: "small",
             tag: ["здоровье"],
+            img: imgArt5,
         },
 
         6: {
@@ -58,6 +78,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Дневной сон бывает полезен не только детям!Мы собрали неожиданные факты о том, как короткий отдых может влиять на здоровье и настроение.",
             size: "small",
             tag: ["дети", "сон"],
+            img: imgArt6,
         },
 
         7: {
@@ -66,6 +87,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Нарушения режима сна у детей — частая проблема для родителей. Узнай, какие факторы могут мешать  ребёнку спокойно засыпать и как можно справиться с ними!",
             size: "small",
             tag: ["дети", "сон"],
+            img: imgArt7,
         },
 
         8: {
@@ -74,6 +96,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Нарушения режима сна у детей — частая проблема для родителей. Узнай, какие факторы могут мешать  ребёнку спокойно засыпать и как можно справиться с ними!",
             size: "small",
             tag: ["дети", "сон"],
+            img: imgArt8,
         },
 
         9: {
@@ -82,6 +105,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Лунатизм или сомнамбулизм — это состояние, при котором человек выполняет действия во сне, часто не осознавая этого. В этой статье мы расскажем о том, как именно возникает лунатизм, какие факторы способствуют его появлению, и как это связано с нарушениями фаз сна. ",
             size: "big",
             tag: ["здоровье", "сон"],
+            img: imgArt9,
         },
 
         
@@ -91,6 +115,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Почему одни люди продуктивнее утром, а другие — вечером? В этой статье мы расскажем, что такое хронотипы и как они связаны с нашими привычками.",
             size: "middle",
             tag: ["иследование", "сон"],
+            img: imgArt10,
         },
 
         11: {
@@ -99,6 +124,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Время во снах часто воспринимается иначе, чем в реальной жизни. В этой статье мы исследуем, почему наше восприятие времени во время сна искажено, что происходит с мозгом в процессе сновидений и как различные стадии сна могут влиять на это.",
             size: "middle",
             tag: ["иследование", "сон"],
+            img: imgArt11,
         },
 
         12: {
@@ -107,6 +133,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text: "Мечтаешь высыпаться лучше? Мы подготовили простые и действенные советы, которые помогут сделать твой сон более восстанавливающим.",
             size: "middle",
             tag: ["советы", "сон"],
+            img: imgArt12,
         },
 
 
@@ -117,7 +144,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 const sizes = {
     small: "24 22 1.1",
     middle: "32 35 1.2",
-    big: "100 23 1.4"
+    big: "100 25 1.4"
 }
 
 let container = document.querySelector(".articlesBlock")
@@ -132,19 +159,26 @@ for (let elem in data) {
   section.classList.add('articleCardAndTime');
   container.append(section);
   let sizeName = (sizes[`${data[elem].size}`]).split(" ");
+  console.log(sizeName[0])
   section.style.width=`${sizeName[0]}%`;
   const div = document.createElement('div');
   div.classList.add('articleCard');
   div.style.height=`${sizeName[1]}vw`;
   div.id = `articleCard${elem}`;
-  let imgWay = "url('" + "../images/articles/article" + elem + ".webp" + "')";
-  div.style.backgroundImage=imgWay;
+
+  div.style.backgroundImage=`url('${data[elem].img}')`;
+
+  if (sizeName[0] == 100) {
+    console.log(div)
+    div.style.backgroundSize="100% 120%"
+  }
+
   section.append(div);
   const goIcon = document.createElement('div');
   goIcon.classList.add('goIcon');
   div.append(goIcon);
   const goIconImg = document.createElement('img')
-  goIconImg.src="../images/articles/arrow.svg"
+  goIconImg.src=svgArrow
   goIcon.append(goIconImg)
   const p = document.createElement('p');
   p.id=`articleName${elem}`;
@@ -155,7 +189,7 @@ for (let elem in data) {
   description.classList.add('description');
   div.append(description);
   const descriptionImg = document.createElement('img');
-  descriptionImg.src="/tt.svg";
+  descriptionImg.src=svgTT;
   description.append(descriptionImg);
   let time = document.createElement('p');
   time.id = `articleTime${elem}`;

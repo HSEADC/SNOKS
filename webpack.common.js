@@ -72,25 +72,19 @@ module.exports = {
         resourceQuery: /raw/,
         type: 'asset/source'
       },
+
       {
-        test: /\.png/,
+        test: /\.(jpg|png|gif|jpeg|webp|svg)/,
         type: 'asset/resource',
         generator: {
           filename: 'images/[hash][ext][query]'
         }
       },
       {
-        test: /\.svg/,
+        test: /\.(ttf|otf|woff2|woff|eot)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[hash][ext][query]'
-        }
-      },
-      {
-        test: /\.(ttf|otf)$/i,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]'
+          filename: 'fonts/[name].[ext]'
         }
       }
     ]

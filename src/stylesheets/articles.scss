@@ -28,7 +28,7 @@
     }
 
     #rightPillow {
-      top: -10.5vw;
+      top: -11vw;
       left: 65vw;
     }
   }
@@ -190,6 +190,7 @@
 
     .articleCardAndTime {
       width: 32%;
+      margin-bottom: 2vw;
 
       p {
         font-size: 1.3vw;
@@ -199,16 +200,16 @@
 
       }
 
+
       .articleCard {
         width: 100%;
         height: 35vw;
         background-color: var(--blue);
         border-radius: 1.5vw;
       
-        background-size: 100% 100%; 
+        background-size: 100% 110%; 
         position: relative;
         display: flex;
-
 
         div {
           width: 4vw;
@@ -235,7 +236,7 @@
           font-size: 1.3vw;
           position: absolute;
           left: 1vw;
-          bottom: 1vw;
+          bottom: 0.4vw;
           font-weight: 600;
           width: 55%;
 

@@ -405,6 +405,48 @@ body {
       border-radius: var(--borderRadius);
       background-image: url("../images/aboutUs/article1.webp");
       background-size: 100% 100%;
+      position: relative;
+
+      .articleInnerCard {
+        width: 18vw;
+        height: 12vw;
+        border-radius: var(--borderRadius);
+        background: var(--blue);
+        position: absolute;
+        right: 4vw;
+        top: 17vw;
+        padding: 1.3vw;
+  
+        box-shadow: 0 0 0.7rem 0 rgba(0, 0, 0, .3);	
+        background-color: rgba(182, 195, 225, 0.41);
+    
+        backdrop-filter: blur(10px);
+      }
+  
+      h4 {
+        font-size: 1.5vw;
+        font-weight: 600;
+        color: var(--white);
+        margin-bottom: 2vw;
+        text-align: left;
+      }
+  
+      p, a {
+        font-size: 0.9vw;
+        font-weight: 600;
+        color: var(--white);
+        text-align: left;
+      }
+
+      .cardLink {
+        font-weight: 600;
+        margin-top: 13.5vw;
+        text-align: end;
+        position: absolute;
+        bottom: 1.3vw;
+        right: 1.3vw;
+
+      }
     }
 
     .circlesGroup {
