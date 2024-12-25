@@ -1,4 +1,9 @@
 import './index.css';
+import imgArt1 from './images/aboutUs/article1.webp';
+import imgArt2 from './images/aboutUs/article2.webp';
+import imgArt3 from './images/aboutUs/article3.webp';
+import imgArt4 from './images/aboutUs/article4.webp';
+import imgArt5 from './images/aboutUs/article5.webp';
 
 document.addEventListener("DOMContentLoaded", (e) => {
 
@@ -116,32 +121,27 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const articles = {
         1: {
             name: "Почему дети плохо спят?",
-            text: "",
-            img: "./images/aboutUs/article1.webp"
+            img: imgArt1
         },
 
         2: {
             name: "Как помочь ребенку спать лучше?",
-            text: "",
-            img: "./images/aboutUs/article1.webp"
+            img: imgArt2
         },
 
         3: {
             name: "Почему малыши не спят крепко?",
-            text: "",
-            img: "./images/aboutUs/article1.webp"
+            img: imgArt3
         },
 
         4: {
             name: "Причины бессоницы",
-            text: "",
-            img: "./images/aboutUs/article1.webp"
+            img: imgArt4
         },
 
         5: {
             name: "10 фактов о дневном сне",
-            text: "",
-            img: "./images/aboutUs/article1.webp"
+            img: imgArt5
         }
     }
 
@@ -196,12 +196,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
             document.querySelector(".articleCard").style.backgroundImage=`url('${articles[n].img}')`
+                        document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         } else {
             document.querySelector(`#circlePick${n}`).classList.remove("picked")
             n = 5
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
             document.querySelector(".articleCard").style.backgroundImage=`url('${articles[n].img}')`
+            document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         }
     }
 
@@ -212,12 +214,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
             document.querySelector(".articleCard").style.backgroundImage=`url('${articles[n].img}')`
+                        document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         } else {
             document.querySelector(`#circlePick${n}`).classList.remove("picked")
             n = 1
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
             document.querySelector(".articleCard").style.backgroundImage=`url('${articles[n].img}')`
+            document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         }
     }
 
