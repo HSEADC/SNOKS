@@ -5,6 +5,9 @@ import imgArt3 from './images/aboutUs/article3.webp';
 import imgArt4 from './images/aboutUs/article4.webp';
 import imgArt5 from './images/aboutUs/article5.webp';
 
+import svgLogo from './images/preview/logo.svg'
+import pngLogo from './images/aboutUs/logoHeader.webp'
+
 document.addEventListener("DOMContentLoaded", (e) => {
 
     window.onload = function() { 
@@ -15,7 +18,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         , 1200)
       };
     
-    // factsAnimations
+// factsAnimations
 
     let facts = document.querySelector(".factsContainer")
 
@@ -114,9 +117,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
     }
 
    
-    //
+//
 
-    // articles swipe animation
+// articles swipe animation
 
     const articles = {
         1: {
@@ -225,6 +228,53 @@ document.addEventListener("DOMContentLoaded", (e) => {
         }
     }
 
-    //
+//
+
+
+// phoneBurger
+
+    if (window.innerHeight > window.innerWidth) { 
+        document.querySelector("main").style.marginTop="20vw"
+        document.querySelector("#mobileNav").style.display="block"
+        let flagNav = false;
+        const burger = document.querySelector(".burger");
+        document.querySelector(".navigation").style.display="none";
+        burger.addEventListener("click", function() {
+            burger.classList.toggle("open");
+            if (!flagNav) {
+                flagNav = true;
+                document.querySelector("#mobileNav").style.backgroundColor="var(--blue)"
+                document.querySelector(".burgerNav").style.display="block"
+                setTimeout(()=> {
+                    document.querySelector(".burgerNav").style.opacity="1";
+                    document.querySelector("#mobileLogo").style.backgroundImage=`url("${svgLogo}")`
+                    document.querySelector("#mobileLogo").style.backgroundSize="78% 78%";
+                     document.querySelector("#mobileLogo").style.backgroundPosition="20% 50%"
+                }, 0)
+            } else {
+                flagNav = false;
+                document.querySelector(".burgerNav").style.opacity="0";
+                document.querySelector("#mobileNav").style.backgroundColor="var(--white)"
+                document.querySelector("#mobileLogo").style.backgroundImage=`url("${pngLogo}")`
+                document.querySelector("#mobileLogo").style.backgroundSize="120% 100%"
+                setTimeout(()=> {
+                    document.querySelector(".burgerNav").style.display="none"
+                }, 300)
+            }
+        });
+
+    } else {
+        document.querySelector("#pcNav").style.display="block"
+    }
+
+//
+
+// resize reload
+
+    window.addEventListener('resize', function(event){
+        location.reload()
+      });
+
+//
 
 })

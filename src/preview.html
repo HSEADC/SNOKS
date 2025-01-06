@@ -25,7 +25,7 @@
     <video class="backgroundVideo tel" src="./images/preview/zaglushVid2Tel.webm" muted autoplay loop></video>
     <video class="backgroundVideo telMin" src="./images/preview/zaglushVidTelMin.webm" muted autoplay loop></video>
 
-    <nav class="navigation">
+    <nav class="navigation" id="pcNav">
       <ul>
         <li>
           <form action="./preview.html">
@@ -40,6 +40,37 @@
         <li><a href="./shop.html">магазин</a></li>
       </ul>
     </nav>
+
+    <nav class="navigation" id="mobileNav">
+      <ul>
+        <li>
+          <form action="./preview.html">
+              <button><div class="logo" id="mobileLogo"></div></button>
+          </form>
+        </li>
+
+        <li>
+            <button class="burger" type="checkbox" id="burger" name="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button> 
+        </li>
+      </ul>
+    </nav>
+
+
+    <section class="burgerNav"> 
+
+      <ul class="menuList">
+        <li><a href="./index.html" class="choosenA">о нас</a></li>
+        <li><a href="./styleguide.html">стайлгайд</a></li>
+        <li><a href="./articles.html">статьи</a></li>
+        <li><a href="./tests.html">тесты</a></li>
+        <li><a href="./dreambook.html">сонник</a></li>
+        <li><a href="./shop.html">магазин</a></li>
+      </ul>
+    </section>
 
     <div class="socialMedia">
       <div class="icon vk"></div>

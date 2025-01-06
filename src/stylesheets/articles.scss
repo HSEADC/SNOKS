@@ -2,7 +2,7 @@
 .articlesBody {
   background-color: var(--white);
 
-  /* titleBlock */
+/* titleBlock */
 
   .titleContainer {
     width: 80%;
@@ -33,9 +33,9 @@
     }
   }
 
-  /* */
+/* */
 
-  /* mainTextBlock */
+/* mainTextBlock */
 
   .mainTextContainer {
     position: relative;
@@ -143,9 +143,9 @@
     }
   }
 
-  /* */
+/* */
 
-  /* findAndFilter */
+/* findAndFilter */
 
   .findAndFilter {
     width: 80%;
@@ -180,6 +180,10 @@
     }
 
   }
+
+/* */
+
+/* articles */
 
   .articlesBlock {
     width: 80%;
@@ -231,6 +235,7 @@
             width: 1.5vw;
             height: 1.5vw;
           }
+
         }
 
         p {
@@ -254,15 +259,70 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          z-index: 666;
 
           img {
             width: 1.5vw;
             height: 1.5vw;
           }
         }
+
+        .articleCardRotated {
+          width: 100%;
+          height: 100%;
+          background-color: var(--blue);
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 1.5vw;
+        }
+
       }
+
+      .articleCardRotated {
+        padding: 1vw;
+        display: flex;
+        justify-content:flex-start;
+        align-items: end;
+
+
+        .descriptionText {
+          color: var(--white);
+          width: 90%;
+          background-color: transparent;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+        }
+
+        .tagsContainer {
+          width: 70%;
+          height: fit-content;
+          display: flex;
+          background-color: transparent;
+          border-radius: 0;
+          flex-wrap: wrap;
+          justify-content: left;
+
+          .tag {
+            border-radius: 4vw;
+            position:unset;
+            opacity: 1;
+            text-align: center;
+            margin: 1vw 1vw 0 0;
+            color: var(--black);
+            width: auto;
+          }
+
+        }
+      }
+
     }
+
+
+
   }
+
 
   /* */
 

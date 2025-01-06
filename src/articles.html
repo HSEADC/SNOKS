@@ -23,7 +23,7 @@
 
     <header>
 
-      <nav class="navigation">
+      <nav class="navigation" id="pcNav">
         <ul>
           <li>
             <form action="./preview.html">
@@ -38,6 +38,37 @@
           <li><a href="./shop.html">магазин</a></li>
         </ul>
       </nav>
+
+      <nav class="navigation" id="mobileNav">
+        <ul>
+          <li>
+            <form action="./preview.html">
+                <button><div class="logo" id="mobileLogo"></div></button>
+            </form>
+          </li>
+
+          <li>
+              <button class="burger" type="checkbox" id="burger" name="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button> 
+          </li>
+        </ul>
+      </nav>
+
+
+      <section class="burgerNav"> 
+
+        <ul class="menuList">
+          <li><a href="./index.html" class="choosenA">о нас</a></li>
+          <li><a href="./styleguide.html">стайлгайд</a></li>
+          <li><a href="./articles.html">статьи</a></li>
+          <li><a href="./tests.html">тесты</a></li>
+          <li><a href="./dreambook.html">сонник</a></li>
+          <li><a href="./shop.html">магазин</a></li>
+        </ul>
+      </section>
     
     </header>
 
@@ -97,6 +128,29 @@
 
           <p id="articleTime1">3 — 5 мин</p>
         </section>
+
+        rotated Ver----------------------
+
+        <div class="articleCard opened" id="articleCard1">
+
+            <div class="goIcon">
+              <img src="./images/articles/arrow.svg">
+            </div>
+            <p id="articleName1">Почему дети<br> плохо спят?</p>
+            <div class="description">
+              <img src="./images/articles/tt.svg">
+            </div>
+            <div class="articleCardRotated" id="articleCardRotated1">
+              <p class="descriptionText"></p>
+              <div class="tagsContainer">
+                <p>сон</p>
+                <p>иследование</p>
+              </div>
+            </div>
+
+          </div>
+
+
       -->
         
       </section>
