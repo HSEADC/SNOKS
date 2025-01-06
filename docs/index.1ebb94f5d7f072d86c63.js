@@ -51,7 +51,13 @@ const article3_namespaceObject = __webpack_require__.p + "images/fe83cf08177fad7
 const article4_namespaceObject = __webpack_require__.p + "images/180f78a15dd77eccfdc7.webp";
 ;// ./src/images/aboutUs/article5.webp
 const article5_namespaceObject = __webpack_require__.p + "images/586c907768fcd456a940.webp";
+;// ./src/images/preview/logo.svg
+const logo_namespaceObject = __webpack_require__.p + "images/752f59445ba13b14576d.svg";
+;// ./src/images/aboutUs/logoHeader.webp
+const logoHeader_namespaceObject = __webpack_require__.p + "images/dfe2dfcce3cd6ec99721.webp";
 ;// ./src/index.js
+
+
 
 
 
@@ -239,6 +245,51 @@ document.addEventListener("DOMContentLoaded", function (e) {
       document.querySelector(".articleInnerCardName").textContent = "".concat(articles[n].name);
     }
   }
+
+  //
+
+  // phoneBurger
+
+  if (window.innerHeight > window.innerWidth) {
+    document.querySelector("main").style.marginTop = "20vw";
+    document.querySelector("#mobileNav").style.display = "block";
+    var flagNav = false;
+    var burger = document.querySelector(".burger");
+    document.querySelector(".navigation").style.display = "none";
+    burger.addEventListener("click", function () {
+      burger.classList.toggle("open");
+      if (!flagNav) {
+        flagNav = true;
+        document.querySelector("#mobileNav").style.backgroundColor = "var(--blue)";
+        document.querySelector(".burgerNav").style.display = "block";
+        setTimeout(function () {
+          document.querySelector(".burgerNav").style.opacity = "1";
+          document.querySelector("#mobileLogo").style.backgroundImage = "url(\"".concat(logo_namespaceObject, "\")");
+          document.querySelector("#mobileLogo").style.backgroundSize = "78% 78%";
+          document.querySelector("#mobileLogo").style.backgroundPosition = "20% 50%";
+        }, 0);
+      } else {
+        flagNav = false;
+        document.querySelector(".burgerNav").style.opacity = "0";
+        document.querySelector("#mobileNav").style.backgroundColor = "var(--white)";
+        document.querySelector("#mobileLogo").style.backgroundImage = "url(\"".concat(logoHeader_namespaceObject, "\")");
+        document.querySelector("#mobileLogo").style.backgroundSize = "120% 100%";
+        setTimeout(function () {
+          document.querySelector(".burgerNav").style.display = "none";
+        }, 300);
+      }
+    });
+  } else {
+    document.querySelector("#pcNav").style.display = "block";
+  }
+
+  //
+
+  // resize reload
+
+  window.addEventListener('resize', function (event) {
+    location.reload();
+  });
 
   //
 });
