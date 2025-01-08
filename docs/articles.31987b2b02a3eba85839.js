@@ -72490,72 +72490,133 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
   /* Articals description */
 
-  var req = new XMLHttpRequest();
-  req.onreadystatechange = function () {
-    if (req.readyState == XMLHttpRequest.DONE) {
-      var showDescription = function showDescription(id, dataText) {
-        document.getElementById("articleCard".concat(id)).classList.add("opened");
-        var backColor = document.createElement('div');
-        backColor.classList.add('articleCardRotated');
-        backColor.id = "articleCardRotated".concat(id);
-        document.getElementById("articleCard".concat(id)).append(backColor);
-        document.querySelector("#description".concat(id)).querySelector("img").src = cross_namespaceObject;
-        var articlDescription = document.createElement('p');
-        articlDescription.classList.add("descriptionText");
-        articlDescription.textContent = dataText["article".concat(id)].text;
-        backColor.append(articlDescription);
-        articlDescription.style.fontSize = "".concat(sizes[data[id].size].split(" ")[3], "vw");
-        var tagsContsiner = document.createElement("div");
-        tagsContsiner.classList.add("tagsContainer");
-        backColor.append(tagsContsiner);
-        dataText["article".concat(id)].tags.forEach(function (elem) {
-          var tag = document.createElement("p");
-          tag.classList.add("tag");
-          tag.textContent = elem;
-          tagsContsiner.append(tag);
-        });
-      };
-      var hideAll = function hideAll(dataText) {
-        for (var i = 1; i <= Object.keys(dataText).length; i++) {
-          if (document.getElementById("articleCard".concat(i)).classList.contains("opened")) {
-            document.getElementById("articleCardRotated".concat(i)).remove();
-            document.getElementById("articleCard".concat(i)).classList.remove("opened");
-            document.querySelector("#description".concat(i)).querySelector("img").src = tt_namespaceObject;
+  /*
+  
+      let req = new XMLHttpRequest();
+      req.onreadystatechange = () => {
+          if (req.readyState == XMLHttpRequest.DONE) {
+              let dataText = (JSON.parse(req.responseText).record[0].articles);
+              const articles = Array.from(document.getElementsByClassName('description'));
+  
+              articles.forEach(article => {
+                  article.addEventListener('click', (e) => {
+                      let id = e.target.id.substr(11)
+                      if (document.getElementById(`articleCard${id}`).classList.contains("opened")) {
+                          hide(id, dataText)
+                      } else {
+                          hideAll(dataText)
+                          showDescription(id, dataText)
+                      }
+                  })
+              })
+  
+              function showDescription(id, dataText) {
+  
+                  document.getElementById(`articleCard${id}`).classList.add("opened")
+                  const backColor = document.createElement('div');
+                  backColor.classList.add('articleCardRotated');
+                  backColor.id= `articleCardRotated${id}`;
+                  document.getElementById(`articleCard${id}`).append(backColor);
+                  document.querySelector(`#description${id}`).querySelector("img").src=svgCross;
+  
+                  const articlDescription = document.createElement('p');
+                  articlDescription.classList.add("descriptionText");
+                  articlDescription.textContent=dataText[`article${id}`].text
+                  backColor.append(articlDescription);
+  
+                  articlDescription.style.fontSize=`${sizes[data[id].size].split(" ")[3]}vw`
+  
+                  const tagsContsiner = document.createElement("div");
+                  tagsContsiner.classList.add("tagsContainer");
+                  backColor.append(tagsContsiner);
+  
+                  dataText[`article${id}`].tags.forEach((elem) => {
+                      const tag = document.createElement("p");
+                      tag.classList.add("tag");
+                      tag.textContent=elem
+                      tagsContsiner.append(tag);
+                  })
+              }
+  
+              function hideAll(dataText) {
+                  for (let i = 1; i <= Object.keys(dataText).length; i++) {
+                     if (document.getElementById(`articleCard${i}`).classList.contains("opened")) {
+                          document.getElementById(`articleCardRotated${i}`).remove();
+                          document.getElementById(`articleCard${i}`).classList.remove("opened")
+                          document.querySelector(`#description${i}`).querySelector("img").src=svgTT;
+                     }
+                  }
+              }
+  
+              function hide(id, dataText) {
+                  document.getElementById(`articleCardRotated${id}`).remove();
+                  document.getElementById(`articleCard${id}`).classList.remove("opened")
+                  document.querySelector(`#description${id}`).querySelector("img").src=svgTT;
+              }
+       
           }
+      }; 
+  
+      req.open("GET", "https://api.jsonbin.io/v3/b/677b0e3dacd3cb34a8c4a997/latest", true);
+      req.send();
+  */
+
+  fetch("https://api.npoint.io/2d0473e88177e8b86bfe").then(function (response) {
+    return response.json();
+  }).then(function (dataa) {
+    var dataText = dataa[0].articles;
+    console.log(dataText);
+    var articles = Array.from(document.getElementsByClassName('description'));
+    articles.forEach(function (article) {
+      article.addEventListener('click', function (e) {
+        var id = e.target.id.substr(11);
+        if (document.getElementById("articleCard".concat(id)).classList.contains("opened")) {
+          hide(id, dataText);
+        } else {
+          hideAll(dataText);
+          showDescription(id, dataText);
         }
-      };
-      var hide = function hide(id, dataText) {
-        document.getElementById("articleCardRotated".concat(id)).remove();
-        document.getElementById("articleCard".concat(id)).classList.remove("opened");
-        document.querySelector("#description".concat(id)).querySelector("img").src = tt_namespaceObject;
-      };
-      var dataText = JSON.parse(req.responseText).record[0].articles;
-      var articles = Array.from(document.getElementsByClassName('description'));
-      articles.forEach(function (article) {
-        article.addEventListener('click', function (e) {
-          var id = e.target.id.substr(11);
-          if (document.getElementById("articleCard".concat(id)).classList.contains("opened")) {
-            hide(id, dataText);
-          } else {
-            hideAll(dataText);
-            showDescription(id, dataText);
-          }
-        });
+      });
+    });
+    function showDescription(id, dataText) {
+      document.getElementById("articleCard".concat(id)).classList.add("opened");
+      var backColor = document.createElement('div');
+      backColor.classList.add('articleCardRotated');
+      backColor.id = "articleCardRotated".concat(id);
+      document.getElementById("articleCard".concat(id)).append(backColor);
+      document.querySelector("#description".concat(id)).querySelector("img").src = cross_namespaceObject;
+      var articlDescription = document.createElement('p');
+      articlDescription.classList.add("descriptionText");
+      articlDescription.textContent = dataText["article".concat(id)].text;
+      backColor.append(articlDescription);
+      articlDescription.style.fontSize = "".concat(sizes[data[id].size].split(" ")[3], "vw");
+      var tagsContsiner = document.createElement("div");
+      tagsContsiner.classList.add("tagsContainer");
+      backColor.append(tagsContsiner);
+      dataText["article".concat(id)].tags.forEach(function (elem) {
+        var tag = document.createElement("p");
+        tag.classList.add("tag");
+        tag.textContent = elem;
+        tagsContsiner.append(tag);
       });
     }
-  };
-  req.open("GET", "https://api.jsonbin.io/v3/b/677b0e3dacd3cb34a8c4a997/latest", true);
-  req.send();
-
-  /* */
-
-  // resize reload
-
-  window.addEventListener('resize', function (event) {
-    location.reload();
+    function hideAll(dataText) {
+      for (var i = 1; i <= Object.keys(dataText).length; i++) {
+        if (document.getElementById("articleCard".concat(i)).classList.contains("opened")) {
+          document.getElementById("articleCardRotated".concat(i)).remove();
+          document.getElementById("articleCard".concat(i)).classList.remove("opened");
+          document.querySelector("#description".concat(i)).querySelector("img").src = tt_namespaceObject;
+        }
+      }
+    }
+    function hide(id, dataText) {
+      document.getElementById("articleCardRotated".concat(id)).remove();
+      document.getElementById("articleCard".concat(id)).classList.remove("opened");
+      document.querySelector("#description".concat(id)).querySelector("img").src = tt_namespaceObject;
+    }
   });
 
-  //
+  /* */
 });
 /******/ })()
 ;
