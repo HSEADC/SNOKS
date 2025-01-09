@@ -72389,9 +72389,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
   if (window.innerHeight > window.innerWidth) {
     sizes = {
-      small: "48 34 1.3 1.5",
-      middle: "32 35 1.2 1.3",
-      big: "100 30 1.4 1.5"
+      small: "48 44 3 1.5",
+      middle: "100 65 3 1.3",
+      big: "100 45 3 1.5"
     };
   } else if (window.innerHeight <= window.innerWidth) {
     sizes = {
@@ -72432,6 +72432,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     goIcon.append(goIconImg);
     var p = document.createElement('p');
     p.id = "articleName".concat(elem);
+    p.style.lineHeight = "2.3vw";
     p.textContent = "".concat(data[elem].name);
     p.style.fontSize = "".concat(sizeName[2], "vw");
     div.append(p);
@@ -72454,6 +72455,25 @@ document.addEventListener("DOMContentLoaded", function (e) {
   // phoneBurger
 
   if (window.innerHeight > window.innerWidth) {
+    var descriptions = document.querySelectorAll(".description");
+    descriptions.forEach(function (description) {
+      description.style.height = "10vw";
+      description.style.width = "10vw";
+      description.firstElementChild.style.height = "5vw";
+      description.firstElementChild.style.width = "5vw";
+    });
+    var goIcons = document.querySelectorAll(".goIcon");
+    goIcons.forEach(function (goIcon) {
+      goIcon.style.height = "10vw";
+      goIcon.style.width = "10vw";
+      goIcon.firstElementChild.style.height = "5vw";
+      goIcon.firstElementChild.style.width = "5vw";
+    });
+    var articleCards = document.querySelectorAll(".articleCard");
+    articleCards.forEach(function (articleCard) {
+      console.log(articleCard.children[1].style.lineHeight = "3.5vw");
+    });
+    document.querySelector(".articlesBlock").style.width = "90%";
     document.querySelector("main").style.marginTop = "25vw";
     document.querySelector("#mobileNav").style.display = "block";
     var flagNav = false;

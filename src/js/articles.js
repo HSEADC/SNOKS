@@ -146,9 +146,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     if (window.innerHeight > window.innerWidth) {
         sizes = {
-            small: "48 34 1.3 1.5",
-            middle: "32 35 1.2 1.3",
-            big: "100 30 1.4 1.5"
+            small: "48 44 3 1.5",
+            middle: "100 65 3 1.3",
+            big: "100 45 3 1.5"
         }
 
       } else if (window.innerHeight <= window.innerWidth) {
@@ -197,6 +197,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         goIcon.append(goIconImg)
         const p = document.createElement('p');
         p.id=`articleName${elem}`;
+        p.style.lineHeight="2.3vw";
         p.textContent=`${data[elem].name}`;
         p.style.fontSize=`${sizeName[2]}vw`;
         div.append(p);
@@ -220,6 +221,30 @@ document.addEventListener("DOMContentLoaded", (e) => {
 // phoneBurger
 
     if (window.innerHeight > window.innerWidth) { 
+        let descriptions = document.querySelectorAll(".description")
+        descriptions.forEach(description => {
+            description.style.height="10vw";
+            description.style.width="10vw";
+            description.firstElementChild.style.height="5vw";
+            description.firstElementChild.style.width="5vw";
+        })
+
+        let goIcons = document.querySelectorAll(".goIcon")
+        goIcons.forEach(goIcon => {
+            goIcon.style.height="10vw";
+            goIcon.style.width="10vw";
+            goIcon.firstElementChild.style.height="5vw";
+            goIcon.firstElementChild.style.width="5vw";
+        })
+
+
+        let articleCards = document.querySelectorAll(".articleCard")
+        articleCards.forEach(articleCard => {
+            console.log(articleCard.children[1].style.lineHeight="3.5vw")
+        })
+
+
+        document.querySelector(".articlesBlock").style.width="90%"
         document.querySelector("main").style.marginTop="25vw"
         document.querySelector("#mobileNav").style.display="block"
         let flagNav = false;
