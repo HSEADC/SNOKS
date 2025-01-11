@@ -72380,24 +72380,26 @@ document.addEventListener("DOMContentLoaded", function (e) {
     }
   };
   var sizes = {
-    small: "24 22 1.1 1",
-    middle: "32 35 1.2 1.2",
-    big: "100 25 1.4 1.5"
+    small: "24 22 1.1 0.8 100 120 0 0",
+    middle: "32 35 1.2 1.2 100 120 0 0",
+    big: "100 25 1.4 1.5 100 120 0 0"
   };
 
   /* articles adaptive */
 
   if (window.innerHeight > window.innerWidth) {
     sizes = {
-      small: "48 44 3 1.5",
-      middle: "100 65 3 1.3",
-      big: "100 45 3 1.5"
+      small: "48 45 2.9 3 100 120 0 0",
+      middle: "100 65 2.9 3 100 180 0 -20",
+      big: "100 45 2.9 3 180 150 -50 -15"
     };
+
+    // width% heightVw fontSizeVW lineHeightVw BackGroundSize1Vw BackGroundSize2Vw BackGroundPosition1Vw BackGroundPosition2Vw
   } else if (window.innerHeight <= window.innerWidth) {
     sizes = {
-      small: "24 22 1.1 0.8",
-      middle: "32 35 1.2 1.2",
-      big: "100 25 1.4 1.5"
+      small: "24 22 1.1 1.5 100 120 0 0",
+      middle: "32 35 1.2 1.5 100 120 0 0",
+      big: "100 25 1.4 1.5 100 120 0 0"
     };
   }
 
@@ -72419,10 +72421,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
     div.style.height = "".concat(sizeName[1], "vw");
     div.id = "articleCard".concat(elem);
     div.style.backgroundImage = "url('".concat(data[elem].img, "')");
-    if (sizeName[0] == 100) {
-      console.log(div);
-      div.style.backgroundSize = "100% 120%";
-    }
+    div.style.backgroundSize = "".concat(sizeName[4], "% ").concat(sizeName[5], "%");
+    div.style.backgroundPosition = "".concat(sizeName[6], "vw ").concat(sizeName[7], "vw");
     section.append(div);
     var goIcon = document.createElement('div');
     goIcon.classList.add('goIcon');
@@ -72435,6 +72435,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     p.style.lineHeight = "2.3vw";
     p.textContent = "".concat(data[elem].name);
     p.style.fontSize = "".concat(sizeName[2], "vw");
+    p.style.lineHeight = "".concat(sizeName[3], "vw");
     div.append(p);
     var description = document.createElement('div');
     description.id = "description".concat(elem);
@@ -72455,24 +72456,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
   // phoneBurger
 
   if (window.innerHeight > window.innerWidth) {
-    var descriptions = document.querySelectorAll(".description");
-    descriptions.forEach(function (description) {
-      description.style.height = "10vw";
-      description.style.width = "10vw";
-      description.firstElementChild.style.height = "5vw";
-      description.firstElementChild.style.width = "5vw";
-    });
-    var goIcons = document.querySelectorAll(".goIcon");
-    goIcons.forEach(function (goIcon) {
-      goIcon.style.height = "10vw";
-      goIcon.style.width = "10vw";
-      goIcon.firstElementChild.style.height = "5vw";
-      goIcon.firstElementChild.style.width = "5vw";
-    });
-    var articleCards = document.querySelectorAll(".articleCard");
-    articleCards.forEach(function (articleCard) {
-      console.log(articleCard.children[1].style.lineHeight = "3.5vw");
-    });
     document.querySelector(".articlesBlock").style.width = "90%";
     document.querySelector("main").style.marginTop = "25vw";
     document.querySelector("#mobileNav").style.display = "block";
@@ -72510,77 +72493,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
   /* Articals description */
 
-  /*
-  
-      let req = new XMLHttpRequest();
-      req.onreadystatechange = () => {
-          if (req.readyState == XMLHttpRequest.DONE) {
-              let dataText = (JSON.parse(req.responseText).record[0].articles);
-              const articles = Array.from(document.getElementsByClassName('description'));
-  
-              articles.forEach(article => {
-                  article.addEventListener('click', (e) => {
-                      let id = e.target.id.substr(11)
-                      if (document.getElementById(`articleCard${id}`).classList.contains("opened")) {
-                          hide(id, dataText)
-                      } else {
-                          hideAll(dataText)
-                          showDescription(id, dataText)
-                      }
-                  })
-              })
-  
-              function showDescription(id, dataText) {
-  
-                  document.getElementById(`articleCard${id}`).classList.add("opened")
-                  const backColor = document.createElement('div');
-                  backColor.classList.add('articleCardRotated');
-                  backColor.id= `articleCardRotated${id}`;
-                  document.getElementById(`articleCard${id}`).append(backColor);
-                  document.querySelector(`#description${id}`).querySelector("img").src=svgCross;
-  
-                  const articlDescription = document.createElement('p');
-                  articlDescription.classList.add("descriptionText");
-                  articlDescription.textContent=dataText[`article${id}`].text
-                  backColor.append(articlDescription);
-  
-                  articlDescription.style.fontSize=`${sizes[data[id].size].split(" ")[3]}vw`
-  
-                  const tagsContsiner = document.createElement("div");
-                  tagsContsiner.classList.add("tagsContainer");
-                  backColor.append(tagsContsiner);
-  
-                  dataText[`article${id}`].tags.forEach((elem) => {
-                      const tag = document.createElement("p");
-                      tag.classList.add("tag");
-                      tag.textContent=elem
-                      tagsContsiner.append(tag);
-                  })
-              }
-  
-              function hideAll(dataText) {
-                  for (let i = 1; i <= Object.keys(dataText).length; i++) {
-                     if (document.getElementById(`articleCard${i}`).classList.contains("opened")) {
-                          document.getElementById(`articleCardRotated${i}`).remove();
-                          document.getElementById(`articleCard${i}`).classList.remove("opened")
-                          document.querySelector(`#description${i}`).querySelector("img").src=svgTT;
-                     }
-                  }
-              }
-  
-              function hide(id, dataText) {
-                  document.getElementById(`articleCardRotated${id}`).remove();
-                  document.getElementById(`articleCard${id}`).classList.remove("opened")
-                  document.querySelector(`#description${id}`).querySelector("img").src=svgTT;
-              }
-       
-          }
-      }; 
-  
-      req.open("GET", "https://api.jsonbin.io/v3/b/677b0e3dacd3cb34a8c4a997/latest", true);
-      req.send();
-  */
-
   fetch("https://api.npoint.io/2d0473e88177e8b86bfe").then(function (response) {
     return response.json();
   }).then(function (dataa) {
@@ -72609,7 +72521,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
       articlDescription.classList.add("descriptionText");
       articlDescription.textContent = dataText["article".concat(id)].text;
       backColor.append(articlDescription);
-      articlDescription.style.fontSize = "".concat(sizes[data[id].size].split(" ")[3], "vw");
+      articlDescription.style.fontSize = "".concat(sizes[data[id].size].split(" ")[2], "vw");
+      articlDescription.style.lineHeight = "".concat(sizes[data[id].size].split(" ")[3], "vw");
       var tagsContsiner = document.createElement("div");
       tagsContsiner.classList.add("tagsContainer");
       backColor.append(tagsContsiner);
@@ -72617,6 +72530,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
         var tag = document.createElement("p");
         tag.classList.add("tag");
         tag.textContent = elem;
+        tag.style.fontSize = "".concat(sizes[data[id].size].split(" ")[2], "vw");
+        if (window.innerHeight > window.innerWidth) {
+          tag.style.padding = "2vw ";
+        } else {
+          tag.style.padding = "1vw";
+        }
         tagsContsiner.append(tag);
       });
     }
@@ -72635,6 +72554,27 @@ document.addEventListener("DOMContentLoaded", function (e) {
       document.querySelector("#description".concat(id)).querySelector("img").src = tt_namespaceObject;
     }
   });
+
+  /* */
+
+  /* adaptives */
+
+  if (window.innerHeight > window.innerWidth) {
+    var descriptions = document.querySelectorAll(".description");
+    descriptions.forEach(function (description) {
+      description.style.height = "10vw";
+      description.style.width = "10vw";
+      description.firstElementChild.style.height = "5vw";
+      description.firstElementChild.style.width = "5vw";
+    });
+    var goIcons = document.querySelectorAll(".goIcon");
+    goIcons.forEach(function (goIcon) {
+      goIcon.style.height = "10vw";
+      goIcon.style.width = "10vw";
+      goIcon.firstElementChild.style.height = "5vw";
+      goIcon.firstElementChild.style.width = "5vw";
+    });
+  }
 
   /* */
 });
