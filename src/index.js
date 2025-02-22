@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                     
                 })
             } else {
-                for (let i = 1; i <= 5; i++) {
+                for (let i = 1; i <= 6; i++) {
                     document.getElementById(`factText${i}`).style.opacity="0";
                     document.getElementById(`factText${i}`).style.display="none";
                     if (document.querySelector(`#btnCircle${i}`).className.includes("bigCircle")) {
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             if (fact.className == "btnCircle" ) {
                 let num = fact.id.split("")[9]
 
-                for (let i = 1; i <= 5; i++) {
+                for (let i = 1; i <= 6; i++) {
                     if (document.querySelector(`#btnCircle${i}`).className.includes("bigCircle")) {
                         document.querySelector(`#btnCircle${i}`).classList.remove("bigCircle");
                         document.querySelector(`#btnText${i}`).classList.remove("biggerText");
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                     
                 })
             } else {
-                for (let i = 1; i <= 5; i++) {
+                for (let i = 1; i <= 6; i++) {
                     document.getElementById(`factText${i}`).style.opacity="0";
                     document.getElementById(`factText${i}`).style.display="none";
                     if (document.querySelector(`#btnCircle${i}`).className.includes("bigCircle")) {

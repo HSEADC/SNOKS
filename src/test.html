@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Тест</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="название теста"/>
+    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <meta property="og:description" content="название теста"/>
+    <meta property="og:image" content="https://ibb.co/55LDw1H"/>
+    <meta property="og:type" content="tests"/>
+    <meta property="og:url" content= "https://hseadc.github.io/SNOKS/shop.html" />
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="preload"href="./fonts/Unbounded/bold/Unbounded-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload"href="./fonts/druktextwidecyr/druktextwidecyr-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+
+  <body class="test">
+
+    <div id="preloader">
+      <video class="preloader-animation" src="./images/preloadVid.webm" muted autoplay></video>
+    </div>
+
+   <header>
+
+    <nav class="navigation" id="pcNav">
+      <ul>
+        <li>
+          <form action="./preview.html">
+              <button><div class="logo"></div></button>
+          </form>
+        </li>
+        <li><a href="./index.html">о нас</a></li>
+        <li><a href="./styleguide.html">стайлгайд</a></li>
+        <li><a href="./articles.html">статьи</a></li>
+        <li><a href="./tests.html" class="choosenA">тесты</a></li>
+        <li><a href="./shop.html">магазин</a></li>
+      </ul>
+    </nav>
+
+    <nav class="navigation" id="mobileNav">
+      <ul>
+        <li>
+          <form action="./preview.html">
+              <button><div class="logo" id="mobileLogo"></div></button>
+          </form>
+        </li>
+
+        <li>
+            <button class="burger" type="checkbox" id="burger" name="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button> 
+        </li>
+      </ul>
+    </nav>
+
+
+
+    <section class="burgerNav"> 
+
+      <ul class="menuList">
+        <li><a href="./index.html">о нас</a></li>
+        <li><a href="./styleguide.html">стайлгайд</a></li>
+        <li><a href="./articles.html">статьи</a></li>
+        <li><a href="./tests.html" class="choosenA">тесты</a></li>
+        <li><a href="./shop.html">магазин</a></li>
+      </ul>
+    </section>
+    
+    </header>
+
+    <main>
+
+      <section class="testBlock" id="testTitle">
+        <div class="testCard">
+          <div class="goIcon" id="goIcon">
+            <img src="./images/articles/arrow.svg">
+          </div>
+          <p class="testName">Какой ты <br>сновидец?</p>
+        </div>
+
+        <div class="testTextsContainerAndBtn">
+          <div class="testTextsContainer">
+            <h1>Что сны говорят <br>
+              о твоих страхах?
+            </h1>
+  
+            <p id="testDescription">Этот  тест поможет  тебе разобраться в том, 
+              что твои сны могут говорить о твоих страхах. Ответив 
+              на несколько вопросов, ты сможешь лучше понять, 
+              какие эмоции и переживания могут скрываться 
+              за твоими ночными видениями. <br><br>Готов ли ты узнать больше
+               о себе и своих страхах? Давай начнем!
+            </p>
+  
+            <p class="time">
+              3 — 5 мин
+            </p>
+          </div>
+
+          <button class="startTest">Начать тест</button>
+
+        </div>
+      </section>
+
+
+      
+      <section class="questionsSection" id="testUI">
+
+        <img src="./images/testsBack.svg" class="testBackground">
+
+        <div class="NameSecAndNum">
+          <h2 class="question">Что сны говорят 
+            о твоих страхах?</h2>
+          <p class="num">1/10</p>
+        </div>
+
+        <div class="answers">
+
+          <!-- EXAMPLE
+          <button class="answer" id="A">
+            <p class="answerTip">A</p>
+            <p>Каждый день</p>
+          </button>
+          <button class="answer" id="B">
+            <p class="answerTip">B</p>
+            <p>Каждый день</p>
+          </button>
+          <button class="answer" id="C">
+            <p class="answerTip">C</p>
+            <p>Каждый день</p>
+          </button>
+          <button class="answer" id="D">
+            <p class="answerTip">D</p>
+            <p>Каждый день</p>
+          </button>
+
+          -->
+        </div>
+
+        <div class="navigationCircles">
+          <button class="navCircle" id="prev"></button>
+          <button class="navCircle" id="next"></button>
+          <button class="navResults" id="result">Результат</button>
+        </div>
+
+
+      </section>
+
+
+      <section class="resultSection" id="resultUI">
+        <div class="resultsAllContainer">
+          <div class="resultsTextsContainer">
+            <p class="appeal">Вы:</p>
+            <h3 class="resultTitle">Спокойный сновидец</h3>
+            <p class="resultMainText"></p>
+          </div>
+          <img class="resultImg" src="./images/tests/result1.webp">
+        </div>
+        <div class="resultsBtnsContainer">
+          <button class="share">Поделиться</button>
+          <form action="./tests.html">
+            <button>Другие тесты</button>
+        </form>
+        </div>
+        
+      </section>
+
+      <div id="my-table-id"></div>
+      
+
+    </main>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  </body>
+</html>

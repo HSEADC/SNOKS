@@ -23,7 +23,7 @@
 
     <header>
 
-      <nav class="navigation" id="pcNav">
+      <nav class="navigation w_headerHavigation" id="pcNav">
         <ul>
           <li>
             <form action="./preview.html">
@@ -34,13 +34,12 @@
           <li><a href="./styleguide.html">стайлгайд</a></li>
           <li><a href="./articles.html">статьи</a></li>
           <li><a href="./tests.html">тесты</a></li>
-          <li><a href="./dreambook.html">сонник</a></li>
           <li><a href="./shop.html">магазин</a></li>
         </ul>
       </nav>
 
 
-      <nav class="navigation" id="mobileNav">
+      <nav class="navigation w_headerHavigation" id="mobileNav">
         <ul>
           <li>
             <form action="./preview.html">
@@ -66,7 +65,6 @@
           <li><a href="./styleguide.html">стайлгайд</a></li>
           <li><a href="./articles.html">статьи</a></li>
           <li><a href="./tests.html">тесты</a></li>
-          <li><a href="./dreambook.html">сонник</a></li>
           <li><a href="./shop.html">магазин</a></li>
         </ul>
       </section>
@@ -87,7 +85,7 @@
 
         <div class="backgroundBorderRadius upRound"></div>
 
-        <section class="LogoScreenContainer">
+        <section class="logoScreenContainer">
           <video src="./images/aboutUs/aboutUs.webm" muted autoplay loop></video>
           <div class="newCard">
             <h4>о нас</h4>
@@ -100,13 +98,15 @@
 
         <div class="backgroundBorderRadius downRound"></div>
 
-        <section class="WhyDreamsContainer">
+        <section class="whyDreamsContainer">
           <h2>П&nbsp;&nbsp;&nbsp;&nbsp;чему м&nbsp;&nbsp;&nbsp;&nbsp;е это снится?<br>Есть ли какой-то с&nbsp;&nbsp;&nbsp;&nbsp;ысл<br> в моих сн&nbsp;&nbsp;&nbsp;&nbsp;х?</h2>
           <img class="letterPuffy" id="o" src="./images/aboutUs/0.webp">
           <img class="letterPuffy" id="h" src="./images/aboutUs/n.webp">
           <img class="letterPuffy" id="m" src="./images/aboutUs/m.webp">
           <img class="letterPuffy" id="a" src="./images/aboutUs/a.webp">
         </section>
+
+        <!--
 
         <p class="miniText">
           Мы тоже размышляли над этим. Изучая<br>
@@ -115,6 +115,8 @@
           сон — крайне<br>
           <span>важная часть нашей жизни</span>.
         </p>
+
+        -->
 
         <section class="missionText">
           <img id="leftPillow" src="./images/leftPillow.webp">
@@ -125,34 +127,6 @@
         </section>
 
         <section class="factsContainer">
-          <div class="factsBtns">
-
-            <div class="btn" id="btn1">
-              <img class="btnText" id="btnText1" src="./images/fact1.svg">
-              <div class="btnCircle" id="btnCircle1"></div>
-            </div>
-
-            <div class="btn" id="btn2">
-              <img class="btnText" id="btnText2" src="./images/fact2.svg">
-              <div class="btnCircle" id="btnCircle2"></div>
-            </div>
-
-            <div class="btn" id="btn3">
-              <img class="btnText" id="btnText3" src="./images/fact3.svg">
-              <div class="btnCircle" id="btnCircle3"></div>
-            </div>
-
-            <div class="btn" id="btn4">
-              <img class="btnText" id="btnText4" src="./images/fact4.svg">
-              <div class="btnCircle" id="btnCircle4"></div>
-            </div>
-
-            <div class="btn" id="btn5">
-              <img class="btnText" id="btnText5" src="./images/fact5.svg">
-              <div class="btnCircle" id="btnCircle5"></div>
-            </div>
-
-          </div>
 
           <div class="factsReview">
             <div class="factsTitleContainer">
@@ -196,7 +170,47 @@
                    только в черно-белом цвете.</p>
               </div>
 
+              <div class="factText" id="factText6">
+                <h4>Цвета</h4>
+                <p>Примерно 12% людей видят сны<br>
+                   только в черно-белом цвете.</p>
+              </div>
+
             </div>
+          </div>
+
+          <div class="factsBtns">
+
+            <div class="btn" id="btn1">
+              <img class="btnText" id="btnText1" src="./images/fact1.svg">
+              <div class="btnCircle" id="btnCircle1"></div>
+            </div>
+
+            <div class="btn" id="btn2">
+              <img class="btnText" id="btnText2" src="./images/fact2.svg">
+              <div class="btnCircle" id="btnCircle2"></div>
+            </div>
+
+            <div class="btn" id="btn3">
+              <img class="btnText" id="btnText3" src="./images/fact3.svg">
+              <div class="btnCircle" id="btnCircle3"></div>
+            </div>
+
+            <div class="btn" id="btn4">
+              <img class="btnText" id="btnText4" src="./images/fact4.svg">
+              <div class="btnCircle" id="btnCircle4"></div>
+            </div>
+
+            <div class="btn" id="btn5">
+              <img class="btnText" id="btnText5" src="./images/fact5.svg">
+              <div class="btnCircle" id="btnCircle5"></div>
+            </div>
+
+            <div class="btn" id="btn6">
+              <img class="btnText" id="btnText6" src="./images/fact5.svg">
+              <div class="btnCircle" id="btnCircle6"></div>
+            </div>
+
           </div>
         </section>
 
@@ -204,8 +218,8 @@
 
         <section class="ThreeScreenContainer">
           <video src="./images/aboutUs/3dTextScreen.webm" muted autoplay loop></video>
-          <p class="first3DTExt">сон — это время, когда мы<br> возвращаемся к себе</p>
-          <p class="second3DTExt">сон — это время, когда мы<br> возвращаемся к себе</p>
+          <p class="first3DText">сон — это время, когда мы<br> возвращаемся к себе</p>
+          <p class="second3DText">сон — это время, когда мы<br> возвращаемся к себе</p>
         </section>
 
         <div class="backgroundBorderRadius downRound"></div>
@@ -225,7 +239,7 @@
               </button>
             </form>
 
-           <img class="arrow arRight" src="./images/rightPillow.webp">
+            <img class="arrow arRight" src="./images/rightPillow.webp">
 
           </div>
 

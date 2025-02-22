@@ -14,7 +14,8 @@ module.exports = {
     tests: '/src/js/tests.js',
     styleguide: "./src/js/styleguide.js",
     dreambook: "./src/js/dreambook.js",
-    shop: "./src/js/shop.js"
+    shop: "./src/js/shop.js",
+    test: "./src/js/test.js"
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -136,6 +137,12 @@ module.exports = {
       template: './src/shop.html',
       filename: './shop.html',
       chunks: ["shop"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/test.html',
+      filename: './test.html',
+      chunks: ["test"],
     }),
 
 
