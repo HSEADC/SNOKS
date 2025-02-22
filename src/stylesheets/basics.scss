@@ -98,6 +98,16 @@ footer {
   }
 }
 
+@media (max-width: 695px) {
+  footer {
+    padding: 5vw 2.5vw;
+    p {
+      font-size: 2vw;
+      line-height: 2.3vw;
+    }
+  }
+}
+
 /* */
 
 
@@ -150,8 +160,8 @@ footer {
 /* logotip */
 
 .logo {
-  width: 14.5vw;
-  height: 15vw;
+  width: 16.5vw;
+  height: 17vw;
   background-image: url("../images/aboutUs/logoHeader.webp");
   background-size: 120% 100%;
   transition: all 0.2s ease-in-out;
@@ -243,3 +253,52 @@ footer {
 
 /* */
 
+
+/* roundedBlockStyle */
+
+.backgroundBorderRadius {
+  background-color: var(--white);
+  height: 5vw;
+  width: 100vw;
+  z-index: 999;
+  position: relative;
+}
+
+.upRound {
+  border-bottom-right-radius: 3vw;
+  border-bottom-left-radius: 3vw;
+}
+
+.downRound {
+  border-top-right-radius: 3vw;
+  border-top-left-radius: 3vw;
+  margin-top: -3vw;
+}
+
+/* */
+
+/* circlesAnimations */
+
+@keyframes shake1 {
+  0% { transform: translate(2px, 3px) }
+  50% { transform: translate(-2px, 3px) }
+  100% { transform: translate(2px, 3px) }
+}
+
+@keyframes shake2 {
+  0% { transform: translate(-3px, 2px) }
+  50% { transform: translate(3px, -2px) }
+  100% { transform: translate(-3px, 2px) }
+}
+
+@keyframes shake3 {
+  0% { transform: translate(-1px, 3px) }
+  50% { transform: translate(3px, -2px) }
+  100% { transform: translate(-1px, 3px) }
+}
+
+@keyframes shake4 {
+  0% { transform: translate(2px, 1px) }
+  50% { transform: translate(-3px, 3px) }
+  100% { transform: translate(2px, 1px) }
+}

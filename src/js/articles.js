@@ -11,14 +11,17 @@ import imgArt9 from '../images/articles/article9.webp';
 import imgArt10 from '../images/articles/article10.webp';
 import imgArt11 from '../images/articles/article11.webp';
 import imgArt12 from '../images/articles/article12.webp';
-import svgArrow from '../images/articles/arrow.svg'
-import svgTT from '../images/articles/tt.svg'
-import svgArrows from '../images/arrows.svg'
+import svgArrow from '../images/articles/arrow.svg';
+import svgTT from '../images/articles/tt.svg';
+import svgArrows from '../images/arrows.svg';
+import svgArrowsOpened from '../images/arrowsOpened.svg'
 import svgCross from '../images/articles/cross.svg' 
 
 import svgLogo from '../images/preview/logo.svg'
 import pngLogo from '../images/aboutUs/logoHeader.webp'
 import { length } from 'three/examples/jsm/nodes/Nodes.js';
+
+const images = {imgArt1, imgArt2, imgArt3, imgArt4, imgArt5, imgArt6, imgArt7, imgArt8, imgArt9, imgArt10, imgArt11, imgArt12}
 
 
 
@@ -34,108 +37,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     document.getElementById("arrows").src=svgArrows
 
-    const data = {
-        1: {
-            name: `Почему дети плохо спят?`,
-            time: "3 — 5",
-            size: "middle",
-            tag: ["дети", "сон"],
-            img: imgArt1,
-        },
-    
-        2: {
-            name: "Как помочь ребенку спать лучше?",
-            time: "6 — 7",
-            size: "middle",
-            tag: ["дети", "сон"],
-            img: imgArt2,
-        },
-    
-        3: {
-            name: "Нужен ли ребёнку дневной сон?",
-            time: "3 — 5",
-            size: "middle",
-            tag: ["дети", "сон"],
-            img: imgArt3,
-        },
-    
-        4: {
-            name: "Что делать, если ребёнок боится засыпать один?",
-            time: "5 — 7",
-            size: "big",
-            tag: ["дети", "сон"],
-            img: imgArt4,
-        },
-
-        5: {
-            name: `Причины бессоницы`,
-            time: "3 — 5",
-            size: "small",
-            tag: ["здоровье"],
-            img: imgArt5,
-        },
-
-        6: {
-            name: `Почему дети \r\n плохо спят?`,
-            time: "3 — 5",
-            size: "small",
-            tag: ["дети", "сон"],
-            img: imgArt6,
-        },
-
-        7: {
-            name: `Почему дети \r\n плохо спят?`,
-            time: "3 — 5",
-            size: "small",
-            tag: ["дети", "сон"],
-            img: imgArt7,
-        },
-
-        8: {
-            name: `Почему дети \r\n плохо спят?`,
-            time: "3 — 5",
-            size: "small",
-            tag: ["дети", "сон"],
-            img: imgArt8,
-        },
-
-        9: {
-            name: `Что такое лунатизми почему он возникает?`,
-            time: "5 — 7",
-            size: "big",
-            tag: ["здоровье", "сон"],
-            img: imgArt9,
-        },
-
-        
-        10: {
-            name: `Совы и жаворонки:кто это?`,
-            time: "3 — 5",
-            size: "middle",
-            tag: ["иследование", "сон"],
-            img: imgArt10,
-        },
-
-        11: {
-            name: `Почему время во снах бывает искажено?`,
-            time: "3 — 5",
-            size: "middle",
-            tag: ["иследование", "сон"],
-            img: imgArt11,
-        },
-
-        12: {
-            name: `7 советов для улучшения сна`,
-            time: "3 — 5",
-            size: "middle",
-            tag: ["советы", "сон"],
-            img: imgArt12,
-        },
-
-
-    }
- 
-
     let sizes = {
         small: "24 22 1.1 0.8 100 120 0 0",
         middle: "32 35 1.2 1.2 100 120 0 0",
@@ -146,8 +47,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     if (window.innerHeight > window.innerWidth) {
         sizes = {
-            small: "48 45 2.9 3 100 120 0 0",
-            middle: "100 65 2.9 3 100 180 0 -20",
+            small: "48 47 2.7 3 100 120 0 0",
+            middle: "100 69 2.9 3 100 180 0 -20",
             big: "100 45 2.9 3 180 150 -50 -15"
         }
 
@@ -155,7 +56,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
       } else if (window.innerHeight <= window.innerWidth) {
         sizes = {
-            small: "24 22 1.1 1.5 100 120 0 0",
+            small: "24 25 1.1 1.5 120 120 0 0",
             middle: "32 35 1.2 1.5 100 120 0 0",
             big: "100 25 1.4 1.5 100 120 0 0"
         }
@@ -170,50 +71,67 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 // generation of article cards
 
+    let dataText = generationArticles()
 
-    for (let elem in data) {
-        const section = document.createElement('section');
-        section.classList.add('articleCardAndTime');
-        container.append(section);
-        let sizeName = (sizes[`${data[elem].size}`]).split(" ");
-        console.log(sizeName[0])
-        section.style.width=`${sizeName[0]}%`;
-        const div = document.createElement('div');
-        div.classList.add('articleCard');
-        div.style.height=`${sizeName[1]}vw`;
-        div.id = `articleCard${elem}`;
 
-        div.style.backgroundImage=`url('${data[elem].img}')`;
-        div.style.backgroundSize=`${sizeName[4]}% ${sizeName[5]}%`;
-        div.style.backgroundPosition=`${sizeName[6]}vw ${sizeName[7]}vw`
+    function generationArticles() {
+        fetch("https://api.npoint.io/ebd355c8a0376b2c5439").then(function (response) {
+            return response.json();
+          }).then(function (dataa) {   
+            const dataText = dataa[0].articles
+            console.log(dataText)
+        
+            for (let elem in dataText) {
+                const section = document.createElement('section');
+                section.classList.add('articleCardAndTime');
+                section.classList.add('showed');
+                section.id=`articleCardAndTime${elem}`;
+                container.append(section);
+                let sizeName = (sizes[`${dataText[elem].size}`]).split(" ");
+                section.style.width=`${sizeName[0]}%`;
+        
+                const div = document.createElement('div');
+                div.classList.add('articleCard');
+                div.style.height=`${sizeName[1]}vw`;
+                div.id = `articleCard${elem}`;
+        
+                div.style.backgroundImage=`url('${images[dataText[elem].img]}')`;
+                div.style.backgroundSize=`${sizeName[4]}% ${sizeName[5]}%`;
+                div.style.backgroundPosition=`${sizeName[6]}vw ${sizeName[7]}vw`
+        
+                section.append(div);
+                const goIcon = document.createElement('div');
+                goIcon.classList.add('goIcon');
+                div.append(goIcon);
+                const goIconImg = document.createElement('img')
+                goIconImg.src=svgArrow
+                goIcon.append(goIconImg)
+                const p = document.createElement('p');
+                p.id=`articleName${elem}`;
+                p.style.lineHeight="2.3vw";
+                p.textContent=`${dataText[elem].name}`;
+                p.style.fontSize=`${sizeName[2]}vw`;
+                p.style.lineHeight=`${sizeName[3]}vw`;
+                div.append(p);
+                const description = document.createElement('div');
+                description.id = `description${elem}`
+                description.classList.add('description');
+                div.append(description);
+                const descriptionImg = document.createElement('img');
+                descriptionImg.src=svgTT;
+                descriptionImg.style.pointerEvents="none"
+                description.append(descriptionImg);
+                let time = document.createElement('p');
+                time.id = `articleTime${elem}`;
+                time.textContent=`${dataText[elem].time} мин`;
+                section.append(time);
+            }
+        })
 
-        section.append(div);
-        const goIcon = document.createElement('div');
-        goIcon.classList.add('goIcon');
-        div.append(goIcon);
-        const goIconImg = document.createElement('img')
-        goIconImg.src=svgArrow
-        goIcon.append(goIconImg)
-        const p = document.createElement('p');
-        p.id=`articleName${elem}`;
-        p.style.lineHeight="2.3vw";
-        p.textContent=`${data[elem].name}`;
-        p.style.fontSize=`${sizeName[2]}vw`;
-        p.style.lineHeight=`${sizeName[3]}vw`;
-        div.append(p);
-        const description = document.createElement('div');
-        description.id = `description${elem}`
-        description.classList.add('description');
-        div.append(description);
-        const descriptionImg = document.createElement('img');
-        descriptionImg.src=svgTT;
-        descriptionImg.style.pointerEvents="none"
-        description.append(descriptionImg);
-        let time = document.createElement('p');
-        time.id = `articleTime${elem}`;
-        time.textContent=`${data[elem].time} мин`;
-        section.append(time);
     }
+
+
+        
 
 //
 
@@ -222,7 +140,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     if (window.innerHeight > window.innerWidth) { 
 
         document.querySelector(".articlesBlock").style.width="90%"
-        document.querySelector("main").style.marginTop="25vw"
+        document.querySelector("main").style.marginTop="30vw"
         document.querySelector("#mobileNav").style.display="block"
         let flagNav = false;
         const burger = document.querySelector(".burger");
@@ -261,7 +179,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 /* Articals description */
 
-    fetch("https://api.npoint.io/2d0473e88177e8b86bfe").then(function (response) {
+    fetch("https://api.npoint.io/ebd355c8a0376b2c5439").then(function (response) {
         return response.json();
       }).then(function (dataa) {   
         const dataText = dataa[0].articles
@@ -282,7 +200,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
         function showDescription(id, dataText) {
      
-
             document.getElementById(`articleCard${id}`).classList.add("opened")
             const backColor = document.createElement('div');
             backColor.classList.add('articleCardRotated');
@@ -292,21 +209,22 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
             const articlDescription = document.createElement('p');
             articlDescription.classList.add("descriptionText");
-            articlDescription.textContent=dataText[`article${id}`].text
+            articlDescription.textContent=dataText[id].text
             backColor.append(articlDescription);
 
-            articlDescription.style.fontSize=`${sizes[data[id].size].split(" ")[2]}vw`
-            articlDescription.style.lineHeight=`${sizes[data[id].size].split(" ")[3]}vw`
+
+            articlDescription.style.fontSize=`${sizes[dataText[id].size].split(" ")[2]}vw`
+            articlDescription.style.lineHeight=`${sizes[dataText[id].size].split(" ")[3]}vw`
 
             const tagsContsiner = document.createElement("div");
             tagsContsiner.classList.add("tagsContainer"); 
             backColor.append(tagsContsiner);
 
-            dataText[`article${id}`].tags.forEach((elem) => {
+            dataText[id].tags.forEach((elem) => {
                 const tag = document.createElement("p");
                 tag.classList.add("tag");
                 tag.textContent=elem;
-                tag.style.fontSize=`${sizes[data[id].size].split(" ")[2]}vw`;
+                tag.style.fontSize=`${sizes[dataText[id].size].split(" ")[2]}vw`;
                 if (window.innerHeight > window.innerWidth) {
                     tag.style.padding="2vw "
                 } else {
@@ -332,33 +250,168 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.querySelector(`#description${id}`).querySelector("img").src=svgTT;
         }
 
+        
+
     });
+
+
+/* */  
+
+
+/* tagsGenerator */
+
+generationTags()
+function generationTags() {
+    let allTags = []; 
+    fetch("https://api.npoint.io/ebd355c8a0376b2c5439").then(function (response) {
+        return response.json();
+      }).then(function (dataa) {  
+        const dataText = dataa[0].articles
+        for (let elem in dataText) {
+            for (let tag in dataText[elem].tags) {
+                if (!(allTags.includes(dataText[elem].tags[tag]))) {
+                   // console.log(dataText[elem].tags[tag])
+                    allTags.push(dataText[elem].tags[tag])
+                }
+            }
+        }
+        console.log(allTags)
+        
+        for (let tag in allTags) {
+            const div = document.createElement('button');
+            div.classList.add('tag');
+            div.id = `tag${tag}`;
+            div.textContent = allTags[tag]
+            document.querySelector(`.tasBlock`).append(div);
+        }
+        
+    })
+
+}
+
+/* */
+
+
+
+/* tagsSwitch*/
+
+    document.querySelector("#arrows").addEventListener("click", (e)=>{
+        if (!(document.querySelector("#arrows").classList.contains("tagsOpen"))) {
+            document.querySelector("#arrows").classList.add("tagsOpen");
+            document.querySelector(".tasContainer").style.height="15vw";
+            document.querySelector("#arrows").src=`${svgArrowsOpened}`;
+        } else {
+            document.querySelector("#arrows").classList.remove("tagsOpen");
+            document.querySelector(".tasContainer").style.height="0vw";
+            document.querySelector("#arrows").src=`${svgArrows}`;
+        }
+    })
 
 
 /* */
 
 
+/*tagsChoose */
+
+    let tagsChoosen = []
+
+    document.querySelector(".tasBlock").addEventListener("click", (e)=> {
+        if (e.target.className.includes("tag")) {
+            chooseTags(e.target)
+        }
+    })
+
+    function chooseTags(target) {
+        if (tagsChoosen.length == 0) {
+            tagsChoosen.push(target.textContent)
+        } else if (tagsChoosen.length == 1 && tagsChoosen[0] == target.textContent) {
+            tagsChoosen.pop()
+        } else {
+            if (!(tagsChoosen.includes(target.textContent))) {
+                tagsChoosen.push(target.textContent)
+            } else {
+                tagsChoosen.splice(tagsChoosen.indexOf(target.textContent), 1);
+            }
+        }
+        renderTags()
+    }
+
+    function renderTags() {
+        let allTags = document.querySelectorAll(".tag");
+        allTags.forEach(tag => {
+            if (tag.className.includes("activee")) {
+                tag.classList.remove("activee")
+            }
+        })
+
+        let allCards = document.querySelectorAll(".articleCardAndTime");
+        allCards.forEach(card => {
+            if (card.className.includes("showed")) {
+                card.classList.remove("showed")
+            }
+        })
+
+        allTags.forEach(tag => {
+            if (tagsChoosen.includes(tag.textContent)) {
+                tag.classList.add("activee")
+            }
+        })
+
+        renderTagsArticles()
+    
+    }
+
+
+    function renderTagsArticles() {
+        if (!(tagsChoosen.length == 0)) {
+            fetch("https://api.npoint.io/ebd355c8a0376b2c5439").then(function (response) {
+                return response.json();
+              }).then(function (dataa) {   
+                const dataText = dataa[0].articles;
+                for (let elem in dataText) {
+                    for (let tag in dataText[`${elem}`].tags) {
+                        if (tagsChoosen.includes(dataText[`${elem}`].tags[tag])) {
+                            if (!(document.querySelector(`#articleCardAndTime${elem}`).className.includes("showed"))) {
+                                document.querySelector(`#articleCardAndTime${elem}`).classList.add("showed")
+                            }
+                        }
+                    }
+                }
+            })
+        } else {
+
+            document.querySelectorAll(".articleCardAndTime").forEach( elem => {
+                elem.classList.add("showed")
+            })
+        }
+    }
+
+
+/* */
+
+
+
 /* adaptives */
 
 
-if (window.innerHeight > window.innerWidth) { 
-    let descriptions = document.querySelectorAll(".description")
-    descriptions.forEach(description => {
-        description.style.height="10vw";
-        description.style.width="10vw";
-        description.firstElementChild.style.height="5vw";
-        description.firstElementChild.style.width="5vw";
-    })
+    if (window.innerHeight > window.innerWidth) { 
+        let descriptions = document.querySelectorAll(".description")
+        descriptions.forEach(description => {
+            description.style.height="10vw";
+            description.style.width="10vw";
+            description.firstElementChild.style.height="5vw";
+            description.firstElementChild.style.width="5vw";
+        })
 
-    let goIcons = document.querySelectorAll(".goIcon")
-    goIcons.forEach(goIcon => {
-        goIcon.style.height="10vw";
-        goIcon.style.width="10vw";
-        goIcon.firstElementChild.style.height="5vw";
-        goIcon.firstElementChild.style.width="5vw";
-    })
+        let goIcons = document.querySelectorAll(".goIcon")
+        goIcons.forEach(goIcon => {
+            goIcon.style.height="10vw";
+            goIcon.style.width="10vw";
+            goIcon.firstElementChild.style.height="5vw";
+            goIcon.firstElementChild.style.width="5vw";
+        })
 
-}
+    }
 
 
 

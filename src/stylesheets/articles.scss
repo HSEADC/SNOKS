@@ -104,6 +104,7 @@
       background-image: url("../images/articles/circ1.webp");
       background-size: 110%;
       background-position: -1vw -4vw;
+      animation: shake1 1.8s linear infinite;
 
       left: 21vw;
       top: -16vw;
@@ -115,6 +116,7 @@
       background-image: url("../images/articles/circ2.webp");
       background-size: 110%;
       background-position: -1vw -3vw;
+      animation: shake3 1.8s linear infinite;
 
       left: 65vw;
       top: -13vw;
@@ -126,6 +128,7 @@
       background-image: url("../images/articles/circ3.webp");
       background-size: 105%;
       background-position: -1vw -6vw;
+      animation: shake4 1.8s linear infinite;
 
       left: 58vw;
       top: 7vw;
@@ -137,6 +140,7 @@
       background-image: url("../images/articles/circ4.webp");
       background-size: 105%;
       background-position: 1vw -1vw;
+      animation: shake4 1.5s linear infinite;
 
       left: 80vw;
       top: 7vw;
@@ -154,6 +158,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    flex-wrap: wrap;
 
     input {
       width: 30vw;
@@ -176,8 +181,50 @@
     }
 
     img {
+      pointer-events: all;
       width: 3vw;
+      cursor: pointer;
     }
+
+    .tasContainer {
+      width: 100%;
+      overflow: hidden;
+      height: 0vw;
+      position: relative;
+      margin-top: 3vw;
+      transition: all 0.3s ease-in-out;
+
+      .tasBlock {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+
+        button {
+          padding: 1vw 3vw;
+          margin: 1.5vw 2vw 0 0;
+          background-color: var(--blue);
+          border-radius: 2vw;
+          color: var(--white);
+          font-size: 2vw;
+          opacity: 0.6;
+          transition: all 0.2s ease-in-out;
+        }
+
+        .activee {
+          opacity: 1;
+          transition: all 0.2s ease-in-out;
+          pointer-events: all;
+        }
+
+        button:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+
 
   }
 
@@ -196,6 +243,7 @@
     .articleCardAndTime {
       width: 32%;
       margin-bottom: 2vw;
+      display: none;
 
       p {
         font-size: 1.3vw;
@@ -227,6 +275,8 @@
         .goIcon {
           right: 1vw;
           top: 1vw;
+          width: 4vw;
+          height: 4vw;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -320,6 +370,10 @@
 
     }
 
+    .showed {
+      display: block;
+    }
+
 
 
   }
@@ -327,7 +381,7 @@
 
   /* */
 
-  /* secondMAinText */
+  /* secondMainText */
 
   .secondMainText {
     margin: 15vw auto 15vw;
@@ -390,11 +444,143 @@
 
 /*adaptive */
 
-@media (max-width: 750px) {
+@media (max-width: 695px) {
+  .titleContainer {
+    h1 {
+      font-size: 12vw;
+    }
+
+    #leftPillow {
+      left: -6vw;
+    }
+
+    #rightPillow {
+      left: 71.5vw;
+    }
+  }
+
   .mainTextContainer {
+    align-items: start;
+    width: 83%;
+    margin-left: auto;
+    margin-left: auto;
     p {
-      font-size: 2vw;
-      line-height: 2.2vw;
+      font-size: 2.6vw;
+      line-height: 3vw;
+      width: 54vw;
+      margin-left: 0;
+    }
+
+    h2 {
+      font-size: 5vw;
+      line-height: 5.4vw;
+      text-align: center;
+    }
+
+    #o {
+      left: 4.2vw;
+      top: -1vw;
+      opacity: 0.8;
+    }
+
+    #m {
+      left: 27.5vw;
+      top: -1vw;
+      opacity: 0.8;
+    }
+    
+    #b {
+      left: 40.3vw;
+      top: -1vw;
+      opacity: 0.95;
+    }
+  }
+
+  .secondMainText {
+    #oS {
+      left: 16.5vw;
+      top: -1vw;
+      opacity: 0.8;
+    }
+
+    #mS {
+      left: 65vw;
+      top: -1vw;
+      opacity: 1;
+    }
+
+    #bS {
+      left: 37vw;
+      top: 10vw;
+      opacity: 1;
+    }
+
+    #eS {
+      left: 35.5vw;
+      top: 16vw;
+      opacity: 1;
+    }
+  }
+
+  .findAndFilter {
+    input {
+      height: 8vw;
+      border-radius: 2vw;
+    }
+
+    input::placeholder {
+      padding-bottom: 1vw;
+      font-size: 3vw;
+      padding-left: 3vw;
+    }
+
+    .findInput {
+      width: 55vw;
+    }
+
+    #arrows {
+      width: 8vw;
+    }
+  }
+
+  .articlesBlock {
+    .articleCardAndTime {
+
+      .articleCardRotated {
+        padding: 2vw;
+      }
+
+      p {
+        font-size: 3vw;
+        margin-top: 2vw;
+      }
+
+      .articleCard {
+        .goIcon {
+          right: 2vw;
+          top: 2vw;
+          width: 9vw;
+          height: 9vw;
+
+          img {
+            width: 6vw;
+            height: 6vw;
+          }
+        }
+
+        .description {
+          bottom: 2vw;
+          right: 2vw;
+
+          width: 9vw;
+          height: 9vw;
+
+          img {
+            width: 5vw;
+            height: 5vw;
+          }
+        }
+      }
     }
   }
 }

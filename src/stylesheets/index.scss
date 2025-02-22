@@ -40,7 +40,7 @@ body {
 
   /* 3dLogoScreen */
 
-  .LogoScreenContainer {
+  .logoScreenContainer {
     z-index: -1;
     width: 100vw;
     height: 50vw;
@@ -80,15 +80,16 @@ body {
     }
 
     p {
-      font-size: 0.9vw;
+      font-size: 1.5vw;
       font-weight: 400;
       color: var(--white);
     }
 
     .link {
       font-weight: 600;
-      margin-top: 13.5vw;
+      margin-top: 8vw;
       text-align: end;
+      font-size: 1vw;
     }
 
   }
@@ -97,9 +98,9 @@ body {
 
   /* H2TitleBlock */
 
-  .WhyDreamsContainer {
+  .whyDreamsContainer {
     width: 100%;
-    margin-top: 2vw;
+    margin-top: 5vw;
     position: relative;
     
     h2 {
@@ -214,7 +215,7 @@ body {
       width: 100%;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 8vw;
+      padding-bottom: 5vw;
       left: 0;
 
       .btn {
@@ -278,6 +279,10 @@ body {
         left: 85.5%;
       }
 
+      #btn6 {
+        display: none;
+      }
+
     }
 
     .factsReview {
@@ -285,7 +290,7 @@ body {
       justify-content: space-between;
       align-items: center;
       width: 90%;
-      margin-top: 20vw;
+      margin-bottom: 8vw;
 
       .factsTitleContainer {
         h3 {
@@ -359,12 +364,12 @@ body {
       opacity: 0.9;
     }
 
-    .first3DTExt {
+    .first3DText {
       top: 35vw;
       left: 14.5vw;
     }
 
-    .second3DTExt {
+    .second3DText {
       top: 14vw;
       left: 68vw;
       text-align: end;
@@ -475,30 +480,78 @@ body {
   /* */
 
 
-   /* roundedBlockStyle */
-
-.backgroundBorderRadius {
-  background-color: var(--white);
-  height: 5vw;
-  width: 100vw;
-}
-
-.upRound {
-  border-bottom-right-radius: 3vw;
-  border-bottom-left-radius: 3vw;
-}
-
-.downRound {
-  border-top-right-radius: 3vw;
-  border-top-left-radius: 3vw;
-  margin-top: -3vw;
-}
-
-/* */
-
 /*adaptive */
 
-@media (max-width: 650px) {
+@media (max-width: 695px) {
+
+  .TitleBlock {
+    width: 90%;
+
+    h1 {
+      font-size: 6.3vw;
+    }
+
+    .underTitleTextContainer {
+
+      margin-top: 4vw;
+      p {
+        font-size: 1.7vw;
+      }
+    }
+  }
+
+  .missionText {
+    width: 69.5%;
+
+    #leftPillow {
+      left: -15vw;
+    }
+
+    #rightPillow {
+      left: 67.5vw;
+    }
+    
+    p {
+      font-size: 3.6vw;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .logoScreenContainer {
+    height: 78vw;
+
+    video {
+      top: -7vw;
+      left: -18vw;
+      width: 140vw;
+    }
+
+    .newCard {
+      width: 40%;
+      height: 40%;
+      top: 39vw;
+      right: 4vw;
+      padding: 3vw;
+      border-radius: 2.5vw;
+
+      h4 {
+        font-size: 4vw;
+      }
+      
+      p {
+        font-size: 2vw;
+      }
+
+      .link {
+        font-size: 1.5vw;
+        margin-top: 7vw;
+      }
+    }
+  }
+
   .miniText {
     font-size: 1.8vw;
     width: 50vw;
@@ -510,22 +563,70 @@ body {
     padding: 5vw 2vw;
     position: relative;
 
+    .factsReview {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      margin-bottom: 8vw;
+
+      .factsTitleContainer {
+        margin-bottom: 6vw;
+
+        h3 {
+          font-size: 10vw;
+        }
+
+        p {
+          font-size: 2.5vw;
+        }
+      }
+
+      .factCard {
+        width: 100%;
+        height: 40vw;
+        padding: 4vw;
+        border-radius: 2.5vw;
+        margin-top: 5vw;
+
+        .factText {
+          width: 100%;
+          h4 {
+            font-size: 4.5vw;
+            margin-bottom: 4vw;
+          }
+
+          p {
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+
     .factsBtns {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       margin-bottom: 8vw;
       left: 0;
+      margin: auto;
+      padding: 0;
+      
 
       .btn {
-        position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        position: inherit;
+        margin-bottom: 5vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
 
         .btnCircle {
-          width: 10vw;
-          height: 10vw;
+          width: 18vw;
+          height: 18vw;
           border-radius: 100%;
           filter: brightness(110%);
           background-image: url("../images/aboutUs/blueTexture2.webp");
@@ -533,16 +634,18 @@ body {
           transition: all 0.5s;
         }
 
+  
+
         .bigCircle {
-          width: 11vw;
-          height: 11vw;
+          width: 17vw;
+          height: 17vw;
           background-image: url("../images/aboutUs/blackTexture2.webp");
           transition: all 0.5s;
         }
 
         img {
-          width: 8vw;
-          height: 8vw; 
+          width: 17vw;
+          height: 17vw; 
           position: absolute;
           z-index: -1;
           opacity: 0;
@@ -550,41 +653,101 @@ body {
         }
 
         .biggerText {
-          width: 16vw;
-          height: 16vw; 
+          width: 24vw;
+          height: 24vw; 
           opacity: 1;
           transition: all 0.3s;
         }
         
       }
 
+      #btn6 {
+        display: flex;
+      }
+
     }
 
   }
 
-  #btn1 {
-    left: 5.5%;
+  .ThreeScreenContainer {
+    height: 78vw;
+    video {
+      width: 140vw;
+      left: -24vw;
+      top: -8vw;
+    }
+
+    p {
+      font-size: 1.5vw;
+      line-height: 1.8vw;
+      width: 40vw;
+    }
+
+    .first3DText {
+      top: 22vw;
+      left: 6vw;
+    }
+
+    .second3DText {
+      left: 55vw;
+      top: 53vw;
+    }
   }
 
-  #btn2 {
-    left: 25.5%;
+  .articles {
+    margin: 5vw 0 10vw;
+    width: 100vw;
+
+    h3 {
+      font-size: 10vw;
+      margin-bottom: 8vw;
+      margin-left: 5vw;
+    }
+
+    .articlesContainer {
+      width: 100vw;
+
+      img {
+        height: 20vw;
+        width: 9vw;
+      }
+
+      .articleCard {
+        width: 75vw;
+        height: 45vw;
+        border-radius: 3vw;
+        margin-bottom: 3vw;
+  
+        .articleInnerCard {
+          padding: 2vw;
+          width: 45%;
+          height: 50%;
+          top: 19vw;
+          h4 {
+            font-size: 2.5vw;
+          }
+  
+          a {
+            font-size: 1.3vw;
+          }
+        }
+      }
+    }
+
+    .circlesGroup {
+      width: 18vw;
+      .circlePick {
+        width: 2.5vw;
+        height: 2.5vw;      
+      }
+    }
   }
 
-  #btn3 {
-    left: 45.5%;
-  }
 
-  #btn4 {
-    left: 65.5%;
-  }
+}
 
-  #btn5 {
-    left: 85.5%;
-  }
+
+
 
 }
 /* */
-
-
-
-}
