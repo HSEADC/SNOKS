@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
     
 // factsAnimations
 
-    let facts = document.querySelector(".factsContainer")
+    let facts = document.querySelector(".s_factsContainer")
 
     if (screen.orientation.type == "landscape-primary" || screen.orientation.type == "landscape-secondary") {
         facts.addEventListener("mouseover", (e) => {
             let fact = e.target;
-            if (fact.className == "btnCircle" ) {
+            if (fact.className == "a_factsButton" ) {
                 let num = fact.id.split("")[9]
     
                 
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
         facts.addEventListener("click", (e) => {
             let fact = e.target;
-            if (fact.className == "btnCircle" ) {
+            if (fact.className == "a_factsButton" ) {
                 let num = fact.id.split("")[9]
 
                 for (let i = 1; i <= 6; i++) {
@@ -148,9 +148,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
         }
     }
 
-    let articlesContainer = document.querySelector(".articlesContainer");
+    let articlesContainer = document.querySelector(".o_articlesSlider");
     articlesContainer.addEventListener("click", (e) => {
-        if (e.target.classList[0] == "arrow") {
+        if (e.target.classList[0] == "a_arrowNavigation") {
             if (e.target.classList[1] == "arLeft") {
                 document.querySelector(`.arLeft`).animate(
                     [
@@ -198,14 +198,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
             n -= 1
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
-            document.querySelector(".articleCard").style.backgroundImage=`url('${articles[n].img}')`
+            document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage=`url('${articles[n].img}')`
                         document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         } else {
             document.querySelector(`#circlePick${n}`).classList.remove("picked")
             n = 5
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
-            document.querySelector(".articleCard").style.backgroundImage=`url('${articles[n].img}')`
+            document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage=`url('${articles[n].img}')`
             document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         }
     }
@@ -216,14 +216,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
             n += 1
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
-            document.querySelector(".articleCard").style.backgroundImage=`url('${articles[n].img}')`
+            document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage=`url('${articles[n].img}')`
                         document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         } else {
             document.querySelector(`#circlePick${n}`).classList.remove("picked")
             n = 1
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
-            document.querySelector(".articleCard").style.backgroundImage=`url('${articles[n].img}')`
+            document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage=`url('${articles[n].img}')`
             document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         }
     }
@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         document.querySelector("#mobileNav").style.display="block"
         let flagNav = false;
         const burger = document.querySelector(".burger");
-        document.querySelector(".navigation").style.display="none";
+        document.querySelector(".o_menubarContainer").style.display="none";
         burger.addEventListener("click", function() {
             burger.classList.toggle("open");
             if (!flagNav) {

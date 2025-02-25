@@ -13,20 +13,21 @@ body {
 
   /* TitleText */
 
-  .TitleBlock {
+  .o_aboutUsTitle {
     width: 90%;
     margin: 7vw auto 0 auto;
 
-    h1 {
+    .a_aboutUsTitle {
       font-size: 5vw;
       font-weight: 600;
     }
 
-    .underTitleTextContainer {
+    .w_underTitleTexts {
       display: flex;
       justify-content: space-between;
       margin-top: 3vw;
-      p {
+
+      .a_textUnderTitle {
         font-size: 1.3vw;
        }
     }
@@ -98,12 +99,12 @@ body {
 
   /* H2TitleBlock */
 
-  .whyDreamsContainer {
+  .m_h2Container {
     width: 100%;
     margin-top: 5vw;
     position: relative;
     
-    h2 {
+    .a_subTitle{
       text-align: center;
       line-height: 5vw;
       font-size: 5vw;
@@ -111,7 +112,7 @@ body {
       color: var(--black);
     }
 
-    img {
+    .q_imageDecorationLetter {
       width: 6vw;
       height: 6vw;
       position: absolute;
@@ -141,11 +142,11 @@ body {
 
     /* littleAnimation */
 
-    .letterPuffy {
+    .q_imageDecorationLetter {
       transition: all 0.2s ease-in-out;
     }
 
-    .letterPuffy:hover {
+    .q_imageDecorationLetter:hover {
       width: 6.3vw;
       height: 6.3vw;
       transition: all 0.2s ease-in-out;
@@ -176,26 +177,27 @@ body {
 
   /* missionText */
 
-  .missionText {
+  .m_missionText {
     width: 58vw;
     margin: 22vw auto;
     position: relative;
 
-    p {
+    .a_missionText {
       font-size: 3vw;
     }
 
-    img {
+    .q_decorationBracketLeft {
       position: absolute;
       width: 17vw;
-    }
 
-    #leftPillow {
       left: -17vw;
       top: -13vw;
     }
 
-    #rightPillow {
+    .q_decorationBracketRight {
+      position: absolute;
+      width: 17vw;
+
       left: 57vw;
       top: -12vw;
     }
@@ -205,26 +207,26 @@ body {
 
   /* facts */
 
-  .factsContainer {
+  .s_factsContainer {
     width: 90%;
     margin: 0vw auto;
     padding: 5vw;
     position: relative;
 
-    .factsBtns {
+    .c_factCirclesRow {
       width: 100%;
       display: flex;
       justify-content: space-between;
       padding-bottom: 5vw;
       left: 0;
 
-      .btn {
+      .m_factCircle {
         position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .btnCircle {
+        .a_factsButton {
           width: 7vw;
           height: 7vw;
           border-radius: 100%;
@@ -285,49 +287,50 @@ body {
 
     }
 
-    .factsReview {
+    .w_facts {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 90%;
       margin-bottom: 8vw;
 
-      .factsTitleContainer {
-        h3 {
+      .m_factsText {
+
+        .a_aboutUsSubTitle {
           font-size: 6vw;
           font-weight: 600;
           text-transform: capitalize;
           margin-bottom: 2vw;
         }
 
-        p {
+        .a_factsInstructionText {
           font-size: 1.5vw;
           opacity: 0.3;
           font-weight: 400;
         }
       }
 
-      .factCard {
+      .m_factCard {
         width: 30vw;
         height: 18vw;
         border-radius: var(--borderRadius);
         background-color: rgb(218, 226, 235);
         padding: 1.8vw;
 
-        .factText {
+        .m_factCardTexts {
           display: none;
           opacity: 0;
           transition: all 0.5s ease-in-out;
         }
 
-        h4 {
+        .a_factHeader {
           font-size: 2vw;
           font-weight: 600;
           text-transform: capitalize;
           margin-bottom: 2vw;
         }
 
-        p {
+        .a_factText {
            font-size: 1vw;
         }
       }
@@ -381,30 +384,30 @@ body {
 
   /* articles */
 
-  .articles {
+  .s_articlesAboutUsContainer {
     width: 90%;
     margin: 0vw auto;
 
-    h3 {
+    .a_aboutUsSubTitle {
       font-size: 6vw;
       font-weight: 600;
       text-transform: capitalize;
       margin-bottom: 5vw;
     }
 
-    .articlesContainer {
+    .o_articlesSlider {
       display: flex;
       justify-content: space-around;
       align-items: center;
     }
 
-    img {
+    .a_arrowNavigation {
       width: 7vw;
       height: 16vw;
       transition: all 0.2s ease-in-out;
     }
 
-    button {
+    .m_aboutUsArticleCard {
       width: 50vw;
       height: 30vw;
       border-radius: var(--borderRadius);
@@ -454,13 +457,13 @@ body {
       }
     }
 
-    .circlesGroup {
+    .a_sliderSwitcher {
       width: 10vw;
       display: flex;
       justify-content: space-between;
       margin: 2vw auto;
 
-      div {
+      .q_sliderbuttton {
         width: 1.2vw;
         height: 1.2vw;
         opacity: 0.6;
@@ -484,34 +487,34 @@ body {
 
 @media (max-width: 695px) {
 
-  .TitleBlock {
+  .o_aboutUsTitle {
     width: 90%;
 
-    h1 {
+    .a_aboutUsTitle {
       font-size: 6.3vw;
     }
 
-    .underTitleTextContainer {
-
+    .w_underTitleTexts {
       margin-top: 4vw;
-      p {
+
+      .a_textUnderTitle {
         font-size: 1.7vw;
       }
     }
   }
 
-  .missionText {
+  .m_missionText {
     width: 69.5%;
 
-    #leftPillow {
+    .q_decorationBracketLeft {
       left: -15vw;
     }
 
-    #rightPillow {
+    .q_decorationBracketRight {
       left: 67.5vw;
     }
     
-    p {
+    .a_missionText {
       font-size: 3.6vw;
 
       span {
@@ -557,53 +560,54 @@ body {
     width: 50vw;
   }
 
-  .factsContainer {
+  .s_factsContainer {
     width: 90%;
     margin: 0vw auto;
     padding: 5vw 2vw;
     position: relative;
 
-    .factsReview {
+    .w_facts {
       display: flex;
       flex-direction: column;
       align-items: start;
       width: 100%;
       margin-bottom: 8vw;
 
-      .factsTitleContainer {
+      .m_factsText {
         margin-bottom: 6vw;
 
-        h3 {
+        .a_aboutUsSubTitle {
           font-size: 10vw;
         }
 
-        p {
+        .a_factsInstructionText {
           font-size: 2.5vw;
         }
       }
 
-      .factCard {
+      .m_factCard {
         width: 100%;
         height: 40vw;
         padding: 4vw;
         border-radius: 2.5vw;
         margin-top: 5vw;
 
-        .factText {
+        .m_factCardTexts {
           width: 100%;
-          h4 {
+
+          .a_factHeader {
             font-size: 4.5vw;
             margin-bottom: 4vw;
           }
 
-          p {
+          .a_factText {
             font-size: 3vw;
           }
         }
       }
     }
 
-    .factsBtns {
+    .c_factCirclesRow {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -614,7 +618,7 @@ body {
       padding: 0;
       
 
-      .btn {
+      .m_factCircle {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -624,7 +628,7 @@ body {
         margin-right: 5vw;
         margin-left: 5vw;
 
-        .btnCircle {
+        .a_factsButton {
           width: 18vw;
           height: 18vw;
           border-radius: 100%;
@@ -694,25 +698,25 @@ body {
     }
   }
 
-  .articles {
+  .s_articlesAboutUsContainer {
     margin: 5vw 0 10vw;
     width: 100vw;
 
-    h3 {
+    .a_aboutUsSubTitle {
       font-size: 10vw;
       margin-bottom: 8vw;
       margin-left: 5vw;
     }
 
-    .articlesContainer {
+    .o_articlesSlider {
       width: 100vw;
 
-      img {
+      .a_arrowNavigation {
         height: 20vw;
         width: 9vw;
       }
 
-      .articleCard {
+      .m_aboutUsArticleCard  {
         width: 75vw;
         height: 45vw;
         border-radius: 3vw;
@@ -734,9 +738,10 @@ body {
       }
     }
 
-    .circlesGroup {
+    .a_sliderSwitcher {
       width: 18vw;
-      .circlePick {
+      
+      .q_sliderbuttton {
         width: 2.5vw;
         height: 2.5vw;      
       }

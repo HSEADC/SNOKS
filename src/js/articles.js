@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
       } else if (window.innerHeight <= window.innerWidth) {
         sizes = {
-            small: "24 25 1.1 1.5 120 120 0 0",
-            middle: "32 35 1.2 1.5 100 120 0 0",
-            big: "100 25 1.4 1.5 100 120 0 0"
+            small: "24 25 1.1 1.3 120 120 0 0",
+            middle: "32 35 1.2 1.3 100 120 0 0",
+            big: "100 25 1.4 1.4 100 120 0 0"
         }
 
     }
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 /* */
 
 
-    let container = document.querySelector(".articlesBlock")
+    let container = document.querySelector(".c_articlesContainer")
 
 
 // generation of article cards
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         
             for (let elem in dataText) {
                 const section = document.createElement('section');
-                section.classList.add('articleCardAndTime');
+                section.classList.add('w_articleCardAndTime');
                 section.classList.add('showed');
                 section.id=`articleCardAndTime${elem}`;
                 container.append(section);
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 section.style.width=`${sizeName[0]}%`;
         
                 const div = document.createElement('div');
-                div.classList.add('articleCard');
+                div.classList.add('o_articleCard');
                 div.style.height=`${sizeName[1]}vw`;
                 div.id = `articleCard${elem}`;
         
@@ -101,28 +101,32 @@ document.addEventListener("DOMContentLoaded", (e) => {
         
                 section.append(div);
                 const goIcon = document.createElement('div');
-                goIcon.classList.add('goIcon');
+                goIcon.classList.add('a_articlesOpenButton');
                 div.append(goIcon);
-                const goIconImg = document.createElement('img')
+                const goIconImg = document.createElement('img');
+                goIconImg.classList.add("q_articlesOpenIcon")
                 goIconImg.src=svgArrow
                 goIcon.append(goIconImg)
                 const p = document.createElement('p');
                 p.id=`articleName${elem}`;
-                p.style.lineHeight="2.3vw";
+                p.style.lineHeight="2vw";
                 p.textContent=`${dataText[elem].name}`;
                 p.style.fontSize=`${sizeName[2]}vw`;
                 p.style.lineHeight=`${sizeName[3]}vw`;
+                p.classList.add("a_articleName")
                 div.append(p);
                 const description = document.createElement('div');
                 description.id = `description${elem}`
-                description.classList.add('description');
+                description.classList.add('a_articlesDescriptionButton');
                 div.append(description);
                 const descriptionImg = document.createElement('img');
                 descriptionImg.src=svgTT;
+                descriptionImg.classList.add("q_articlesDescriptionIcon")
                 descriptionImg.style.pointerEvents="none"
                 description.append(descriptionImg);
                 let time = document.createElement('p');
                 time.id = `articleTime${elem}`;
+                time.classList.add("a_articleTime")
                 time.textContent=`${dataText[elem].time} мин`;
                 section.append(time);
             }
@@ -139,12 +143,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     if (window.innerHeight > window.innerWidth) { 
 
-        document.querySelector(".articlesBlock").style.width="90%"
+        document.querySelector(".c_articlesContainer").style.width="90%"
         document.querySelector("main").style.marginTop="30vw"
         document.querySelector("#mobileNav").style.display="block"
         let flagNav = false;
         const burger = document.querySelector(".burger");
-        document.querySelector(".navigation").style.display="none";
+        document.querySelector(".o_menubarContainer").style.display="none";
         burger.addEventListener("click", function() {
             burger.classList.toggle("open");
             if (!flagNav) {
@@ -184,7 +188,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       }).then(function (dataa) {   
         const dataText = dataa[0].articles
         console.log(dataText)
-        const articles = Array.from(document.getElementsByClassName('description'));
+        const articles = Array.from(document.getElementsByClassName('a_articlesDescriptionButton'));
 
         articles.forEach(article => {
             article.addEventListener('click', (e) => {
@@ -203,12 +207,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.getElementById(`articleCard${id}`).classList.add("opened")
             const backColor = document.createElement('div');
             backColor.classList.add('articleCardRotated');
-            backColor.id= `articleCardRotated${id}`;
+            backColor.id=`articleCardRotated${id}`;
             document.getElementById(`articleCard${id}`).append(backColor);
             document.querySelector(`#description${id}`).querySelector("img").src=svgCross;
 
             const articlDescription = document.createElement('p');
-            articlDescription.classList.add("descriptionText");
+            articlDescription.classList.add("a_articleDescription");
             articlDescription.textContent=dataText[id].text
             backColor.append(articlDescription);
 
@@ -217,12 +221,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
             articlDescription.style.lineHeight=`${sizes[dataText[id].size].split(" ")[3]}vw`
 
             const tagsContsiner = document.createElement("div");
-            tagsContsiner.classList.add("tagsContainer"); 
+            tagsContsiner.classList.add("c_tagsArticleCard"); 
             backColor.append(tagsContsiner);
 
             dataText[id].tags.forEach((elem) => {
                 const tag = document.createElement("p");
-                tag.classList.add("tag");
+                tag.classList.add("a_tagArticleCard");
                 tag.textContent=elem;
                 tag.style.fontSize=`${sizes[dataText[id].size].split(" ")[2]}vw`;
                 if (window.innerHeight > window.innerWidth) {
@@ -298,11 +302,11 @@ function generationTags() {
     document.querySelector("#arrows").addEventListener("click", (e)=>{
         if (!(document.querySelector("#arrows").classList.contains("tagsOpen"))) {
             document.querySelector("#arrows").classList.add("tagsOpen");
-            document.querySelector(".tasContainer").style.height="15vw";
+            document.querySelector(".c_articlesTas").style.height="15vw";
             document.querySelector("#arrows").src=`${svgArrowsOpened}`;
         } else {
             document.querySelector("#arrows").classList.remove("tagsOpen");
-            document.querySelector(".tasContainer").style.height="0vw";
+            document.querySelector(".c_articlesTas").style.height="0vw";
             document.querySelector("#arrows").src=`${svgArrows}`;
         }
     })
@@ -344,7 +348,7 @@ function generationTags() {
             }
         })
 
-        let allCards = document.querySelectorAll(".articleCardAndTime");
+        let allCards = document.querySelectorAll(".w_articleCardAndTime");
         allCards.forEach(card => {
             if (card.className.includes("showed")) {
                 card.classList.remove("showed")
@@ -380,7 +384,7 @@ function generationTags() {
             })
         } else {
 
-            document.querySelectorAll(".articleCardAndTime").forEach( elem => {
+            document.querySelectorAll(".w_articleCardAndTime").forEach( elem => {
                 elem.classList.add("showed")
             })
         }
@@ -395,7 +399,7 @@ function generationTags() {
 
 
     if (window.innerHeight > window.innerWidth) { 
-        let descriptions = document.querySelectorAll(".description")
+        let descriptions = document.querySelectorAll(".a_articlesDescriptionButton")
         descriptions.forEach(description => {
             description.style.height="10vw";
             description.style.width="10vw";

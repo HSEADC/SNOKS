@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.querySelector("#mobileNav").style.display="block"
             let flagNav = false;
             const burger = document.querySelector(".burger");
-            document.querySelector(".navigation").style.display="none";
+            document.querySelector(".o_menubarContainer").style.display="none";
             burger.addEventListener("click", function() {
                 burger.classList.toggle("open");
                 if (!flagNav) {
