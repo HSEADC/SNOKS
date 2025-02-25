@@ -1,0 +1,38 @@
+.s_testsType {
+  width: 100%;
+  height: fit-content;
+  margin: 5vw auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15vw;
+  position: relative;
+}
+
+  
+.s_factsContainer {
+  width: 90%;
+  margin: 0vw auto;
+  padding: 5vw;
+  position: relative;
+}
+
+.s_articlesAboutUsContainer {
+  width: 90%;
+  margin: 0vw auto;
+}
+
+@media (max-width: 695px) {
+  .s_factsContainer {
+    width: 90%;
+    margin: 0vw auto;
+    padding: 5vw 2vw;
+    position: relative;
+  }
+
+  .s_articlesAboutUsContainer {
+    margin: 5vw 0 10vw;
+    width: 100vw;
+  }
+}

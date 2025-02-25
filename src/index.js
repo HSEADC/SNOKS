@@ -199,14 +199,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
             document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage=`url('${articles[n].img}')`
-                        document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
+            //document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         } else {
             document.querySelector(`#circlePick${n}`).classList.remove("picked")
             n = 5
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
             document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage=`url('${articles[n].img}')`
-            document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
+            //document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         }
     }
 
@@ -217,14 +217,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
             document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage=`url('${articles[n].img}')`
-                        document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
+            //document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         } else {
             document.querySelector(`#circlePick${n}`).classList.remove("picked")
             n = 1
             document.querySelector(`#circlePick${n}`).classList.add("picked")
 
             document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage=`url('${articles[n].img}')`
-            document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
+            //document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
         }
     }
 

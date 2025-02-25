@@ -54,7 +54,7 @@ body {
     width: 100%;
   }
 
-  .testsContainerBackground {
+  .o_testsContainerBackground {
     background-color: var(--lightBlue);
     padding: 4vw 0;
     margin-top: -3vw;
@@ -286,7 +286,7 @@ body {
 /* mobileTestsVer */
 
 .tests {
-  .testsContainerBackground {
+  .o_testsContainerBackground {
     margin-top: 4vw;
     position: relative;
     overflow: hidden;
@@ -298,7 +298,7 @@ body {
       position: relative;
       margin: 12vw auto 2vw;
 
-      .mobileCardsLine {
+      .c_mobileCardsLine {
         width: fit-content;
         height: fit-content;
         display: flex;
@@ -314,7 +314,6 @@ body {
           border: 0.6vw var(--white) solid;
           border-radius: 3vw;
           transition: all 0.5s ease-in-out;
-          
 
           opacity: 0.5;
 
@@ -411,7 +410,7 @@ body {
       }
     }
 
-    .testsContainerBackground {
+    .o_testsContainerBackground {
 
       .a_testSwitcherButton {
         display: block;
