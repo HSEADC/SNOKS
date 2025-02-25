@@ -72458,7 +72458,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     function showDescription(id, dataText) {
       document.getElementById("articleCard".concat(id)).classList.add("opened");
       var backColor = document.createElement('div');
-      backColor.classList.add('articleCardRotated');
+      backColor.classList.add('o_articleCardRotated');
       backColor.id = "articleCardRotated".concat(id);
       document.getElementById("articleCard".concat(id)).append(backColor);
       document.querySelector("#description".concat(id)).querySelector("img").src = cross_namespaceObject;

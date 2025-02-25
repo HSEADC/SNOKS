@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
      
             document.getElementById(`articleCard${id}`).classList.add("opened")
             const backColor = document.createElement('div');
-            backColor.classList.add('articleCardRotated');
+            backColor.classList.add('o_articleCardRotated');
             backColor.id=`articleCardRotated${id}`;
             document.getElementById(`articleCard${id}`).append(backColor);
             document.querySelector(`#description${id}`).querySelector("img").src=svgCross;

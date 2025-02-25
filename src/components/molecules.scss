@@ -1,0 +1,409 @@
+.m_pageTitle {
+  width: 80%;
+  margin: 13vw auto 20vw;
+  position: relative;
+
+
+  #leftPillow {
+    top: -11vw;
+    left: 0vw;
+  }
+
+  #rightPillow {
+    top: -11vw;
+    left: 65vw;
+  }
+}
+
+.m_factCircle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 6vw;
+    height: 6vw; 
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  .biggerText {
+    width: 12vw;
+    height: 12vw; 
+    opacity: 1;
+    transition: all 0.3s;
+  }
+
+
+  &.bigCircle {
+    width: 8vw;
+    height: 8vw;
+    background-image: url("../images/aboutUs/blackTexture2.webp");
+    transition: all 0.5s;
+  }
+}
+
+#btn1 {
+  left: 5.5%;
+}
+
+#btn2 {
+  left: 25.5%;
+}
+
+#btn3 {
+  left: 45.5%;
+}
+
+#btn4 {
+  left: 65.5%;
+}
+
+#btn5 {
+  left: 85.5%;
+}
+
+#btn6 {
+  display: none;
+}
+
+.m_h2Container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 40vw auto 15vw;
+
+  &.whyDreams {
+    .a_h2Container {
+      font-size: 5vw;
+    }
+    #o {
+      left: 13vw;
+      top: -1vw;
+      opacity: 0.8;
+    }
+
+    #m {
+      left: 36.5vw;
+      top: -1vw;
+      opacity: 0.8;
+    }
+    
+    #b {
+      left: 49.5vw;
+      top: -1vw;
+      opacity: 0.95;
+    }
+  }
+
+  &.why {
+    #o {
+      top: -0.5vw;
+      left: 14vw;
+      opacity: 0.8;
+    }
+
+    #h {
+      top: -0.5vw;
+      left: 41.5vw;
+    }
+
+    #m {
+      top: 5vw;
+      left: 70vw;
+      opacity: 0.9;
+    }
+
+    #a {
+      top: 10vw;
+      left: 59vw;
+    }
+  }
+
+
+  #circ1 {
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/articles/circ1.webp");
+    background-size: 110%;
+    background-position: -1vw -4vw;
+    animation: shake1 1.8s linear infinite;
+
+    left: 21vw;
+    top: -16vw;
+  }
+
+  #circ2 {
+    width: 9vw;
+    height: 9vw;
+    background-image: url("../images/articles/circ2.webp");
+    background-size: 110%;
+    background-position: -1vw -3vw;
+    animation: shake3 1.8s linear infinite;
+
+    left: 65vw;
+    top: -13vw;
+  }
+
+  #circ3 {
+    width: 16vw;
+    height: 16vw;
+    background-image: url("../images/articles/circ3.webp");
+    background-size: 105%;
+    background-position: -1vw -6vw;
+    animation: shake4 1.8s linear infinite;
+
+    left: 58vw;
+    top: 7vw;
+  }
+
+  #circ4 {
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/articles/circ4.webp");
+    background-size: 105%;
+    background-position: 1vw -1vw;
+    animation: shake4 1.5s linear infinite;
+
+    left: 80vw;
+    top: 7vw;
+  }
+
+  &.secondMainText {
+    margin: 15vw auto 15vw;
+
+    .a_h2Container {
+      text-align: center;
+      line-height: 5vw;
+      font-size: 4.5vw;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .q_decorationLetter {
+      width: 6vw;
+      height: 6vw;
+      position: absolute;
+    }
+
+    #oS {
+      left: 19.3vw;
+      top: -1vw;
+      opacity: 0.8;
+    }
+
+    #mS {
+      left: 63vw;
+      top: -1vw;
+      opacity: 1;
+    }
+
+    #bS {
+      left: 74.1vw;
+      top: 5vw;
+      opacity: 1;
+    }
+
+    #eS {
+      left: 44.3vw;
+      top: 10vw;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 695px) {
+  .m_h2Container {
+    align-items: start;
+    width: 83%;
+    margin-left: auto;
+    margin-left: auto;
+
+    &.whyDreams {
+      .a_h2Container {
+        font-size: 5vw;
+      }
+      #o {
+        left: 4.2vw;
+        top: -1vw;
+        opacity: 0.8;
+      }
+  
+      #m {
+        left: 27.5vw;
+        top: -1vw;
+        opacity: 0.8;
+      }
+      
+      #b {
+        left: 40.3vw;
+        top: -1vw;
+        opacity: 0.95;
+      }
+    }
+
+    &.secondMainText {
+      #oS {
+        left: 16.5vw;
+        top: -1vw;
+        opacity: 0.8;
+      }
+  
+      #mS {
+        left: 65vw;
+        top: -1vw;
+        opacity: 1;
+      }
+  
+      #bS {
+        left: 37vw;
+        top: 10vw;
+        opacity: 1;
+      }
+  
+      #eS {
+        left: 35.5vw;
+        top: 16vw;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.m_pageTitle {
+  width: 80%;
+  margin: 13vw auto 15vw;
+  position: relative;
+
+  #leftPillow {
+    left: -6vw;
+  }
+
+  #rightPillow {
+    left: 71.5vw;
+  }
+
+  &.articles {
+    .a_h1 {
+      font-size: 12vw;
+    }
+    #leftPillow {
+      left: -6vw;
+    }
+  
+    #rightPillow {
+      left: 71.5vw;
+    }
+  }
+
+}
+
+@media (max-width: 695px) {
+  .m_pageTitle {
+    margin: 20vw auto 15vw auto;
+  }
+}
+
+.m_missionText {
+  width: 58vw;
+  margin: 22vw auto;
+  position: relative;
+}
+
+.m_factCircle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.m_factCard {
+  width: 30vw;
+  height: 18vw;
+  border-radius: var(--borderRadius);
+  background-color: rgb(218, 226, 235);
+  padding: 1.8vw;
+}
+
+.m_factCardTexts {
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.m_aboutUsArticleCard {
+  width: 50vw;
+  height: 30vw;
+  border-radius: var(--borderRadius);
+  background-image: url("../images/aboutUs/article1.webp");
+  background-size: 100% 100%;
+  position: relative;
+}
+
+@media (max-width: 695px) { 
+  .m_missionText {
+    width: 69.5%;
+  }
+  .m_factsText {
+    margin-bottom: 6vw;
+  }
+
+  .m_factCard {
+    width: 100%;
+    height: 40vw;
+    padding: 4vw;
+    border-radius: 2.5vw;
+    margin-top: 5vw;
+  }
+
+  .m_factCardTexts {
+    width: 100%;
+  }
+
+  .m_factCircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: inherit;
+    margin-bottom: 5vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
+
+    img {
+      width: 17vw;
+      height: 17vw; 
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    .biggerText {
+      width: 24vw;
+      height: 24vw; 
+      opacity: 1;
+      transition: all 0.3s;
+    }
+
+    &.bigCircle {
+      width: 17vw;
+      height: 17vw;
+      background-image: url("../images/aboutUs/blackTexture2.webp");
+      transition: all 0.5s;
+    }
+  }
+
+  .m_aboutUsArticleCard  {
+    width: 75vw;
+    height: 45vw;
+    border-radius: 3vw;
+    margin-bottom: 3vw;
+  }
+}

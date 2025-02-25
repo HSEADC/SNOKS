@@ -322,7 +322,7 @@
           }
         }
 
-        .articleCardRotated {
+        .o_articleCardRotated {
           width: 100%;
           height: 100%;
           background-color: var(--blue);
@@ -334,7 +334,7 @@
 
       }
 
-      .articleCardRotated {
+      .o_articleCardRotated {
         padding: 1vw;
         display: flex;
         justify-content:flex-start;
@@ -552,7 +552,6 @@
 
   .c_articlesContainer {
     .w_articleCardAndTime {
-
       .a_articleTime {
         font-size: 3vw;
         margin-top: 2vw;

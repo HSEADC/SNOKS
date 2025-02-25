@@ -1,0 +1,91 @@
+.c_articlesTas {
+  width: 100%;
+  overflow: hidden;
+  height: 0vw;
+  position: relative;
+  margin-top: 3vw;
+  transition: all 0.3s ease-in-out;
+  
+  .tasBlock {
+    button {
+      padding: 1vw 3vw;
+      margin: 1.5vw 2vw 0 0;
+      background-color: var(--blue);
+      border-radius: 2vw;
+      color: var(--white);
+      font-size: 2vw;
+      opacity: 0.6;
+      transition: all 0.2s ease-in-out;
+
+      & .activee {
+          opacity: 1;
+          transition: all 0.2s ease-in-out;
+          pointer-events: all;
+        }
+    }
+
+    button:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.c_mobileCardsLine {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  left: -290vw;
+  transition: all 0.5s ease-in-out;
+}
+
+.c_articlesContainer {
+  width: 80%;
+  margin: 10vw auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.c_tagsArticleCard {
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  background-color: transparent;
+  border-radius: 0;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.c_allTests {
+  width: 80%;
+  height: fit-content;
+  margin: 5vw auto 10vw;
+}
+
+.c_factCirclesRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5vw;
+  left: 0;
+
+  #btn6 {
+    display: flex;
+  }
+}
+
+@media (max-width: 695px) {
+  .c_factCirclesRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 8vw;
+    left: 0;
+    margin: auto;
+    padding: 0;
+  }
+}
