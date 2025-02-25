@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         document.querySelector("#mobileNav").style.display="block"
         let flagNav = false;
         const burger = document.querySelector(".burger");
-        document.querySelector(".navigation").style.display="none";
+        document.querySelector(".o_menubarContainer").style.display="none";
         burger.addEventListener("click", function() {
             burger.classList.toggle("open");
             if (!flagNav) {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 /* test generation */
 
-    const container = document.querySelector(".testsContainer")
+    const container = document.querySelector(".c_allTests")
 
     fetch("https://api.npoint.io/e13c715d54b7e038e8bf").then(function (response) {
         return response.json();
@@ -84,37 +84,39 @@ document.addEventListener("DOMContentLoaded", (e) => {
             for (let elem in dataText) {
                 console.log(elem)
                 const section = document.createElement('section');
-                section.classList.add("testsType")
+                section.classList.add("s_testsType")
                 section.classList.add(elem)
                 container.append(section)
     
                 for (let tests in dataText[elem]) {
                     if (tests == "name") {
                         let h = document.createElement("h2")
-                        h.classList.add("testsTypeName")
+                        h.classList.add("a_testTypeName")
                         h.textContent=`${dataText[elem].name}`
                         section.append(h)
                     } else {
                         const div = document.createElement('div');
-                        div.classList.add('testCard');
+                        div.classList.add('o_testCard');
                         section.append(div);
                         div.id = `testCard${tests}`;
                         div.style.backgroundImage=`url('${imagesTests[tests]}')`;
     
                         const goIcon = document.createElement('div');
-                        goIcon.classList.add('goIcon');
+                        goIcon.classList.add('a_testsOpenButton');
                         goIcon.id = `goIcon${tests}`
                         div.append(goIcon);
                         const goIconImg = document.createElement('img');
                         goIconImg.src=svgArrow;
+                        goIconImg.classList.add("q_testsOpenIcon")
                         goIcon.append(goIconImg);
                         goIcon.addEventListener("click", (e) => {  
                             let id = e.target.id.substr(6)
                             localStorage.setItem("test", JSON.stringify([dataText[elem][id], id, elem]));      
-                            window.location.href = '../test.html';
+                            window.location.href = '../SNOKS/test.html';
                         })
     
                         const p = document.createElement('p');
+                        p.classList.add("a_testName")
                         p.id=`testName${tests}`;
                         p.textContent=dataText[elem][tests].name;
                         div.append(p);
@@ -122,7 +124,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 }
             }
         } else {
-            document.querySelector(".testsContainer").classList.add("testsContainerMobile")
+            document.querySelector(".c_allTests").classList.add("testsContainerMobile")
             const section = document.createElement('section');
             section.classList.add("mobileCardsLine")
             container.append(section)
@@ -132,7 +134,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 for (let tests in dataText[elem]) {
                     if (tests != "name") {
                         const div = document.createElement('div');
-                        div.classList.add('testCard');
+                        div.classList.add('o_testCard');
                         section.append(div);
                         div.id = `testCard${tests}`;
                         div.style.backgroundImage=`url('${imagesTests[tests]}')`;
@@ -144,6 +146,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                         })
     
                         const p = document.createElement('p');
+                        p.classList.add("a_testName")
                         p.id=`testName${tests}`;
                         p.textContent=dataText[elem][tests].name;
                         div.append(p);
@@ -168,7 +171,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 if (choosePos[id]) {
                     choosen = id;
 
-                    document.querySelectorAll(".testCard").forEach(elem => {
+                    document.querySelectorAll(".o_testCard").forEach(elem => {
                         if (elem.classList.contains("choosen")) {
                             elem.classList.remove("choosen")
                         }

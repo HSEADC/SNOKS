@@ -43,7 +43,7 @@ body {
 
    /* navigation */
 
-   .navigation {
+   .o_menubarContainer {
     width: 100%;
 
     ul {
@@ -52,7 +52,7 @@ body {
       align-items: center;
     }
 
-    a {
+    .a_navigationCategory {
       font-family:  "unbounded";
       color: var(--white);
       font-weight: 600;
@@ -61,7 +61,7 @@ body {
       transition: all 0.25s ease;
     }
 
-    a:hover {
+    .a_navigationCategory:hover {
       color: var(--blue);
       transition: all 0.25s ease;
     }
@@ -71,7 +71,7 @@ body {
 
   /* logotip */
 
-  .logo {
+  .a_navigationLogo {
     width: 6vw;
     height: 6vw;
     background-image: url("../images/preview/logo.svg");
@@ -545,7 +545,7 @@ body {
 
 /* logotip */
 
-.logo {
+.a_navigationLogo {
   width: 14.5vw;
   height: 15vw;
   background-image: url("../images/preview/logo.svg");

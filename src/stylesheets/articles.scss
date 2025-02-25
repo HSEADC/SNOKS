@@ -4,19 +4,19 @@
 
 /* titleBlock */
 
-  .titleContainer {
+  .m_pageTitle {
     width: 80%;
     margin: 13vw auto 20vw;
     position: relative;
 
-    h1 {
+    .a_h1 {
       font-size: 10vw;
       text-transform: uppercase;
       font-weight: 600;
       text-align: center;
     }
 
-    img {
+    .q_decorationBracket {
       width: 15vw;
       height: 33vw;
       position: absolute;
@@ -37,7 +37,7 @@
 
 /* mainTextBlock */
 
-  .mainTextContainer {
+  .m_h2Container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -46,7 +46,7 @@
     flex-direction: column;
     margin: 40vw auto 15vw;
     
-    h2 {
+    .a_h2Container {
       text-align: center;
       line-height: 5vw;
       font-size: 5vw;
@@ -55,7 +55,7 @@
 
     }
 
-    img {
+    .q_decorationLetter {
       width: 6vw;
       height: 6vw;
       position: absolute;
@@ -79,7 +79,7 @@
       opacity: 0.95;
     }
 
-    p {
+    .a_articlesMainText {
       font-size: 1.4vw;
       width: 40vw;
       margin-top: 8vw;
@@ -93,9 +93,9 @@
       
     }
 
-    div {
-      border-radius: 100%;
+    .q_circlesImage {
       position: absolute;
+      border-radius: 100%;
     }
 
     #circ1 {
@@ -151,7 +151,7 @@
 
 /* findAndFilter */
 
-  .findAndFilter {
+  .w_searchAndTags {
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -160,33 +160,33 @@
     position: relative;
     flex-wrap: wrap;
 
-    input {
+    .a_search {
       width: 30vw;
-      height: 3vw;
+      height: 4vw;
       border-radius: var(--borderRadius);
       border: 0.15vw var(--black) solid;
     } 
 
-    input {
+    .a_search {
       outline:none;
       background-color: var(--white);
     }
 
 
-    input::placeholder  {
+    .a_search::placeholder  {
      padding: 1vw;
      color: var(--black);
      font-family: "Unbounded";
      font-size: 1.4vw;
     }
 
-    img {
+    .q_articlesTagsOpen {
       pointer-events: all;
       width: 3vw;
       cursor: pointer;
     }
 
-    .tasContainer {
+    .c_articlesTas {
       width: 100%;
       overflow: hidden;
       height: 0vw;
@@ -232,7 +232,7 @@
 
 /* articles */
 
-  .articlesBlock {
+  .c_articlesContainer {
     width: 80%;
     margin: 10vw auto;
     display: flex;
@@ -240,12 +240,12 @@
     align-items: center;
     flex-wrap: wrap;
 
-    .articleCardAndTime {
+    .w_articleCardAndTime {
       width: 32%;
       margin-bottom: 2vw;
       display: none;
 
-      p {
+      .a_articleTime {
         font-size: 1.3vw;
         width: fit-content;
         margin: 1vw auto;
@@ -254,7 +254,7 @@
       }
 
 
-      .articleCard {
+      .o_articleCard {
         width: 100%;
         height: 35vw;
         background-color: var(--blue);
@@ -264,15 +264,13 @@
         position: relative;
         display: flex;
 
-        div {
+        .a_articlesOpenButton {
           width: 4vw;
           height: 4vw;
           border-radius: 100%;
           background-color: var(--white);
           position: absolute;
-        }
 
-        .goIcon {
           right: 1vw;
           top: 1vw;
           width: 4vw;
@@ -281,30 +279,36 @@
           justify-content: center;
           align-items: center;
 
-          img {
+          .q_articlesOpenIcon {
             width: 1.5vw;
             height: 1.5vw;
           }
 
         }
 
-        p {
+        .a_articleName {
           font-size: 1.3vw;
           position: absolute;
           left: 1vw;
-          bottom: 0.4vw;
+          bottom: 1vw;
           font-weight: 600;
           width: 55%;
           height: fit-content;
 
-          padding: 1.1vw 1vw;
+          padding: 0.7vw 0.7vw;
           background-color: var(--white);
           border-radius: 0.5vw;
 
           line-height: 1.4vw;
         }
 
-        .description {
+        .a_articlesDescriptionButton {
+          width: 4vw;
+          height: 4vw;
+          border-radius: 100%;
+          background-color: var(--white);
+          position: absolute;
+
           bottom: 1vw;
           right: 1vw;
           display: flex;
@@ -312,7 +316,7 @@
           align-items: center;
           z-index: 666;
 
-          img {
+          .q_articlesDescriptionIcon {
             width: 1.5vw;
             height: 1.5vw;
           }
@@ -337,16 +341,16 @@
         align-items: end;
 
 
-        .descriptionText {
+        .a_articleDescription {
           color: var(--white);
           width: 90%;
           background-color: transparent;
           opacity: 1;
           position: absolute;
-          top: 0;
+          top: 1vw;
         }
 
-        .tagsContainer {
+        .c_tagsArticleCard {
           width: 70%;
           height: fit-content;
           display: flex;
@@ -355,7 +359,7 @@
           flex-wrap: wrap;
           justify-content: left;
 
-          .tag {
+          .a_tagArticleCard {
             border-radius: 4vw;
             position:unset;
             opacity: 1;
@@ -363,6 +367,8 @@
             margin: 1vw 1vw 0 0;
             color: var(--black);
             width: auto;
+            background-color: var(--white);
+            font-weight: 600;
           }
 
         }
@@ -386,7 +392,7 @@
   .secondMainText {
     margin: 15vw auto 15vw;
 
-    h2 {
+    .a_h2Container {
       text-align: center;
       line-height: 5vw;
       font-size: 4.5vw;
@@ -394,7 +400,7 @@
       color: var(--black);
     }
 
-    img {
+    .q_decorationLetter {
       width: 6vw;
       height: 6vw;
       position: absolute;
@@ -430,11 +436,11 @@
 
   /* littleAnimation */
 
-  .letterPuffy {
+  .q_decorationLetter {
     transition: all 0.2s ease-in-out;
   }
 
-  .letterPuffy:hover {
+  .q_decorationLetter:hover {
     width: 6.3vw;
     height: 6.3vw;
     transition: all 0.2s ease-in-out;
@@ -445,8 +451,8 @@
 /*adaptive */
 
 @media (max-width: 695px) {
-  .titleContainer {
-    h1 {
+  .m_pageTitle {
+    .a_h1 {
       font-size: 12vw;
     }
 
@@ -459,19 +465,20 @@
     }
   }
 
-  .mainTextContainer {
+  .m_h2Container {
     align-items: start;
     width: 83%;
     margin-left: auto;
     margin-left: auto;
-    p {
+
+    .a_articlesMainText {
       font-size: 2.6vw;
       line-height: 3vw;
       width: 54vw;
       margin-left: 0;
     }
 
-    h2 {
+    .a_h2Container {
       font-size: 5vw;
       line-height: 5.4vw;
       text-align: center;
@@ -522,60 +529,73 @@
     }
   }
 
-  .findAndFilter {
-    input {
+  .w_searchAndTags {
+    .a_search {
       height: 8vw;
       border-radius: 2vw;
     }
 
-    input::placeholder {
+    .a_search::placeholder {
       padding-bottom: 1vw;
       font-size: 3vw;
       padding-left: 3vw;
     }
 
-    .findInput {
+    .a_search {
       width: 55vw;
     }
 
-    #arrows {
+    .q_articlesTagsOpen {
       width: 8vw;
     }
   }
 
-  .articlesBlock {
-    .articleCardAndTime {
+  .c_articlesContainer {
+    .w_articleCardAndTime {
+
+      .a_articleTime {
+        font-size: 3vw;
+        margin-top: 2vw;
+      }
 
       .articleCardRotated {
         padding: 2vw;
       }
 
-      p {
+      .a_articleDescription {
         font-size: 3vw;
         margin-top: 2vw;
       }
 
-      .articleCard {
-        .goIcon {
+      .o_articleCard {
+        .a_articlesOpenButton {
           right: 2vw;
           top: 2vw;
           width: 9vw;
           height: 9vw;
 
-          img {
+          .q_articlesOpenIcon {
             width: 6vw;
             height: 6vw;
           }
+          
         }
 
-        .description {
+        .a_articleName {
+          bottom: 2vw;
+          left: 2vw;
+          padding: 2vw;
+          border-radius: 2vw;
+        }
+
+        .a_articlesDescriptionButton {
           bottom: 2vw;
           right: 2vw;
 
           width: 9vw;
           height: 9vw;
 
-          img {
+          .q_articlesDescriptionIcon {
             width: 5vw;
             height: 5vw;
           }

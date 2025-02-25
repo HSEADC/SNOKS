@@ -23,7 +23,7 @@ body::-webkit-scrollbar { width: 0; }
 
 /* navigation */
 
-.navigation {
+.o_menubarContainer {
   width: 90%;
   margin: 0vw auto;
   display: none;
@@ -34,7 +34,7 @@ body::-webkit-scrollbar { width: 0; }
     align-items: center;
   }
 
-  a {
+  .a_navigationCategory {
     font-family:  "unbounded";
     color: var(--black);
     font-weight: 600;
@@ -43,7 +43,7 @@ body::-webkit-scrollbar { width: 0; }
     transition: all 0.25s ease;
   }
 
-  a:hover {
+  .a_navigationCategory:hover {
     color: var(--blue);
     transition: all 0.25s ease;
   }
@@ -57,7 +57,7 @@ body::-webkit-scrollbar { width: 0; }
 
 /* logotip */
 
-.logo {
+.a_navigationLogo {
   width: 7.5vw;
   height: 7vw;
   background-image: url("../images/aboutUs/logoHeader.webp");
@@ -83,17 +83,20 @@ footer {
   align-items: end;
   font-weight: 400;
 
-  p {
+  .a_footerCategoryTip {
     font-size: 1.13vw;
     color: var(--white);
     line-height: 1.5vw;
   }
 
-  span {
+  .a_footerCategoryName {
     font-weight: 600;
   }
 
-  .media {
+  .a_socialMediaTag {
+    font-size: 1.13vw;
+    color: var(--white);
+    line-height: 1.5vw;
     margin-left: -10vw;
   }
 }
@@ -101,7 +104,7 @@ footer {
 @media (max-width: 695px) {
   footer {
     padding: 5vw 2.5vw;
-    p {
+    .a_footerCategoryTip, .a_socialMediaTag {
       font-size: 2vw;
       line-height: 2.3vw;
     }
@@ -159,7 +162,7 @@ footer {
 
 /* logotip */
 
-.logo {
+.a_navigationLogo {
   width: 16.5vw;
   height: 17vw;
   background-image: url("../images/aboutUs/logoHeader.webp");
@@ -195,7 +198,7 @@ footer {
     height: 40vh;
     width: 90%;
 
-    a {
+    .a_navigationCategory {
         font-size: 7vw;
         color: var(--white);
         font-weight: 600;
