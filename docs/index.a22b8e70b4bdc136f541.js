@@ -74,11 +74,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
   // factsAnimations
 
-  var facts = document.querySelector(".factsContainer");
+  var facts = document.querySelector(".s_factsContainer");
   if (screen.orientation.type == "landscape-primary" || screen.orientation.type == "landscape-secondary") {
     facts.addEventListener("mouseover", function (e) {
       var fact = e.target;
-      if (fact.className == "btnCircle") {
+      if (fact.className == "a_factsButton") {
         var num = fact.id.split("")[9];
         document.getElementById("factText".concat(num)).style.display = "block";
         document.getElementById("factText".concat(num)).style.opacity = "1";
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
   if (screen.orientation.type == "portrait-primary" || screen.orientation.type == "portrait-secondary") {
     facts.addEventListener("click", function (e) {
       var fact = e.target;
-      if (fact.className == "btnCircle") {
+      if (fact.className == "a_factsButton") {
         var num = fact.id.split("")[9];
         for (var i = 1; i <= 6; i++) {
           if (document.querySelector("#btnCircle".concat(i)).className.includes("bigCircle")) {
@@ -176,9 +176,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
       img: article5_namespaceObject
     }
   };
-  var articlesContainer = document.querySelector(".articlesContainer");
+  var articlesContainer = document.querySelector(".o_articlesSlider");
   articlesContainer.addEventListener("click", function (e) {
-    if (e.target.classList[0] == "arrow") {
+    if (e.target.classList[0] == "a_arrowNavigation") {
       if (e.target.classList[1] == "arLeft") {
         document.querySelector(".arLeft").animate([{
           transform: "translateX(0px)"
@@ -220,13 +220,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
       document.querySelector("#circlePick".concat(n)).classList.remove("picked");
       n -= 1;
       document.querySelector("#circlePick".concat(n)).classList.add("picked");
-      document.querySelector(".articleCard").style.backgroundImage = "url('".concat(articles[n].img, "')");
+      document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage = "url('".concat(articles[n].img, "')");
       document.querySelector(".articleInnerCardName").textContent = "".concat(articles[n].name);
     } else {
       document.querySelector("#circlePick".concat(n)).classList.remove("picked");
       n = 5;
       document.querySelector("#circlePick".concat(n)).classList.add("picked");
-      document.querySelector(".articleCard").style.backgroundImage = "url('".concat(articles[n].img, "')");
+      document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage = "url('".concat(articles[n].img, "')");
       document.querySelector(".articleInnerCardName").textContent = "".concat(articles[n].name);
     }
   }
@@ -235,13 +235,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
       document.querySelector("#circlePick".concat(n)).classList.remove("picked");
       n += 1;
       document.querySelector("#circlePick".concat(n)).classList.add("picked");
-      document.querySelector(".articleCard").style.backgroundImage = "url('".concat(articles[n].img, "')");
+      document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage = "url('".concat(articles[n].img, "')");
       document.querySelector(".articleInnerCardName").textContent = "".concat(articles[n].name);
     } else {
       document.querySelector("#circlePick".concat(n)).classList.remove("picked");
       n = 1;
       document.querySelector("#circlePick".concat(n)).classList.add("picked");
-      document.querySelector(".articleCard").style.backgroundImage = "url('".concat(articles[n].img, "')");
+      document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage = "url('".concat(articles[n].img, "')");
       document.querySelector(".articleInnerCardName").textContent = "".concat(articles[n].name);
     }
   }
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.querySelector("#mobileNav").style.display = "block";
     var flagNav = false;
     var burger = document.querySelector(".burger");
-    document.querySelector(".navigation").style.display = "none";
+    document.querySelector(".o_menubarContainer").style.display = "none";
     burger.addEventListener("click", function () {
       burger.classList.toggle("open");
       if (!flagNav) {

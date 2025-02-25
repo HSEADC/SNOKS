@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.querySelector("#mobileNav").style.display = "block";
     var flagNav = false;
     var burger = document.querySelector(".burger");
-    document.querySelector(".navigation").style.display = "none";
+    document.querySelector(".o_menubarContainer").style.display = "none";
     burger.addEventListener("click", function () {
       burger.classList.toggle("open");
       if (!flagNav) {
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
   /* test generation */
 
-  var container = document.querySelector(".testsContainer");
+  var container = document.querySelector(".c_allTests");
   fetch("https://api.npoint.io/e13c715d54b7e038e8bf").then(function (response) {
     return response.json();
   }).then(function (dataa) {
@@ -136,34 +136,36 @@ document.addEventListener("DOMContentLoaded", function (e) {
       var _loop = function _loop(elem) {
         console.log(elem);
         var section = document.createElement('section');
-        section.classList.add("testsType");
+        section.classList.add("s_testsType");
         section.classList.add(elem);
         container.append(section);
         for (var tests in dataText[elem]) {
           if (tests == "name") {
             var h = document.createElement("h2");
-            h.classList.add("testsTypeName");
+            h.classList.add("a_testTypeName");
             h.textContent = "".concat(dataText[elem].name);
             section.append(h);
           } else {
             var div = document.createElement('div');
-            div.classList.add('testCard');
+            div.classList.add('o_testCard');
             section.append(div);
             div.id = "testCard".concat(tests);
             div.style.backgroundImage = "url('".concat(imagesTests[tests], "')");
             var goIcon = document.createElement('div');
-            goIcon.classList.add('goIcon');
+            goIcon.classList.add('a_testsOpenButton');
             goIcon.id = "goIcon".concat(tests);
             div.append(goIcon);
             var goIconImg = document.createElement('img');
             goIconImg.src = arrow_namespaceObject;
+            goIconImg.classList.add("q_testsOpenIcon");
             goIcon.append(goIconImg);
             goIcon.addEventListener("click", function (e) {
               var id = e.target.id.substr(6);
               localStorage.setItem("test", JSON.stringify([dataText[elem][id], id, elem]));
-              window.location.href = '../test.html';
+              window.location.href = '../SNOKS/test.html';
             });
             var p = document.createElement('p');
+            p.classList.add("a_testName");
             p.id = "testName".concat(tests);
             p.textContent = dataText[elem][tests].name;
             div.append(p);
@@ -177,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
       var choose = function choose(id) {
         if (choosePos[id]) {
           choosen = id;
-          document.querySelectorAll(".testCard").forEach(function (elem) {
+          document.querySelectorAll(".o_testCard").forEach(function (elem) {
             if (elem.classList.contains("choosen")) {
               elem.classList.remove("choosen");
             }
@@ -186,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
           document.querySelector(".mobileCardsLine").style.left = "".concat(choosePos[id], "vw");
         }
       };
-      document.querySelector(".testsContainer").classList.add("testsContainerMobile");
+      document.querySelector(".c_allTests").classList.add("testsContainerMobile");
       var section = document.createElement('section');
       section.classList.add("mobileCardsLine");
       container.append(section);
@@ -195,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         for (var tests in dataText[_elem]) {
           if (tests != "name") {
             var div = document.createElement('div');
-            div.classList.add('testCard');
+            div.classList.add('o_testCard');
             section.append(div);
             div.id = "testCard".concat(tests);
             div.style.backgroundImage = "url('".concat(imagesTests[tests], "')");
@@ -205,6 +207,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
               window.location.href = '../test.html';
             });
             var p = document.createElement('p');
+            p.classList.add("a_testName");
             p.id = "testName".concat(tests);
             p.textContent = dataText[_elem][tests].name;
             div.append(p);

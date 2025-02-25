@@ -72328,15 +72328,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
     // width% heightVw fontSizeVW lineHeightVw BackGroundSize1Vw BackGroundSize2Vw BackGroundPosition1Vw BackGroundPosition2Vw
   } else if (window.innerHeight <= window.innerWidth) {
     sizes = {
-      small: "24 25 1.1 1.5 120 120 0 0",
-      middle: "32 35 1.2 1.5 100 120 0 0",
-      big: "100 25 1.4 1.5 100 120 0 0"
+      small: "24 25 1.1 1.3 120 120 0 0",
+      middle: "32 35 1.2 1.3 100 120 0 0",
+      big: "100 25 1.4 1.4 100 120 0 0"
     };
   }
 
   /* */
 
-  var container = document.querySelector(".articlesBlock");
+  var container = document.querySelector(".c_articlesContainer");
 
   // generation of article cards
 
@@ -72349,14 +72349,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
       console.log(dataText);
       for (var elem in dataText) {
         var section = document.createElement('section');
-        section.classList.add('articleCardAndTime');
+        section.classList.add('w_articleCardAndTime');
         section.classList.add('showed');
         section.id = "articleCardAndTime".concat(elem);
         container.append(section);
         var sizeName = sizes["".concat(dataText[elem].size)].split(" ");
         section.style.width = "".concat(sizeName[0], "%");
         var div = document.createElement('div');
-        div.classList.add('articleCard');
+        div.classList.add('o_articleCard');
         div.style.height = "".concat(sizeName[1], "vw");
         div.id = "articleCard".concat(elem);
         div.style.backgroundImage = "url('".concat(articles_images[dataText[elem].img], "')");
@@ -72364,28 +72364,32 @@ document.addEventListener("DOMContentLoaded", function (e) {
         div.style.backgroundPosition = "".concat(sizeName[6], "vw ").concat(sizeName[7], "vw");
         section.append(div);
         var goIcon = document.createElement('div');
-        goIcon.classList.add('goIcon');
+        goIcon.classList.add('a_articlesOpenButton');
         div.append(goIcon);
         var goIconImg = document.createElement('img');
+        goIconImg.classList.add("q_articlesOpenIcon");
         goIconImg.src = arrow_namespaceObject;
         goIcon.append(goIconImg);
         var p = document.createElement('p');
         p.id = "articleName".concat(elem);
-        p.style.lineHeight = "2.3vw";
+        p.style.lineHeight = "2vw";
         p.textContent = "".concat(dataText[elem].name);
         p.style.fontSize = "".concat(sizeName[2], "vw");
         p.style.lineHeight = "".concat(sizeName[3], "vw");
+        p.classList.add("a_articleName");
         div.append(p);
         var description = document.createElement('div');
         description.id = "description".concat(elem);
-        description.classList.add('description');
+        description.classList.add('a_articlesDescriptionButton');
         div.append(description);
         var descriptionImg = document.createElement('img');
         descriptionImg.src = tt_namespaceObject;
+        descriptionImg.classList.add("q_articlesDescriptionIcon");
         descriptionImg.style.pointerEvents = "none";
         description.append(descriptionImg);
         var time = document.createElement('p');
         time.id = "articleTime".concat(elem);
+        time.classList.add("a_articleTime");
         time.textContent = "".concat(dataText[elem].time, " \u043C\u0438\u043D");
         section.append(time);
       }
@@ -72397,12 +72401,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
   // phoneBurger
 
   if (window.innerHeight > window.innerWidth) {
-    document.querySelector(".articlesBlock").style.width = "90%";
+    document.querySelector(".c_articlesContainer").style.width = "90%";
     document.querySelector("main").style.marginTop = "30vw";
     document.querySelector("#mobileNav").style.display = "block";
     var flagNav = false;
     var burger = document.querySelector(".burger");
-    document.querySelector(".navigation").style.display = "none";
+    document.querySelector(".o_menubarContainer").style.display = "none";
     burger.addEventListener("click", function () {
       burger.classList.toggle("open");
       if (!flagNav) {
@@ -72439,7 +72443,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
   }).then(function (dataa) {
     var dataText = dataa[0].articles;
     console.log(dataText);
-    var articles = Array.from(document.getElementsByClassName('description'));
+    var articles = Array.from(document.getElementsByClassName('a_articlesDescriptionButton'));
     articles.forEach(function (article) {
       article.addEventListener('click', function (e) {
         var id = e.target.id.substr(11);
@@ -72459,17 +72463,17 @@ document.addEventListener("DOMContentLoaded", function (e) {
       document.getElementById("articleCard".concat(id)).append(backColor);
       document.querySelector("#description".concat(id)).querySelector("img").src = cross_namespaceObject;
       var articlDescription = document.createElement('p');
-      articlDescription.classList.add("descriptionText");
+      articlDescription.classList.add("a_articleDescription");
       articlDescription.textContent = dataText[id].text;
       backColor.append(articlDescription);
       articlDescription.style.fontSize = "".concat(sizes[dataText[id].size].split(" ")[2], "vw");
       articlDescription.style.lineHeight = "".concat(sizes[dataText[id].size].split(" ")[3], "vw");
       var tagsContsiner = document.createElement("div");
-      tagsContsiner.classList.add("tagsContainer");
+      tagsContsiner.classList.add("c_tagsArticleCard");
       backColor.append(tagsContsiner);
       dataText[id].tags.forEach(function (elem) {
         var tag = document.createElement("p");
-        tag.classList.add("tag");
+        tag.classList.add("a_tagArticleCard");
         tag.textContent = elem;
         tag.style.fontSize = "".concat(sizes[dataText[id].size].split(" ")[2], "vw");
         if (window.innerHeight > window.innerWidth) {
@@ -72533,11 +72537,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
   document.querySelector("#arrows").addEventListener("click", function (e) {
     if (!document.querySelector("#arrows").classList.contains("tagsOpen")) {
       document.querySelector("#arrows").classList.add("tagsOpen");
-      document.querySelector(".tasContainer").style.height = "15vw";
+      document.querySelector(".c_articlesTas").style.height = "15vw";
       document.querySelector("#arrows").src = "".concat(arrowsOpened_namespaceObject);
     } else {
       document.querySelector("#arrows").classList.remove("tagsOpen");
-      document.querySelector(".tasContainer").style.height = "0vw";
+      document.querySelector(".c_articlesTas").style.height = "0vw";
       document.querySelector("#arrows").src = "".concat(arrows_namespaceObject);
     }
   });
@@ -72573,7 +72577,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         tag.classList.remove("activee");
       }
     });
-    var allCards = document.querySelectorAll(".articleCardAndTime");
+    var allCards = document.querySelectorAll(".w_articleCardAndTime");
     allCards.forEach(function (card) {
       if (card.className.includes("showed")) {
         card.classList.remove("showed");
@@ -72603,7 +72607,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         }
       });
     } else {
-      document.querySelectorAll(".articleCardAndTime").forEach(function (elem) {
+      document.querySelectorAll(".w_articleCardAndTime").forEach(function (elem) {
         elem.classList.add("showed");
       });
     }
@@ -72614,7 +72618,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
   /* adaptives */
 
   if (window.innerHeight > window.innerWidth) {
-    var descriptions = document.querySelectorAll(".description");
+    var descriptions = document.querySelectorAll(".a_articlesDescriptionButton");
     descriptions.forEach(function (description) {
       description.style.height = "10vw";
       description.style.width = "10vw";
