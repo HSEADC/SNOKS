@@ -292,9 +292,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 // resize reload
 
-  //  window.addEventListener('resize', function(event){
-   //     location.reload()
-   //   });
+    window.addEventListener('resize', function(event){
+        location.reload()
+      });
 
 //
 
