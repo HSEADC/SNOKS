@@ -72659,6 +72659,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
   }
 
   /* */
+
+  window.addEventListener('resize', function (event) {
+    setTimeout(function () {
+      location.reload();
+    }, 100);
+  });
 });
 /******/ })()
 ;
