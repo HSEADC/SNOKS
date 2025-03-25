@@ -448,6 +448,10 @@ function generationTags() {
 
 /* */
 
+window.addEventListener('resize', function(event){
+    location.reload()
+});
+
 
 
 })
