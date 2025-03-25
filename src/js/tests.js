@@ -207,7 +207,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 // resize reload
 
     window.addEventListener('resize', function(event){
-        location.reload()
+        setTimeout(function () {
+            location.reload()
+        }, 100);
     });
 
 //
