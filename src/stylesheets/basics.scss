@@ -1,127 +1,59 @@
 * {
-    box-sizing: border-box;
-  }
- 
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
 }
-  
+
 body {
-  font-family: "Unbounded";
-  font-size: 1.5vw;
-  font-weight: 400;
-  color: var(--black);
-  background-color: var(--white);
+font-family: "Unbounded";
+font-size: 1.5vw;
+font-weight: 400;
+color: var(--black);
+background-color: var(--white);
 }
 
 body::-webkit-scrollbar { width: 0; }
 
 ::selection {
-  background: var(--blue);
+background: var(--blue);
 }
 
-/* navigation */
 
-.navigation {
-  width: 90%;
-  margin: 0vw auto;
-
-  ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body {
+  &.test {
+    main{
+      height: fit-content;
+      display: flex;
+      align-items: center;
+    }
+    height: 90vh;
   }
 
-  a {
-    font-family:  "unbounded";
-    color: var(--black);
-    font-weight: 600;
-    text-transform: lowercase;
-    font-size: 1.5vw;
-    transition: all 0.25s ease;
+  &.preview {
+    background-color: var(--blue);
+    overflow: hidden;
   }
 
-  a:hover {
-    color: var(--blue);
-    transition: all 0.25s ease;
-  }
-
-  .choosenA {
-    color: var(--blue);
-  }
-}
-
-/* */
-
-/* logotip */
-
-.logo {
-  width: 7.5vw;
-  height: 7vw;
-  background-image: url("../images/aboutUs/logoHeader.webp");
-  background-size: 120% 100%;
-  transition: all 0.3s ease;
-
-}
-
-/* */
-
-
-/* footer */
-
-footer {
-  margin-top: 7vw;
-  width: 100%;
-  background-color: var(--black);
-  border-top-left-radius: 3vw;
-  border-top-right-radius: 3vw;
-  padding: 2vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: end;
-  font-weight: 400;
-
-  p {
-    font-size: 1.13vw;
-    color: var(--white);
-    line-height: 1.5vw;
-  }
-
-  span {
-    font-weight: 600;
-  }
-
-  .media {
-    margin-left: -10vw;
-  }
-}
-
-/* */
-
-
-/* preloader */
-
-#preloader {
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background-color: var(--white); 
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.1s ease-in-out;
-
-  video {
+  &.styleguide {
+    width: 100vw;
     background-color: var(--white);
-    width: 40vw;
+    
+    padding: 2vw 0vw;
+  }
+}
+
+
+@media (max-width: 695px) {
+
+  .test {
+    main {
+      height: calc(100vh - 21vw);
+      display: block;
+    }
+    height: 100vh;
   }
 
 }
-
-/* */
-
-

@@ -14,54 +14,84 @@
 
     <link rel="preload"href="./fonts/Unbounded/bold/Unbounded-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload"href="./fonts/druktextwidecyr/druktextwidecyr-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-</head>
+  </head>
   <body class="articlesBody">
 
-    <div id="preloader">
-      <video class="preloader-animation" src="./images/preloadVid.webm" muted autoplay></video>
+    <div class="m_preloader" id="preloader">
+      <video class="q_logoAnimation" src="./images/preloadVid.webm" muted autoplay></video>
     </div>
 
     <header>
 
-      <nav class="navigation">
-        <ul>
+      <nav class="o_menubarContainer" id="pcNav">
+        <ul class="w_headerNavigationList">
           <li>
             <form action="./preview.html">
-                <button><div class="logo"></div></button>
+                <button><div class="a_navigationLogo"></div></button>
             </form>
           </li>
-          <li><a href="./index.html">о нас</a></li>
-          <li><a href="./styleguide.html">стайлгайд</a></li>
-          <li><a href="./articles.html" class="choosenA">статьи</a></li>
-          <li><a href="./tests.html">тесты</a></li>
-          <li><a href="./dreambook.html">сонник</a></li>
-          <li><a href="./shop.html">магазин</a></li>
+          <li><a class="a_navigationCategory" href="./index.html">о нас</a></li>
+          <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
+          <li><a class="a_navigationCategory choosenA" href="./articles.html">статьи</a></li>
+          <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
+          <li><a class="a_navigationCategory" href="./shop.html">магазин</a></li>
         </ul>
       </nav>
+
+
+      <nav class="o_menubarContainer" id="mobileNav">
+        <ul class="w_headerNavigationList">
+          <li>
+            <form action="./preview.html">
+                <button><div class="a_navigationLogo" id="mobileLogo"></div></button>
+            </form>
+          </li>
+
+          <li>
+              <button class="q_burgerIcon" type="checkbox" id="burger" name="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button> 
+          </li>
+        </ul>
+      </nav>
+
+
+      <section class="s_mobileNavigation"> 
+
+        <ul class="c_mobileNavigation">
+          <li><a class="a_navigationCategory" href="./index.html">о нас</a></li>
+          <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
+          <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
+          <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
+          <li><a class="a_navigationCategory" href="./shop.html">магазин</a></li>
+        </ul>
+      </section>
     
     </header>
 
     <main>
 
-      <section class="titleContainer">
-        <img id="leftPillow" src="./images/leftPillow.webp">
-        <h1>статьи</h1>
-        <img id="rightPillow" src="./images/rightPillow.webp">
+      <section class="m_pageTitle articles">
+        <img class="q_decorationBracket" id="leftPillow" src="./images/leftPillow.webp">
+        <h1 class="a_h1">статьи</h1>
+        <img class="q_decorationBracket" id="rightPillow" src="./images/rightPillow.webp">
       </section>
 
-      <section class="mainTextContainer">
+      <section class="m_h2Container whyDreams">
 
-        <h2>П&nbsp;&nbsp;&nbsp;&nbsp;чему &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ы &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;идим &nbsp;сны?</h2>
-        <img class="letterPuffy" id="o" src="./images/articles/0.webp">
-        <img class="letterPuffy" id="m" src="./images/articles/m.webp">
-        <img class="letterPuffy" id="b" src="./images/articles/b.webp">
+        <h2 class="a_h2Container">П&nbsp;&nbsp;&nbsp;&nbsp;чему &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ы &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;идим &nbsp;сны?</h2>
+        <img class="q_decorationLetter" id="o" src="./images/articles/0.webp">
+        <img class="q_decorationLetter" id="m" src="./images/articles/m.webp">
+        <img class="q_decorationLetter" id="b" src="./images/articles/b.webp">
 
-        <div class="circleImages" id="circ1"></div>
-        <div class="circleImages" id="circ2"></div>
-        <div class="circleImages" id="circ3"></div>
-        <div class="circleImages" id="circ4"></div>
+        <div class="q_circlesImage" id="circ1"></div>
+        <div class="q_circlesImage" id="circ2"></div>
+        <div class="q_circlesImage" id="circ3"></div>
+        <div class="q_circlesImage" id="circ4"></div>
 
-        <p><span>Сны</span> — одна из <span>величайших загадок</span>, 
+        <p class="a_articlesMainText"><span>Сны</span> — одна из <span>величайших загадок</span>, 
           волнующая людей на протяжении тысячелетий.
            Одни восхищаются их яркостью и глубиной,
             другие видят в них мистические знаки и 
@@ -70,46 +100,74 @@
 
       </section>
 
-      <section class="findAndFilter">
+      <section class="w_searchAndTags">
         <form action="#">
-          <input class="findInput" type="text" name="findInput" id="findInput" placeholder="Поиск">
+          <input class="a_search" type="text" name="findInput" id="findInput" placeholder="Поиск">
         </form>
+        
+        <img class="q_articlesTagsOpen" id="arrows" src="./images/arrows.svg">
 
-        <img id="arrows" src="./images/arrows.svg">
+        <section class="w_articlesTas">
+          <div class="c_tasBlock">
+          </div>
+        </section>
       </section>
 
-      <section class="articlesBlock">
+      <section class="c_articlesContainer">
 
 <!--  example !Dont delete!
-        <section class="articleCardAndTime">
-          <div class="articleCard" id="articleCard1">
+        <section class="w_articleCardAndTime showed">
+          <div class="o_articleCard" id="articleCard1">
 
-            <div class="goIcon">
-              <img src="./images/articles/arrow.svg">
+            <div class="a_articlesOpenButton">
+              <img class="q_articlesOpenIcon" src="./images/articles/arrow.svg">
             </div>
-            <p id="articleName1">Почему дети<br> плохо спят?</p>
-            <div class="description">
-              <img src="./images/articles/tt.svg">
+            <p class="a_articleName" id="articleName1">Почему дети<br> плохо спят?</p>
+            <div class="a_articlesDescriptionButton">
+              <img class="q_articlesDescriptionIcon" src="./images/articles/tt.svg">
             </div>
             </div>
 
           </div>
 
-          <p id="articleTime1">3 — 5 мин</p>
+          <p class="a_articleTime" id="articleTime1">3 — 5 мин</p>
         </section>
+
+        rotated Ver----------------------
+
+        <div class="o_articleCard opened" id="articleCard1">
+
+            <div class="a_articlesOpenButton">
+              <img class="q_articlesOpenIcon" src="./images/articles/arrow.svg">
+            </div>
+            <p class="a_articleName" id="articleName1">Почему дети<br> плохо спят?</p>
+            <div class="a_articlesDescriptionButton">
+              <img class="q_articlesDescriptionIcon" src="./images/articles/tt.svg">
+            </div>
+            <div class="o_articleCardRotated" id="articleCardRotated1">
+              <p class="a_articleDescription"></p>
+              <div class="c_tagsArticleCard">
+                <p class="a_tagArticleCard">сон</p>
+                <p class="a_tagArticleCard">иследование</p>
+              </div>
+            </div>
+
+          </div>
+
+
       -->
         
       </section>
 
-      <section class="mainTextContainer secondMainText">
-        <h2>«С&nbsp;&nbsp;&nbsp;&nbsp;н — это золот&nbsp;&nbsp;&nbsp;&nbsp;я  нить, 
+      <section class="m_h2Container secondMainText">
+        <h2 class="a_h2Container">«С&nbsp;&nbsp;&nbsp;&nbsp;н — это золот&nbsp;&nbsp;&nbsp;&nbsp;я  нить, 
           которая связывает здо&nbsp;&nbsp;&nbsp;&nbsp;овье 
           <br>и наш&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;тело.»?</h2>
 
-          <img class="letterPuffy" id="oS" src="./images/articles/0.webp">
-          <img class="letterPuffy" id="mS" src="./images/articles/a.webp">
-          <img class="letterPuffy" id="bS" src="./images/articles/p.webp">
-          <img class="letterPuffy" id="eS" src="./images/articles/e.webp">
+          <img class="q_decorationLetter" id="oS" src="./images/articles/0.webp">
+          <img class="q_decorationLetter" id="mS" src="./images/articles/a.webp">
+          <img class="q_decorationLetter" id="bS" src="./images/articles/p.webp">
+          <img class="q_decorationLetter" id="eS" src="./images/articles/e.webp">
 
       </section>
 
@@ -117,25 +175,25 @@
 
 
 
-    <footer>
-      <p>
-        <span>Создатели</span><br><br>
+    <footer class="s_footerContainer">
+      <p class="a_footerCategoryTip">
+        <span class="a_footerCategoryName">Создатели</span><br><br>
 
         Антипенко Екатерина<br>
         Иосифова Виола<br>
         Яковлева Анна
       </p>
 
-      <p class="media"><span>@snoksmedia<br>
+      <p class="a_socialMediaTag"><span class="a_footerCategoryName">@snoksmedia<br>
         HSEADC 2024</span></p>
         
-        <p>
-          <span>Контакты</span><br><br>
+      <p class="a_footerCategoryTip">
+        <span class="a_footerCategoryName">Контакты</span><br><br>
   
-          @Kate097a<br>
-          @fwrrq<br>
-          @thisisandi
-        </p>
+        @Kate097a<br>
+        @fwrrq<br>
+        @thisisandi
+      </p>
      
     </footer>
 

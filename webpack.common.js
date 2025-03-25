@@ -13,8 +13,9 @@ module.exports = {
     preview: './src/js/preview.js',
     tests: '/src/js/tests.js',
     styleguide: "./src/js/styleguide.js",
-    dreambook: "./src/js/dreambook.js",
-    shop: "./src/js/shop.js"
+    404: "./src/js/404.js",
+    shop: "./src/js/shop.js",
+    test: "./src/js/test.js"
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -127,9 +128,9 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/dreambook.html',
-      filename: './dreambook.html',
-      chunks: ["dreambook"],
+      template: './src/404.html',
+      filename: './404.html',
+      chunks: ["404"],
     }),
 
     new HtmlWebpackPlugin({
@@ -137,6 +138,12 @@ module.exports = {
       filename: './shop.html',
       chunks: ["shop"],
     }),
+
+    new HtmlWebpackPlugin({
+      template: './src/test.html',
+      filename: './test.html',
+      chunks: ["test"],
+    })
 
 
     

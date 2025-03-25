@@ -17,64 +17,96 @@
   </head>
   <body class="aboutUs">
     
-    <div id="preloader">
-      <video class="preloader-animation" src="./images/preloadVid.webm" muted autoplay></video>
+    <div class="m_preloader" id="preloader">
+      <video class="q_logoAnimation" src="./images/preloadVid.webm" muted autoplay></video>
     </div>
 
     <header>
 
-      <nav class="navigation">
-        <ul>
+      <nav class="o_menubarContainer" id="pcNav">
+        <ul class="w_headerNavigationList">
           <li>
             <form action="./preview.html">
-                <button><div class="logo"></div></button>
+                <button><div class="a_navigationLogo"></div></button>
             </form>
           </li>
-          <li><a href="./index.html" class="choosenA">о нас</a></li>
-          <li><a href="./styleguide.html">стайлгайд</a></li>
-          <li><a href="./articles.html">статьи</a></li>
-          <li><a href="./tests.html">тесты</a></li>
-          <li><a href="./dreambook.html">сонник</a></li>
-          <li><a href="./shop.html">магазин</a></li>
+          <li><a class="a_navigationCategory choosenA" href="./index.html">о нас</a></li>
+          <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
+          <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
+          <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
+          <li><a class="a_navigationCategory" href="./shop.html">магазин</a></li>
         </ul>
       </nav>
+
+
+      <nav class="o_menubarContainer" id="mobileNav">
+        <ul class="w_headerNavigationList">
+          <li>
+            <form action="./preview.html">
+                <button><div class="a_navigationLogo" id="mobileLogo"></div></button>
+            </form>
+          </li>
+
+          <li>
+              <button class="q_burgerIcon" type="checkbox" id="burger" name="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button> 
+          </li>
+        </ul>
+      </nav>
+
+
+      <section class="s_mobileNavigation"> 
+
+        <ul class="c_mobileNavigation">
+          <li><a class="a_navigationCategory" href="./index.html">о нас</a></li>
+          <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
+          <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
+          <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
+          <li><a class="a_navigationCategory" href="./shop.html">магазин</a></li>
+        </ul>
+      </section>
     
     </header>
 
     <main> 
 
-        <section class="TitleBlock">
-          <h1>SNOK(S) — <span class="blueText">медиа</span><br> про
+        <section class="o_aboutUsTitle">
+          <h1 class="a_aboutUsTitle">SNOK(S) — <span class="blueText">медиа</span><br> про
             сон и сновидения</h1>
-          <div class="underTitleTextContainer">
-            <p>значения образов<br> в сновидениях</p>
-            <p>улучшение качества<br> сна и жизни</p>
-            <p>познание себя и раскрытие<br> своего внутреннего мира</p>
+          <div class="w_underTitleTexts">
+            <p class="a_textUnderTitle">значения образов<br> в сновидениях</p>
+            <p class="a_textUnderTitle">улучшение качества<br> сна и жизни</p>
+            <p class="a_textUnderTitle">познание себя и раскрытие<br> своего внутреннего мира</p>
           </div>
         </section>
 
-        <div class="backgroundBorderRadius upRound"></div>
+        <div class="q_backgroundBorderRadius upRound"></div>
 
-        <section class="LogoScreenContainer">
-          <video src="./images/aboutUs/aboutUs.webm" muted autoplay loop></video>
-          <div class="newCard">
-            <h4>о нас</h4>
-            <p>Наш проект родился из желания 
+        <section class="o_mainAboutUsContainer">
+          <video class="q_aboutUsVideo" src="./images/aboutUs/aboutUs.webm" muted autoplay loop></video>
+          <div class="m_aboutUsCard">
+            <h4 class="a_aboutUsCardTitle">о нас</h4>
+            <p class="a_aboutUsCardTexts">Наш проект родился из желания 
               помочь людям соприкоснуться <br>с уникальным миром
-               подсознания.</p>
-            <p class="link">узнать подробнее</p>
+              подсознания.</p>
+            <p class="a_aboutUsCardTextLearnMore">подробнее</p>
           </div>
+        </section> 
+
+        <div class="q_backgroundBorderRadius downRound"></div>
+
+        <section class="m_h2Container why">
+          <h2 class="a_subTitle">П&nbsp;&nbsp;&nbsp;&nbsp;чему м&nbsp;&nbsp;&nbsp;&nbsp;е это снится?<br>Есть ли какой-то с&nbsp;&nbsp;&nbsp;&nbsp;ысл<br> в моих сн&nbsp;&nbsp;&nbsp;&nbsp;х?</h2>
+          <img class="q_decorationLetter" id="o" src="./images/aboutUs/0.webp">
+          <img class="q_decorationLetter" id="h" src="./images/aboutUs/n.webp">
+          <img class="q_decorationLetter" id="m" src="./images/aboutUs/m.webp">
+          <img class="q_decorationLetter" id="a" src="./images/aboutUs/a.webp">
         </section>
 
-        <div class="backgroundBorderRadius downRound"></div>
-
-        <section class="WhyDreamsContainer">
-          <h2>П&nbsp;&nbsp;&nbsp;&nbsp;чему м&nbsp;&nbsp;&nbsp;&nbsp;е это снится?<br>Есть ли какой-то с&nbsp;&nbsp;&nbsp;&nbsp;ысл<br> в моих сн&nbsp;&nbsp;&nbsp;&nbsp;х?</h2>
-          <img class="letterPuffy" id="o" src="./images/aboutUs/0.webp">
-          <img class="letterPuffy" id="h" src="./images/aboutUs/n.webp">
-          <img class="letterPuffy" id="m" src="./images/aboutUs/m.webp">
-          <img class="letterPuffy" id="a" src="./images/aboutUs/a.webp">
-        </section>
+        <!--
 
         <p class="miniText">
           Мы тоже размышляли над этим. Изучая<br>
@@ -84,149 +116,163 @@
           <span>важная часть нашей жизни</span>.
         </p>
 
-        <section class="missionText">
-          <img id="leftPillow" src="./images/leftPillow.webp">
-          <p>Наша <span class="blueText">миссия</span> — создание платформы, 
+        -->
+
+        <section class="m_missionText">
+          <img class="q_decorationBracketLeft" src="./images/leftPillow.webp">
+          <p class="a_missionText">Наша <span class="blueText">миссия</span> — создание платформы, 
             которая поможет каждому разобраться в своих
              сновидениях и глубже понять природу самого сна.</p>
-          <img id="rightPillow" src="./images/rightPillow.webp">
+          <img class="q_decorationBracketRight" src="./images/rightPillow.webp">
         </section>
 
-        <section class="factsContainer">
-          <div class="factsBtns">
+        <section class="s_factsContainer">
 
-            <div class="btn" id="btn1">
-              <img class="btnText" id="btnText1" src="./images/fact1.svg">
-              <div class="btnCircle" id="btnCircle1"></div>
+          <div class="w_facts">
+            <div class="m_factsText">
+              <h3 class="a_aboutUsSubTitle facts">факты <br>про сон <br></h3>
+              <p class="a_factsInstructionText"> Наведи/Нажми на круг, чтобы<br> узнать факт!</p>
             </div>
+            <div class="m_factCard"> 
 
-            <div class="btn" id="btn2">
-              <img class="btnText" id="btnText2" src="./images/fact2.svg">
-              <div class="btnCircle" id="btnCircle2"></div>
-            </div>
-
-            <div class="btn" id="btn3">
-              <img class="btnText" id="btnText3" src="./images/fact3.svg">
-              <div class="btnCircle" id="btnCircle3"></div>
-            </div>
-
-            <div class="btn" id="btn4">
-              <img class="btnText" id="btnText4" src="./images/fact4.svg">
-              <div class="btnCircle" id="btnCircle4"></div>
-            </div>
-
-            <div class="btn" id="btn5">
-              <img class="btnText" id="btnText5" src="./images/fact5.svg">
-              <div class="btnCircle" id="btnCircle5"></div>
-            </div>
-
-          </div>
-
-          <div class="factsReview">
-            <div class="factsTitleContainer">
-              <h3>факты <br>про сон <br></h3>
-              <p> Наведи/Нажми на круг, чтобы<br> узнать факт!</p>
-            </div>
-            <div class="factCard"> 
-
-              <div class="factText" id="factText1">
-                <h4>Обучение</h4>
-                <p>Во время сна наши знания<br>
+              <div class="m_factCardTexts" id="factText1">
+                <h4 class="a_factHeader">Обучение</h4>
+                <p class="a_factText">Во время сна наши знания<br>
                    переходят из кратковременной<br>
                    памяти в долговременную</p>
               </div>
 
-              <div class="factText" id="factText2">
-                <h4>Нехватка сна</h4>
-            <p>Хроническая нехватка сна ведёт <br> 
-                к расстройствам слуха, зрения,<br>
-                повышенной тревожности,<br>
-                нарушению обмена веществ,<br> 
-                нервным тикам и общей слабости</p>
+              <div class="m_factCardTexts" id="factText2">
+                <h4 class="a_factHeader">Нехватка сна</h4>
+                <p class="a_factText">Хроническая нехватка сна ведёт <br> 
+                  к расстройствам слуха, зрения,<br>
+                  повышенной тревожности,<br>
+                  нарушению обмена веществ,<br> 
+                  нервным тикам и общей слабости</p>
               </div>
 
-              <div class="factText" id="factText3">
-                <h4>Время</h4>
-                <p>Примерно четверть всей своей<br>
+              <div class="m_factCardTexts" id="factText3">
+                <h4 class="a_factHeader">Время</h4>
+                <p class="a_factText">Примерно четверть всей своей<br>
                    жизни мы проводим во сне</p>
               </div>
 
-              <div class="factText" id="factText4">
-                <h4>Забывчивость</h4>
-                <p>Через 5 минут после пробуждения<br>
+              <div class="m_factCardTexts" id="factText4">
+                <h4 class="a_factHeader">Забывчивость</h4>
+                <p class="a_factText">Через 5 минут после пробуждения<br>
                   мы забываем до 50% снов, а через 10<br>
                   минут — до 90%.</p>
               </div>
 
-              <div class="factText" id="factText5">
-                <h4>Цвета</h4>
-                <p>Примерно 12% людей видят сны<br>
+              <div class="m_factCardTexts" id="factText5">
+                <h4 class="a_factHeader">Цвета</h4>
+                <p class="a_factText">Примерно 12% людей видят сны<br>
+                   только в черно-белом цвете.</p>
+              </div>
+
+              <div class="m_factCardTexts" id="factText6">
+                <h4 class="a_factHeader">Цвета</h4>
+                <p class="a_factText">Примерно 12% людей видят сны<br>
                    только в черно-белом цвете.</p>
               </div>
 
             </div>
           </div>
+
+          <div class="c_factCirclesRow">
+
+            <div class="m_factCircle" id="btn1">
+              <img class="a_factTextCircle" id="btnText1" src="./images/fact1.svg">
+              <div class="a_factsButton" id="btnCircle1"></div>
+            </div>
+
+            <div class="m_factCircle" id="btn2">
+              <img class="a_factTextCircle" id="btnText2" src="./images/fact2.svg">
+              <div class="a_factsButton" id="btnCircle2"></div>
+            </div>
+
+            <div class="m_factCircle" id="btn3">
+              <img class="a_factTextCircle" id="btnText3" src="./images/fact3.svg">
+              <div class="a_factsButton" id="btnCircle3"></div>
+            </div>
+
+            <div class="m_factCircle" id="btn4">
+              <img class="a_factTextCircle" id="btnText4" src="./images/fact4.svg">
+              <div class="a_factsButton" id="btnCircle4"></div>
+            </div>
+
+            <div class="m_factCircle" id="btn5">
+              <img class="a_factTextCircle" id="btnText5" src="./images/fact5.svg">
+              <div class="a_factsButton" id="btnCircle5"></div>
+            </div>
+
+            <div class="m_factCircle" id="btn6">
+              <img class="a_factTextCircle" id="btnText6" src="./images/fact5.svg">
+              <div class="a_factsButton" id="btnCircle6"></div>
+            </div>
+
+          </div>
         </section>
 
         <div class="backgroundBorderRadius upRound"></div>
 
-        <section class="ThreeScreenContainer">
+        <!--<section class="m_3dTextScreenSecond">
           <video src="./images/aboutUs/3dTextScreen.webm" muted autoplay loop></video>
-          <p class="first3DTExt">сон — это время, когда мы<br> возвращаемся к себе</p>
-          <p class="second3DTExt">сон — это время, когда мы<br> возвращаемся к себе</p>
-        </section>
+          <p class="first3DText">сон — это время, когда мы<br> возвращаемся к себе</p>
+          <p class="second3DText">сон — это время, когда мы<br> возвращаемся к себе</p>
+        </section>-->
 
         <div class="backgroundBorderRadius downRound"></div>
 
-        <section class="articles"> 
-          <h3>статьи</h3>
-          <div class="articlesContainer">
+        <section class="s_articlesAboutUsContainer"> 
+          <h3 class="a_aboutUsSubTitle articles">статьи</h3>
+          <div class="o_articlesSlider">
             
-            <img class="arrow arLeft" src="./images/leftPillow.webp">
+            <img class="a_arrowNavigation arLeft" src="./images/leftPillow.webp">
 
             <form action="#">
-              <button class="articleCard">
-                <div class="articleInnerCard">
+              <button class="m_aboutUsArticleCard">
+                <!--<div class="articleInnerCard">
                   <h4 class="articleInnerCardName">Почему малыши не спят крепко?</h4>
                   <a href="./articles.html" class="cardLink">читать статью</a>
-                </div>
+                </div>-->
               </button>
             </form>
 
-           <img class="arrow arRight" src="./images/rightPillow.webp">
+            <img class="a_arrowNavigation arRight" src="./images/rightPillow.webp">
 
           </div>
 
-          <div class="circlesGroup">
-            <div class="circlePick" id="circlePick1"></div>
-            <div class="circlePick" id="circlePick2"></div>
-            <div class="circlePick picked" id="circlePick3"></div>
-            <div class="circlePick" id="circlePick4"></div>
-            <div class="circlePick" id="circlePick5"></div>
+          <div class="a_sliderSwitcher">
+            <div class="q_sliderbuttton" id="circlePick1"></div>
+            <div class="q_sliderbuttton" id="circlePick2"></div>
+            <div class="q_sliderbuttton picked" id="circlePick3"></div>
+            <div class="q_sliderbuttton" id="circlePick4"></div>
+            <div class="q_sliderbuttton" id="circlePick5"></div>
           </div>
         </section>
 
     </main>
 
-    <footer>
-      <p>
-        <span>Создатели</span><br><br>
+    <footer class="s_footerContainer">
+      <p class="a_footerCategoryTip">
+        <span class="a_footerCategoryName">Создатели</span><br><br>
 
         Антипенко Екатерина<br>
         Иосифова Виола<br>
         Яковлева Анна
       </p>
 
-      <p class="media"><span>@snoksmedia<br>
+      <p class="a_socialMediaTag"><span class="a_footerCategoryName">@snoksmedia<br>
         HSEADC 2024</span></p>
         
-        <p>
-          <span>Контакты</span><br><br>
+      <p class="a_footerCategoryTip">
+        <span class="a_footerCategoryName">Контакты</span><br><br>
   
-          @Kate097a<br>
-          @fwrrq<br>
-          @thisisandi
-        </p>
+        @Kate097a<br>
+        @fwrrq<br>
+        @thisisandi
+      </p>
      
     </footer>
 

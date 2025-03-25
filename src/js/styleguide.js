@@ -1,4 +1,6 @@
-import '../styleguide.css';
+import '../index.css';
+import svgLogo from '../images/preview/logo.svg'
+import pngLogo from '../images/aboutUs/logoHeader.webp'
 
 document.addEventListener("DOMContentLoaded", (e) => {
 
@@ -10,10 +12,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
         , 1200)
     };
 
-    let navigation = document.querySelector(".styleguideNav")
+    let navigation = document.querySelector(".c_styleguideNav")
 
     navigation.addEventListener("click", (e)=> {
-        if (e.target.className == "navTip") {
+        if (e.target.className == "a_styleguideNavigation") {
             console.log(e.target.id.substr(6))
             document.querySelector(`#guideTip${e.target.id.substr(6)}`).scrollIntoView({ behavior: 'smooth' });
         }
@@ -110,4 +112,90 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.getElementById("navTip11").classList.add("blueNav")
         }
     })
+
+
+
+    if (window.innerHeight > window.innerWidth) { 
+        let styleNavFlag = false;
+        document.querySelector(".c_styleguideNav ul").style.marginLeft="-40vw";
+        document.querySelector(".c_styleguideNav").style.display="none";
+        document.querySelector(".o_styleGuide").style.width="95%";
+        document.querySelector(".o_styleGuide").style.marginLeft="5%";
+        document.querySelector(".a_articlesOpenIcon").style.display="block"
+        document.querySelector(".o_styleguideAndNav").style.height="1250vw"
+
+        document.querySelector(".a_articlesOpenIcon").addEventListener("click", (e) => {
+            if (!styleNavFlag) {
+                styleNavFlag = true;
+                document.querySelector(".c_styleguideNav").style.display="block";
+                setTimeout(()=> {
+                    document.querySelector(".c_styleguideNav ul").style.marginLeft="0";
+                    document.querySelector(".o_styleGuide").style.width="80%";
+                    document.querySelector(".a_articlesOpenIcon").style.left="27vw"
+                    document.querySelector(".a_articlesOpenIcon").style.transform="rotate(180deg)"
+                    document.querySelector(".o_styleguideAndNav").style.height="1150vw"
+                }
+                ,0)
+
+            } else {
+                styleNavFlag = false;
+                document.querySelector(".c_styleguideNav ul").style.marginLeft="-40vw";
+                setTimeout(()=> {
+                    document.querySelector(".c_styleguideNav").style.display="none";
+                    document.querySelector(".o_styleGuide").style.width="95%";
+                }, 300)
+                document.querySelector(".a_articlesOpenIcon").style.left="4vw"
+                document.querySelector(".a_articlesOpenIcon").style.transform="rotate(0deg)"
+                document.querySelector(".o_styleguideAndNav").style.height="1250vw"
+            }
+        })
+    }
+
+
+// phoneBurger
+
+    if (window.innerHeight > window.innerWidth) { 
+        console.log(1111111111111)
+        document.querySelector("main").style.marginTop="24vw"
+        document.querySelector("#mobileNav").style.display="block"
+        let flagNav = false;
+        const burger = document.querySelector("#burger");
+        document.querySelector(".o_menubarContainer").style.display="none";
+        burger.addEventListener("click", function() {
+            burger.classList.toggle("open");
+            if (!flagNav) {
+                flagNav = true;
+                document.querySelector("#mobileNav").style.backgroundColor="var(--blue)"
+                document.querySelector(".s_mobileNavigation").style.display="block"
+                setTimeout(()=> {
+                    document.querySelector(".s_mobileNavigation").style.opacity="1";
+                    document.querySelector("#mobileLogo").style.backgroundImage=`url("${svgLogo}")`
+                    document.querySelector("#mobileLogo").style.backgroundSize="78% 78%";
+                     document.querySelector("#mobileLogo").style.backgroundPosition="20% 50%"
+                }, 0)
+            } else {
+                flagNav = false;
+                document.querySelector(".s_mobileNavigation").style.opacity="0";
+                document.querySelector("#mobileNav").style.backgroundColor="var(--white)"
+                document.querySelector("#mobileLogo").style.backgroundImage=`url("${pngLogo}")`
+                document.querySelector("#mobileLogo").style.backgroundSize="120% 100%"
+                setTimeout(()=> {
+                    document.querySelector(".s_mobileNavigation").style.display="none"
+                }, 300)
+            }
+        });
+
+    } else {
+        document.querySelector("#pcNav").style.display="block"
+    }
+
+//
+
+// resize reload
+
+  //  window.addEventListener('resize', function(event){
+  //      location.reload()
+ //   });
+
+//
 })

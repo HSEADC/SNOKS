@@ -1,4 +1,6 @@
-import '../shop.css';
+
+import svgLogo from '../images/preview/logo.svg'
+import pngLogo from '../images/aboutUs/logoHeader.webp'
 
 document.addEventListener("DOMContentLoaded", (e) => {
 
@@ -8,5 +10,53 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.getElementById("preloader").style.pointerEvents="none"
         }
         , 1200)
-      };
+    };
+
+// phoneBurger
+    
+    if (window.innerHeight > window.innerWidth) { 
+        document.querySelector("main").style.marginTop="25vw"
+        document.querySelector("#mobileNav").style.display="block"
+        let flagNav = false;
+        const burger = document.querySelector(".burger");
+        document.querySelector(".o_menubarContainer").style.display="none";
+        burger.addEventListener("click", function() {
+            burger.classList.toggle("open");
+            if (!flagNav) {
+                flagNav = true;
+                document.querySelector("#mobileNav").style.backgroundColor="var(--blue)"
+                document.querySelector(".burgerNav").style.display="block"
+                setTimeout(()=> {
+                    document.querySelector(".burgerNav").style.opacity="1";
+                    document.querySelector("#mobileLogo").style.backgroundImage=`url("${svgLogo}")`
+                    document.querySelector("#mobileLogo").style.backgroundSize="78% 78%";
+                    document.querySelector("#mobileLogo").style.backgroundPosition="20% 50%"
+                }, 0)
+            } else {
+                flagNav = false;
+                document.querySelector(".burgerNav").style.opacity="0";
+                document.querySelector("#mobileNav").style.backgroundColor="var(--white)"
+                document.querySelector("#mobileLogo").style.backgroundImage=`url("${pngLogo}")`
+                document.querySelector("#mobileLogo").style.backgroundSize="120% 100%"
+                setTimeout(()=> {
+                    document.querySelector(".burgerNav").style.display="none"
+                }, 300)
+            }
+        });
+    
+    
+    } else {
+        document.querySelector("#pcNav").style.display="block"
+    }
+    
+//
+
+
+// resize reload
+
+ //   window.addEventListener('resize', function(event){
+ //       location.reload()
+  //  });
+
+//
 })

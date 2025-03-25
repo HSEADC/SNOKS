@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Тест</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="название теста"/>
+    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <meta property="og:description" content="название теста"/>
+    <meta property="og:image" content="https://ibb.co/55LDw1H"/>
+    <meta property="og:type" content="tests"/>
+    <meta property="og:url" content= "https://hseadc.github.io/SNOKS/shop.html" />
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="preload"href="./fonts/Unbounded/bold/Unbounded-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload"href="./fonts/druktextwidecyr/druktextwidecyr-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+
+  <body class="test">
+
+    <div class="m_preloader" id="preloader">
+      <video class="q_logoAnimation" src="styleguide.html" muted autoplay></video>
+    </div>
+
+    <header>
+
+      <nav class="o_menubarContainer" id="pcNav">
+        <ul class="w_headerNavigationList">
+          <li>
+            <form action="./preview.html">
+                <button><div class="a_navigationLogo"></div></button>
+            </form>
+          </li>
+          <li><a class="a_navigationCategory" href="./index.html">о нас</a></li>
+          <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
+          <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
+          <li><a class="a_navigationCategory choosenA" href="./tests.html">тесты</a></li>
+          <li><a class="a_navigationCategory" href="./shop.html">магазин</a></li>
+        </ul>
+      </nav>
+
+
+      <nav class="o_menubarContainer" id="mobileNav">
+        <ul class="w_headerNavigationList">
+          <li>
+            <form action="./preview.html">
+                <button><div class="a_navigationLogo" id="mobileLogo"></div></button>
+            </form>
+          </li>
+
+          <li>
+              <button class="q_burgerIcon" type="checkbox" id="burger" name="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button> 
+          </li>
+        </ul>
+      </nav>
+
+
+      <section class="s_mobileNavigation"> 
+
+        <ul class="c_mobileNavigation">
+          <li><a class="a_navigationCategory" href="./index.html">о нас</a></li>
+          <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
+          <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
+          <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
+          <li><a class="a_navigationCategory" href="./shop.html">магазин</a></li>
+        </ul>
+      </section>
+    
+    </header>
+
+    <main>
+
+      <section class="s_choosenTest" id="testTitle">
+        <div class="o_choosenTestCard">
+          <div class="m_testsGoBack" id="goIcon">
+            <img class="q_testsGoBack" src="./images/articles/arrow.svg">
+          </div>
+          <p class="a_articleName">Какой ты <br>сновидец?</p>
+        </div>
+
+        <div class="w_choosenTestTextAndBtn">
+          <div class="m_choosenTestText">
+            <h1 class="a_choosenTestName">Что сны говорят <br>
+              о твоих страхах?
+            </h1>
+  
+            <p class="a_aboutChoosenTest">Этот  тест поможет  тебе разобраться в том, 
+              что твои сны могут говорить о твоих страхах. Ответив 
+              на несколько вопросов, ты сможешь лучше понять, 
+              какие эмоции и переживания могут скрываться 
+              за твоими ночными видениями. <br><br>Готов ли ты узнать больше
+               о себе и своих страхах? Давай начнем!
+            </p>
+  
+            <p class="a_choosenTestTime">
+              3 — 5 мин
+            </p>
+          </div>
+
+          <button class="a_testsButton">Начать тест</button>
+
+        </div>
+      </section>
+
+
+      
+      <section class="s_testUI" id="testUI">
+
+        <img class="q_testBackgroundImage" src="./images/testsBack.svg">
+
+        <div class="w_testQuestion">
+          <h2 class="a_testQuestion">Что сны говорят 
+            о твоих страхах?</h2>
+          <p class="a_testQuestionNumber">1/10</p>
+        </div>
+
+        <div class="c_answers">
+
+          <!-- EXAMPLE
+          <button class="m_testsOption" id="A">
+            <p class="a_answerLetter">A</p>
+            <p class=a_answerText>Каждый день</p>
+          </button>
+          <button class="m_testsOption" id="B">
+            <p class="answerTip">B</p>
+            <p class=a_answerText>Каждый день</p>
+          </button>
+          <button class="m_testsOption" id="C">
+            <p class="answerTip">C</p>
+            <p class=a_answerText>Каждый день</p>
+          </button>
+          <button class="m_testsOption" id="D">
+            <p class="answerTip">D</p>
+            <p class=a_answerText>Каждый день</p>
+          </button>
+
+          -->
+        </div>
+
+        <div class="m_navigationCircles">
+          <button class="a_testsNavigationCircle" id="prev"></button>
+          <button class="a_testsNavigationCircle" id="next"></button>
+          <button class="a_testsNavigationCircle" id="result">Результат</button>
+        </div>
+
+
+      </section>
+
+
+      <section class="s_resultUI" id="resultUI">
+        <div class="o_resultsAll">
+          <div class="w_resultsTexts">
+            <h3 class="a_testResultName">Спокойный сновидец</h3>
+            <p class="a_testResultDesc"></p>
+          </div>
+          <img class="q_imageTestResult" src="./images/tests/result1.webp">
+        </div>
+        <div class="w_resultsBtns">
+          <form action="./tests.html">
+            <button class="a_testsButton resultsBtn another">Другие тесты</button>
+          </form>
+          <button class="a_testsButton resultsBtn share">Поделиться</button>
+        </div>
+        
+      </section>
+
+      <div id="my-table-id"></div>
+      
+
+    </main>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  </body>
+</html>

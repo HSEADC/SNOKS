@@ -17,46 +17,83 @@
 
   <body class="preview">
 
-    <div id="preloader">
-      <video class="preloader-animation" src="./images/preloadVid.webm" muted autoplay></video>
+    <div class="m_preloader" id="preloader">
+      <video class="q_logoAnimation" src="./images/preloadVid.webm" muted autoplay></video>
     </div>
+
+    <video class="q_backgroundVideo pc" src="./images/preview/zaglushVid2.webm" muted autoplay loop></video>
+    <video class="q_backgroundVideo tel" src="./images/preview/zaglushVid2Tel.webm" muted autoplay loop></video>
+    <video class="q_backgroundVideo telMin" src="./images/preview/zaglushVidTelMin.webm" muted autoplay loop></video>
+
+    <header>
+
+      <nav class="o_menubarContainer" id="pcNav">
+        <ul class="w_headerNavigationList">
+          <li>
+            <form action="./preview.html">
+                <button><div class="a_navigationLogo"></div></button>
+            </form>
+          </li>
+          <li><a class="a_navigationCategory" href="./index.html">о нас</a></li>
+          <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
+          <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
+          <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
+          <li><a class="a_navigationCategory" href="./shop.html">магазин</a></li>
+        </ul>
+      </nav>
+
+
+      <nav class="o_menubarContainer" id="mobileNav">
+        <ul class="w_headerNavigationList">
+          <li>
+            <form action="./preview.html">
+                <button><div class="a_navigationLogo" id="mobileLogo"></div></button>
+            </form>
+          </li>
+
+          <li>
+              <button class="q_burgerIcon" type="checkbox" id="burger" name="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button> 
+          </li>
+        </ul>
+      </nav>
+
+
+      <section class="s_mobileNavigation"> 
+
+        <ul class="c_mobileNavigation">
+          <li><a class="a_navigationCategory" href="./index.html">о нас</a></li>
+          <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
+          <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
+          <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
+          <li><a class="a_navigationCategory" href="./shop.html">магазин</a></li>
+        </ul>
+      </section>
     
-    <video class="backgroundVideo pc" src="./images/preview/zaglushVid2.webm" muted autoplay loop></video>
-    <video class="backgroundVideo tel" src="./images/preview/zaglushVid2Tel.webm" muted autoplay loop></video>
-    <video class="backgroundVideo telMin" src="./images/preview/zaglushVidTelMin.webm" muted autoplay loop></video>
+    </header>
+    <main>
 
-    <nav class="navigation">
-      <ul>
-        <li>
-          <form action="./preview.html">
-              <button><div class="logo"></div></button>
-          </form>
-        </li>
-        <li><a href="./index.html">о нас</a></li>
-        <li><a href="./styleguide.html" class="choosenA">стайлгайд</a></li>
-        <li><a href="./articles.html">статьи</a></li>
-        <li><a href="./tests.html">тесты</a></li>
-        <li><a href="./dreambook.html">сонник</a></li>
-        <li><a href="./shop.html">магазин</a></li>
-      </ul>
-    </nav>
-
-    <div class="socialMedia">
-      <div class="icon vk"></div>
-      <div class="icon tg"></div>
+    <div class="w_socialMedia preview">
+      <div class="a_socialButton vk"></div>
+      <div class="a_socialButton tg"></div>
     </div>
 
-  <section class="textAndEmail">
-    <div class="back"></div>
-    <p class="zaglTextBlock">Мы готовим новый медиа-сервис про сон <br>и сновидения.
+  <section class="o_previewCard">
+
+    <p class="a_FormSubtitle">Мы готовим новый медиа-сервис про сон <br>и сновидения.
       Оставь свою электронную почту, чтобы узнать о запуске самым первым!</p>
 
       <form id="my-form" action="https://formspree.io/f/xpwzakpz" method="POST">
-        <input class="email" type="email" name="email" placeholder="&nbsp;&nbsp;&nbsp;Snoks@gmail.com"/>
-        <button id="my-form-button">отправить</button>
+        <input class="a_formInput email" type="email" name="email" placeholder="&nbsp;&nbsp;&nbsp;Snoks@gmail.com"/>
+        <button class="a_sendButton" id="my-form-button">отправить</button>
         <p id="my-form-status"></p>
       </form>
   </section>
+
+</main>
 <!--
     <div class="timerContainer">
     </div>
@@ -78,6 +115,7 @@
         }).then(response => {
           if (response.ok) {
             status.innerHTML = "Спасибо за внимание!";
+            status.style.position="absolute"
             form.reset()
           } else {
             response.json().then(data => {
