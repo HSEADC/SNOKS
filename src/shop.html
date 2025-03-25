@@ -24,21 +24,50 @@
 
    <header>
 
-    <nav class="navigation">
+    <nav class="o_menubarContainer" id="pcNav">
       <ul>
         <li>
           <form action="./preview.html">
-              <button><div class="logo"></div></button>
+              <button><div class="a_navigationLogo"></div></button>
           </form>
         </li>
-        <li><a href="./index.html">о нас</a></li>
-        <li><a href="./styleguide.html">стайлгайд</a></li>
-        <li><a href="./articles.html">статьи</a></li>
-        <li><a href="./tests.html">тесты</a></li>
-        <li><a href="./dreambook.html">сонник</a></li>
-        <li><a href="./shop.html" class="choosenA">магазин</a></li>
+        <li><a class="a_navigationCategory" href="./index.html">о нас</a></li>
+        <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
+        <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
+        <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
+        <li><a class="a_navigationCategory choosenA" href="./shop.html">магазин</a></li>
       </ul>
     </nav>
+
+    <nav class="o_menubarContainer" id="mobileNav">
+      <ul>
+        <li>
+          <form action="./preview.html">
+              <button><div class="a_navigationLogo" id="mobileLogo"></div></button>
+          </form>
+        </li>
+
+        <li>
+            <button class="burger" type="checkbox" id="burger" name="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button> 
+        </li>
+      </ul>
+    </nav>
+
+
+    <section class="burgerNav"> 
+
+      <ul class="menuList">
+        <li><a class="a_navigationCategory" href="./index.html">о нас</a></li>
+        <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
+        <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
+        <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
+        <li><a class="a_navigationCategory"href="./shop.html">магазин</a></li>
+      </ul>
+    </section>
     
     </header>
 

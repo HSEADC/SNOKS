@@ -1,0 +1,171 @@
+/* mobileNavigation */
+
+.c_mobileNavigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  height: 40vh;
+  width: 90%;
+
+  .a_navigationCategory {
+    font-size: 7vw;
+    color: var(--white);
+    font-weight: 600;
+  }
+}
+
+/* */
+
+/* about us */
+
+.c_factCirclesRow {
+  width: 100%;
+  height: 20vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  left: 0;
+  padding-bottom: 5vw;
+}
+
+/* */
+
+/* aricles */
+
+.c_tasBlock {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.c_articlesContainer {
+  width: 80%;
+  margin: 5vw auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+.c_tagsArticleCard {
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  background-color: transparent;
+  border-radius: 0;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+/* */
+
+/* tests */
+
+.c_allTests {
+  width: 80%;
+  height: fit-content;
+  
+  margin: 5vw auto 10vw;
+}
+
+/* */
+
+/* testUI */
+
+.c_answers {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-bottom: 8vw;
+}
+
+/* */
+
+/* styleguide */
+
+.c_styleguideNav {
+  position: sticky;
+  width: 20%;
+  height: 0vw;
+
+  top: 30%;
+  left: 2vw;
+
+  ul {
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+/* */
+
+
+
+
+/* adaptive */
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+   
+  .c_answers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    margin-bottom: 8vw;
+  }
+  
+}
+
+@media (max-width: 695px) {
+
+  /*about us */ 
+
+  .c_factCirclesRow {
+    position: relative;
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+    height: 50vw;
+
+    margin-bottom: 8vw;
+    left: 0;
+    margin: auto;
+    padding: 0;
+  }
+  
+  /* */
+
+  /* tests*/
+  .c_allTests {
+
+    &.testsContainerMobile {
+      width: 100vw;
+      height: 95vw;
+      overflow: hidden;
+      position: relative;
+
+      margin: 12vw auto 2vw;
+    }
+  }
+
+  .c_mobileCardsLine {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+
+    left: -290vw;
+    transition: all 0.5s ease-in-out;
+  }
+
+  /* */
+}
