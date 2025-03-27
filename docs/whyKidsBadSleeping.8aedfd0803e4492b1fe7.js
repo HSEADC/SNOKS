@@ -208,16 +208,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
   /* anotherArticle */
 
   document.querySelector("#anotherArticleBtn1").addEventListener("click", function (e) {
-    window.location.href = "../404.html";
+    window.location.href = "../SNOKS/404.html";
   });
   document.querySelector("#anotherArticleBtn2").addEventListener("click", function (e) {
-    window.location.href = "../404.html";
+    window.location.href = "../SNOKS/404.html";
   });
   document.querySelector("#anotherArticleBtn3").addEventListener("click", function (e) {
     window.location.href = "../SNOKS/factsAboutSleepingInNature.html";
   });
   document.querySelector("#anotherArticleBtn4").addEventListener("click", function (e) {
-    window.location.href = "../404.html";
+    window.location.href = "../SNOKS/404.html";
   });
 
   /* */

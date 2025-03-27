@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                             let id = e.target.id.substr(6)
                             localStorage.setItem("test", JSON.stringify([dataText[elem][id], id, elem]));      
                             //window.location.href = '../SNOKS/test.html';
-                            window.location.href = '../test.html';
+                            window.location.href = '../SNOKS/test.html';
                         })
     
                         const p = document.createElement('p');
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                         div.addEventListener("click", (e) => {  
                             let id = e.target.id.substr(8)
                             localStorage.setItem("test", JSON.stringify([dataText[elem][id], id, elem]));      
-                            window.location.href = '../SNOKS/test.html';
+                            window.location.href = '../test.html';
                         })
     
                         const p = document.createElement('p');
