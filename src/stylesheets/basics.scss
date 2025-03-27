@@ -33,6 +33,7 @@ body {
   }
 
   &.preview {
+    height: 100vh;
     background-color: var(--blue);
     overflow: hidden;
   }
@@ -42,6 +43,12 @@ body {
     background-color: var(--white);
     
     padding: 2vw 0vw;
+  }
+
+  &.article1 {
+    footer {
+      margin-top: -3vw;
+    }
   }
 }
 

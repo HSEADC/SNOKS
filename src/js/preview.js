@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
     // phoneBurger
         
         if (window.innerHeight > window.innerWidth) { 
-            console.log(1111111111111)
             document.querySelector("main").style.marginTop="20vw"
             document.querySelector("#mobileNav").style.display="block"
             let flagNav = false;
@@ -50,9 +49,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 // resize reload
 
-  //  window.addEventListener('resize', function(event){
-  //      location.reload()
-  //  });
+window.addEventListener('resize', function(event){
+    setTimeout(function () {
+        location.reload()
+    }, 100);
+});
 
 //
 })

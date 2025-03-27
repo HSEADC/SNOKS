@@ -79,12 +79,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
             return response.json();
           }).then(function (dataa) {   
             const dataText = dataa[0].articles
-            console.log(dataText)
         
             for (let elem in dataText) {
                 const section = document.createElement('section');
                 section.classList.add('w_articleCardAndTime');
                 section.classList.add('showed');
+                if (dataText[`${elem}`].size == "big") {
+                    section.classList.add("big")
+                }
                 section.id=`articleCardAndTime${elem}`;
                 container.append(section);
                 let sizeName = (sizes[`${dataText[elem].size}`]).split(" ");
@@ -103,7 +105,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 const goIcon = document.createElement('button');
 
                 goIcon.addEventListener("click", (e)=> {
-                    window.location.href = '../404.html';
+                    window.location.href = `${dataText[elem].link}`;
                 })
 
                 goIcon.classList.add('a_articlesOpenButton');
@@ -148,7 +150,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 // phoneBurger
 
     if (window.innerHeight > window.innerWidth) { 
-            console.log(1111111111111)
+            
             document.querySelector("main").style.marginTop="20vw"
             document.querySelector("#mobileNav").style.display="block"
             let flagNav = false;
@@ -191,7 +193,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
         return response.json();
       }).then(function (dataa) {   
         const dataText = dataa[0].articles
-        console.log(dataText)
         const articles = Array.from(document.getElementsByClassName('a_articlesDescriptionButton'));
 
         articles.forEach(article => {
@@ -328,8 +329,7 @@ function generationTags() {
     let tagsChoosen = []
 
     document.querySelector(".c_tasBlock").addEventListener("click", (e)=> {
-        if (e.target.className.includes("a_tagArticle")) {
-            
+        if (e.target.className.includes("a_tagArticle")) {         
             fetch("https://api.npoint.io/ebd355c8a0376b2c5439").then(function (response) {
                 return response.json();
               }).then(function (dataa) {  
@@ -393,6 +393,9 @@ function generationTags() {
 
 
     function renderTagsArticles() {
+
+        document.querySelector(".c_articlesContainer").style.justifyContent="space-between";
+
         if (!(tagsChoosen.length == 0)) {
             fetch("https://api.npoint.io/ebd355c8a0376b2c5439").then(function (response) {
                 return response.json();
@@ -404,17 +407,24 @@ function generationTags() {
                             if (!(document.querySelector(`#articleCardAndTime${elem}`).className.includes("showed"))) {
                                 document.querySelector(`#articleCardAndTime${elem}`).classList.add("showed")
                                 document.querySelector(`#articleCardAndTime${elem}`).classList.add("tagged")
-                            }
-                        }
+                                if (dataText[`${elem}`].size == "big") {
+                                    //document.querySelector(`#articleCard${elem}`).style.backgroundSize="350% 100%",
+                                   // document.querySelector(`#articleCard${elem}`).style.backgroundPosition="-35vw 0"
+                                }
+                            } 
+                        } 
                     }
                 }
             })
         } else {
+            document.querySelector(".c_articlesContainer").style.justifyContent="space-between";
 
             document.querySelectorAll(".w_articleCardAndTime").forEach( elem => {
                 elem.classList.add("showed")
             })
         }
+
+        
     }
 
 
