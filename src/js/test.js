@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                     document.querySelector(".s_mobileNavigation").style.opacity="1";
                     document.querySelector("#mobileLogo").style.backgroundImage=`url("${svgLogo}")`
                     document.querySelector("#mobileLogo").style.backgroundSize="78% 78%";
-                        document.querySelector("#mobileLogo").style.backgroundPosition="20% 50%"
+                    document.querySelector("#mobileLogo").style.backgroundPosition="20% 50%"
                 }, 0)
             } else {
                 flagNav = false;
@@ -224,7 +224,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 id -= 1
                 generateQuestion(testData[0].questions[`question${id}`], id, answers) 
             } else if (e.target.id == "next") {
-                console.log(Object.keys(testData[0].questions).length)
                 id += 1
                 generateQuestion(testData[0].questions[`question${id}`], id, answers) 
             }
@@ -249,7 +248,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 btn.classList.add("m_testsOption");
                 btn.id = `${alphabet[count]}`;
                 if (btn.id == clicked[id]) {
-                    console.log("dfdfdfsdfgdgfdfgfd", clicked)
                     btn.classList.add("clicked")
                 }
                 container.append(btn);
@@ -315,7 +313,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
             let answers = a[1]
             let question = a[2]
             answers[question] = id
-            console.log(answers)
 
             if (!(question == Object.keys(testData[0].questions).length)) {
                 document.getElementById("next").style.opacity="1";
@@ -347,13 +344,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
             for (let elem in answers) {
                 array.push(answers[elem])
             }
-            console.log(array)
             return array.sort((a,b) => array.filter(v => v===a).length - array.filter(v => v===b).length).pop();
         }
 
 
         document.querySelector("#result").addEventListener("click", (e) => {
-            console.log(countResult(answers)) 
             
             document.querySelector("#testUI").style.display="none";
             let imgName = `${testData[1]}${countResult(answers)}`
@@ -403,7 +398,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 id -= 1
                 generateQuestion(testData[0].questions[`question${id}`], id, answers) 
             } else if (e.target.id == "next") {
-                console.log(Object.keys(testData[0].questions).length)
                 id += 1
                 generateQuestion(testData[0].questions[`question${id}`], id, answers) 
             }
@@ -530,7 +524,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 
         document.querySelector("#result").addEventListener("click", (e) => {
-            console.log(countResult(answers)) 
             
             document.querySelector("#testUI").style.display="none";
             document.querySelector("#resultUI").style.display="block";
@@ -606,9 +599,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 // resize reload
 
- //   window.addEventListener('resize', function(event){
- //       location.reload()
-  //  });
+window.addEventListener('resize', function(event){
+    setTimeout(function () {
+        location.reload()
+    }, 100);
+});
 
 //
 

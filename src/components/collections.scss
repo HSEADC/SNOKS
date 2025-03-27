@@ -105,6 +105,54 @@
 
 /* */
 
+/* article1 */
+
+.c_articleChoosenMainTextUl {
+  list-style-type: disc;
+
+  .a_articleChoosenMainText {
+    margin-left: 2vw;
+  }
+}
+
+.c_articleChoosenFacts {
+  width: 45%;
+}
+
+.c_anotherArticles {
+  width: 85%;
+  margin: -4vw auto 0;
+  display: flex;
+}
+
+.c_articleNav {
+  height: 0;
+  left: 2vw;
+  position: sticky;
+  top: 30%;
+  width: 20%;
+
+  ul {
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+/* */
+
+/* article2 */
+
+.c_articleFactsGrid {
+  display: grid;
+  width: 83vw;
+  grid-template-columns: 31% 31% 31%;
+  grid-template-rows: 24vw 24vw 24vw 24vw 24vw 24vw;
+  gap: 1.5vw;
+
+  margin-bottom: 4vw;
+}
+
+/* */
+
 
 
 
@@ -152,7 +200,7 @@
       overflow: hidden;
       position: relative;
 
-      margin: 12vw auto 2vw;
+      margin: 1vw auto 2vw;
     }
   }
 

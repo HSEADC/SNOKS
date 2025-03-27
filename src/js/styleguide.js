@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     navigation.addEventListener("click", (e)=> {
         if (e.target.className == "a_styleguideNavigation") {
-            console.log(e.target.id.substr(6))
             document.querySelector(`#guideTip${e.target.id.substr(6)}`).scrollIntoView({ behavior: 'smooth' });
         }
     })
@@ -155,7 +154,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 // phoneBurger
 
     if (window.innerHeight > window.innerWidth) { 
-        console.log(1111111111111)
         document.querySelector("main").style.marginTop="24vw"
         document.querySelector("#mobileNav").style.display="block"
         let flagNav = false;
@@ -193,9 +191,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 // resize reload
 
-  //  window.addEventListener('resize', function(event){
-  //      location.reload()
- //   });
+window.addEventListener('resize', function(event){
+    setTimeout(function () {
+        location.reload()
+    }, 100);
+});
 
 //
+
 })

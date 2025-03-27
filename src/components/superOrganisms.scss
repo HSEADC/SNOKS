@@ -115,6 +115,72 @@
 /* */
 
 
+/* article1 */
+
+.s_articleChoosen {
+  width: 100%;
+  background-color: var(--lightBlue);
+
+  padding: 1.2vw 0 4.2vw 0;
+
+  .upRound {
+    margin-top: -4vw;
+    margin-bottom: 3vw;
+  }
+}
+
+.s_articleContent {
+  width: 77%;
+
+  margin-left: 23%;
+  margin-top: -5vw;
+}
+
+.s_articleChoosenUnderContent {
+  width: 100%;
+  padding: 5vw 0vw 8vw;
+  background-color: var(--lightBlue);
+
+  &.upRound {
+    margin-top: -5vw;
+    padding-top: 25vw;
+  }
+}
+
+.s_anotherArticles {
+  width: 100%;
+}
+
+.s_articleAndNav {
+  height: 345vw;
+  width: 100%;
+
+  transition: all 0.4s ease-in-out;
+}
+
+.s_articleChoosenContent {
+  display: flex;
+  flex-wrap: wrap;
+  height: 20vw;
+  width: 75%;
+
+  margin-left: 25%;
+  transition: all 0.4s ease-in-out;
+
+  &.smallArticle {
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+
+    .q_articleChoosenImg {
+      width: 100%;
+    }
+  }
+
+}
+
+/* */
+
 
 
 

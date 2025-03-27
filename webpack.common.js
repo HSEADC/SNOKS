@@ -15,7 +15,9 @@ module.exports = {
     styleguide: "./src/js/styleguide.js",
     404: "./src/js/404.js",
     shop: "./src/js/shop.js",
-    test: "./src/js/test.js"
+    test: "./src/js/test.js",
+    whyKidsBadSleeping: "./src/js/whyKidsBadSleeping.js",
+    factsAboutSleepingInNature: "./src/js/factsAboutSleepingInNature.js",
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -143,6 +145,18 @@ module.exports = {
       template: './src/test.html',
       filename: './test.html',
       chunks: ["test"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/whyKidsBadSleeping.html',
+      filename: './whyKidsBadSleeping.html',
+      chunks: ["whyKidsBadSleeping"],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/factsAboutSleepingInNature.html',
+      filename: './factsAboutSleepingInNature.html',
+      chunks: ["factsAboutSleepingInNature"],
     })
 
 

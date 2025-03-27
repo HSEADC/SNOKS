@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 // phoneBurger
     
     if (window.innerHeight > window.innerWidth) { 
-                console.log(1111111111111)
                 document.querySelector("main").style.marginTop="20vw"
                 document.querySelector("#mobileNav").style.display="block"
                 let flagNav = false;
@@ -84,11 +83,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
         return response.json();
     }).then(function (dataa) {   
         const dataText = dataa[0].tests.types
-        console.log(dataText)
 
         if (window.innerHeight <= window.innerWidth && window.innerWidth > 700) {
             for (let elem in dataText) {
-                console.log(elem)
                 const section = document.createElement('section');
                 section.classList.add("s_testsType")
                 section.classList.add(elem)
@@ -206,11 +203,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 // resize reload
 
-    window.addEventListener('resize', function(event){
-        setTimeout(function () {
-            location.reload()
-        }, 100);
-    });
+window.addEventListener('resize', function(event){
+    setTimeout(function () {
+        location.reload()
+    }, 100);
+});
 
 //
 

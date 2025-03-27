@@ -34,3 +34,15 @@
          url('../fonts/Unbounded/bold/Unbounded-Bold.eot') format('eot'),
          url('../fonts/Unbounded/bold/Unbounded-Bold.ttf') format('truetype');
   }
+
+  @font-face {
+     font-family: 'Unbounded';
+     font-style: normal;
+     font-weight: 500;
+     src: local('Unbounded'),
+          url('../fonts/Unbounded/Medium/Unbounded-Medium.woff') format('woff'),
+          url('../fonts/Unbounded/Medium/Unbounded-Medium.woff2') format('woff2'),
+          url('../fonts/Unbounded/Medium/Unbounded-Medium.eot') format('eot'),
+          url('../fonts/Unbounded/Medium/Unbounded-Medium.ttf') format('truetype');
+   }
+  

@@ -66,15 +66,22 @@
 
   &.tagged {
     width: 32% !important;
-    margin-right: 1.6vw !important;
+    //margin-right: 1.6vw !important;
 
     .o_articleCard {
       width: 100% !important;
       height: 35vw !important;
     }
+
+    &.big {
+      .o_articleCard {
+        background-size:350% 100% !important;
+        background-position:-35vw 0 !important;
+      }
+    }
   }
-  &.tagged:nth-child(3n) {
-    margin-right: 0 !important;
+  &.tagged:nth-child(3n+3) {
+    //margin-right: 0 !important;
   }
 
   /* */
@@ -87,7 +94,7 @@
 .w_socialMedia {
   &.tests {
     display: flex;
-    width: 20%;
+    width: 25%;
     justify-content: space-between;
 
     margin: 5vw auto 17vw auto;
@@ -183,6 +190,68 @@
 
     &#caps {
       width: 53%;
+    }
+  }
+}
+
+/* */
+
+/* article 1 */
+
+.w_articleChoosenRemNonRem {
+  display: flex;
+}
+
+.w_articleChoosenDuoImages {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.w_articleChoosenFacts {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.w_articleChoosenTripleImages {
+  display: flex;
+  width: 56%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.w_articleChoosenRecommendationsTip {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+
+.w_articleChoosenRateBtns {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* */
+
+/* article2 */
+
+.w_articleFactsBlock {
+  padding: 1.5vw;
+  border-radius: 3vw;
+  height: 24vw;
+  &.white {
+    border: 0.3vw solid var(--blue);
+  }
+
+  &.blue {
+    background-color: var(--blue);
+    border: 0.3vw solid var(--blue);
+
+    .a_articleFactsBlockTitle, .a_articleFactsBlockText, .a_articleFactsBlockNum {
+      color: var(--white);
     }
   }
 }
