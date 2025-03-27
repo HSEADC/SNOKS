@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             div.addEventListener("click", function (e) {
               var id = e.target.id.substr(8);
               localStorage.setItem("test", JSON.stringify([dataText[_elem][id], id, _elem]));
-              window.location.href = '../test.html';
+              window.location.href = '../SNOKS/test.html';
             });
             var p = document.createElement('p');
             p.classList.add("a_testName");
