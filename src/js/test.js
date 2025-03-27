@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         document.querySelector(".a_choosenTestName").textContent=`${testData[0].name}`;
 
         document.querySelector("#goIcon").addEventListener("click", (e) => {
-            window.location.href = '../tests.html';
+            window.location.href = '../SNOKS/tests.html';
         })
     }
 

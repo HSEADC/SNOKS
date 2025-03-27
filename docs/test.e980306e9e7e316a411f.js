@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.querySelector(".a_aboutChoosenTest").textContent = "".concat(testData[0].description);
     document.querySelector(".a_choosenTestName").textContent = "".concat(testData[0].name);
     document.querySelector("#goIcon").addEventListener("click", function (e) {
-      window.location.href = '../tests.html';
+      window.location.href = '../SNOKS/tests.html';
     });
   }
   console.log(testData);
