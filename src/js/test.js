@@ -200,8 +200,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
         })
     }
 
-    console.log(testData)
-
     /* testUIShow */
 
     if (flag) {
@@ -422,7 +420,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 btn.classList.add("m_testsOption");
                 btn.id = `${alphabet[count]}`;
                 if (btn.id == clicked[id]) {
-                    console.log("dfdfdfsdfgdgfdfgfd", clicked)
                     btn.classList.add("clicked")
                 }
                 container.append(btn);

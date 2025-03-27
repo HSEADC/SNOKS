@@ -135,8 +135,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
             section.classList.add("c_mobileCardsLine")
             container.append(section)
             for (let elem in dataText) {
-                console.log(elem)
-
                 for (let tests in dataText[elem]) {
                     if (tests != "name") {
                         const div = document.createElement('div');
