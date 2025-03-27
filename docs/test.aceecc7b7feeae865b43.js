@@ -298,7 +298,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
       window.location.href = '../SNOKS/tests.html';
     });
   }
-  console.log(testData);
 
   /* testUIShow */
 
@@ -469,7 +468,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         btn.classList.add("m_testsOption");
         btn.id = "".concat(alphabet[count]);
         if (btn.id == clicked[id]) {
-          console.log("dfdfdfsdfgdgfdfgfd", clicked);
           btn.classList.add("clicked");
         }
         container.append(btn);
