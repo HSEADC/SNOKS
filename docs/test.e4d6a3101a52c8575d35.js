@@ -566,67 +566,23 @@ document.addEventListener("DOMContentLoaded", function (e) {
       var imgName = "".concat(testData[1]).concat(countResult(answers));
       document.querySelector(".q_imageTestResult").src = "".concat(imagesResults[imgName]);
     });
-
-    /* 
-        var workbook = XLSX.read("../shh.xlsx", {type: "string"});
-        let worksheets = {};
-        let SheetName = workbook.SheetNames[0]
-    
-        let newWorkBook = workbook // create new workbook
-        newWorkBook.Sheets[SheetName]['A1'] = "Номер теста"
-        newWorkBook.Sheets[SheetName]['B1'] = "Название" // assign new value // assign new value
-      
-        //XLSX.writeFile(newWorkBook, "../shh.xlsx") // write the same file with new values
-        //console.log(newWorkBook.Sheets[SheetName]['A1'].v) // outputs : New Value
-        //const da =  XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]])
-        // console.log(sheet_name_list)
-          let workSheetColumnName = [
-            "номер",
-            "имя",
-        ]
-        for (let i = 1; i <= 15; i++) {
-            workSheetColumnName.push(i)
-        }
-          let answersData = [
-            testData[1],
-            testData[0].name
-        ]
-        
-        for (let answer in answers) {
-            answersData.push(answers[answer])
-        }
-    
-        const workSheetName = 'answers';
-        const filePath = '../shh.xlsx';
-          const exportExcel = (answersData, workSheetColumnNames, workSheetName, filePath) => {
-            const workBook = XLSX.utils.book_new();
-            const workSheetData = [
-                workSheetColumnNames,
-                answersData
-            ];
-              const workSheet = XLSX.utils.aoa_to_sheet(workSheetData);
-            XLSX.utils.book_append_sheet(workBook, workSheet, workSheetName);
-            XLSX.writeFile(workBook,"shh.xlsx");
-        }
-          const exportUsersToExcel = (workSheetColumnNames, workSheetName, filePath) => {
-            exportExcel(answersData, workSheetColumnNames, workSheetName, filePath);
-        }
-        exportUsersToExcel(workSheetColumnName, workSheetName, filePath);
-    
-            */
   });
 
   /* */
 
   // resize reload
 
+  var saved_width = window.innerWidth;
   window.addEventListener('resize', function (event) {
-    setTimeout(function () {
-      location.reload();
-    }, 100);
+    if (window.innerWidth != saved_width) {
+      saved_width = window.innerWidth;
+      setTimeout(function () {
+        location.reload();
+      }, 100);
+    }
   });
 
-  //
+  /* */
 });
 /******/ })()
 ;

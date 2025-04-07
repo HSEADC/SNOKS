@@ -45,7 +45,7 @@
 const logo_namespaceObject = __webpack_require__.p + "images/752f59445ba13b14576d.svg";
 ;// ./src/images/aboutUs/logoHeader.webp
 const logoHeader_namespaceObject = __webpack_require__.p + "images/dfe2dfcce3cd6ec99721.webp";
-;// ./src/js/404.js
+;// ./src/js/factsAboutSleepingInNature.js
 
 
 
@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
   // phoneBurger
 
   if (window.innerHeight > window.innerWidth) {
+    document.querySelector("main").style.marginTop = "17vw";
     document.querySelector("#mobileNav").style.display = "block";
     var flagNav = false;
     var burger = document.querySelector("#burger");
@@ -93,11 +94,71 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
   //
 
-  window.addEventListener('resize', function (event) {
-    setTimeout(function () {
-      location.reload();
-    }, 100);
+  /* rate */
+
+  document.querySelector("#heart").addEventListener("click", function (e) {
+    document.querySelector("#heart").classList.add("picked");
+    console.log(document.getElementById("brokenHeart").className);
+    if (document.getElementById("brokenHeart").classList.contains("picked")) {
+      document.getElementById("brokenHeart").classList.remove("picked");
+    }
   });
+  document.querySelector("#brokenHeart").addEventListener("click", function (e) {
+    document.querySelector("#brokenHeart").classList.add("picked");
+    if (document.querySelector("#heart").classList.contains("picked")) {
+      document.querySelector("#heart").classList.remove("picked");
+    }
+  });
+
+  /* */
+
+  /* anotherArticle */
+
+  document.querySelector("#anotherArticleBtn1").addEventListener("click", function (e) {
+    window.location.href = "../404.html";
+  });
+  document.querySelector("#anotherArticleBtn2").addEventListener("click", function (e) {
+    window.location.href = "../404.html";
+  });
+  document.querySelector("#anotherArticleBtn3").addEventListener("click", function (e) {
+    window.location.href = "../SNOKS/whyKidsBadSleeping.html";
+  });
+  document.querySelector("#anotherArticleBtn4").addEventListener("click", function (e) {
+    window.location.href = "../404.html";
+  });
+
+  /* */
+
+  /* rate */
+
+  document.querySelector("#heart").addEventListener("click", function (e) {
+    document.querySelector("#heart").classList.add("picked");
+    if (document.getElementById("brokenHeart").classList.contains("picked")) {
+      document.getElementById("brokenHeart").classList.remove("picked");
+    }
+  });
+  document.querySelector("#brokenHeart").addEventListener("click", function (e) {
+    document.querySelector("#brokenHeart").classList.add("picked");
+    if (document.querySelector("#heart").classList.contains("picked")) {
+      document.querySelector("#heart").classList.remove("picked");
+    }
+  });
+
+  /* */
+
+  // resize reload
+
+  var saved_width = window.innerWidth;
+  window.addEventListener('resize', function (event) {
+    if (window.innerWidth != saved_width) {
+      saved_width = window.innerWidth;
+      setTimeout(function () {
+        location.reload();
+      }, 100);
+    }
+  });
+
+  /* */
 });
 /******/ })()
 ;
