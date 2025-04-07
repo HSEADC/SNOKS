@@ -166,6 +166,19 @@
   margin-top: -4vw;
 }
 
+.m_articleInnerCard {
+  padding: 1.5vw;
+  background-color: var(--white);
+  width: fit-content;
+  border-radius: 1.2vw;
+  position: absolute;
+  text-align: left;
+
+  bottom: 2vw;
+  left: 2vw;
+  
+}
+
 /* */
 
 /* articels */
@@ -782,7 +795,7 @@
   /* */
 }
 
-@media (max-width: 695px) {
+@media (orientation: portrait) {
   
   /* about us */
 

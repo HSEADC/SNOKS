@@ -94,7 +94,7 @@
 .w_socialMedia {
   &.tests {
     display: flex;
-    width: 25%;
+    width: 15%;
     justify-content: space-between;
 
     margin: 5vw auto 17vw auto;
@@ -401,7 +401,7 @@
 }
 
 
-@media (max-width: 695px) {
+@media (orientation: portrait) {
 
   /* about us */
 
@@ -445,7 +445,9 @@
   /* tests */
 
   .w_socialMedia {
-    width: 35%;
+    &.tests {
+      width: 25%;
+    }
   }
 
   /* */

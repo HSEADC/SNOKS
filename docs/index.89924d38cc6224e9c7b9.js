@@ -238,13 +238,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
       n -= 1;
       document.querySelector("#circlePick".concat(n)).classList.add("picked");
       document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage = "url('".concat(articles[n].img, "')");
-      //document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
+      document.querySelector(".a_articleInnerCardName").textContent = "".concat(articles[n].name);
     } else {
       document.querySelector("#circlePick".concat(n)).classList.remove("picked");
       n = 5;
       document.querySelector("#circlePick".concat(n)).classList.add("picked");
       document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage = "url('".concat(articles[n].img, "')");
-      //document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
+      document.querySelector(".a_articleInnerCardName").textContent = "".concat(articles[n].name);
     }
   }
   function nextArticle(n) {
@@ -253,13 +253,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
       n += 1;
       document.querySelector("#circlePick".concat(n)).classList.add("picked");
       document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage = "url('".concat(articles[n].img, "')");
-      //document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
+      document.querySelector(".a_articleInnerCardName").textContent = "".concat(articles[n].name);
     } else {
       document.querySelector("#circlePick".concat(n)).classList.remove("picked");
       n = 1;
       document.querySelector("#circlePick".concat(n)).classList.add("picked");
       document.querySelector(".m_aboutUsArticleCard ").style.backgroundImage = "url('".concat(articles[n].img, "')");
-      //document.querySelector(".articleInnerCardName").textContent=`${articles[n].name}`
+      document.querySelector(".a_articleInnerCardName").textContent = "".concat(articles[n].name);
     }
   }
 
