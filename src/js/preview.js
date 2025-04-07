@@ -49,11 +49,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 // resize reload
 
+let saved_width = window.innerWidth;
+
 window.addEventListener('resize', function(event){
-    setTimeout(function () {
-        location.reload()
-    }, 100);
+    if (window.innerWidth != saved_width) {
+        saved_width = window.innerWidth;
+        setTimeout(function () {
+            location.reload()
+        }, 100);
+    }
 });
 
-//
+/* */
+
 })
