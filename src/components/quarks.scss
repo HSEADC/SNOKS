@@ -727,7 +727,7 @@
 
 }
 
-@media (max-width: 695px) {
+@media (orientation: portrait) {
   
   /* about us */
 
@@ -848,6 +848,13 @@
 
     margin-top: 14vw;
 
+  }
+
+  .q_backgroundBorderRadius {
+    &.topTests {
+      margin-bottom: 8vw;
+    }
+    
   }
   
   .q_decorationCirclesImages {
