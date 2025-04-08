@@ -18,7 +18,7 @@ import svgArrowsOpened from '../images/arrowsOpened.svg'
 import svgCross from '../images/articles/cross.svg' 
 
 import svgLogo from '../images/preview/logo.svg'
-import pngLogo from '../images/aboutUs/logoHeader.webp'
+import pngLogo from '../images/styleguideLogo4.webp'
 import { length } from 'three/examples/jsm/nodes/Nodes.js';
 
 const images = {imgArt1, imgArt2, imgArt3, imgArt4, imgArt5, imgArt6, imgArt7, imgArt8, imgArt9, imgArt10, imgArt11, imgArt12}
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                     document.querySelector(".s_mobileNavigation").style.opacity="0";
                     document.querySelector("#mobileNav").style.backgroundColor="var(--white)"
                     document.querySelector("#mobileLogo").style.backgroundImage=`url("${pngLogo}")`
-                    document.querySelector("#mobileLogo").style.backgroundSize="120% 100%"
+                    document.querySelector("#mobileLogo").style.backgroundSize="100% 100%"
                     setTimeout(()=> {
                         document.querySelector(".s_mobileNavigation").style.display="none"
                     }, 300)

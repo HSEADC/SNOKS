@@ -1,7 +1,7 @@
 import '../index.css';
 
 import svgLogo from '../images/preview/logo.svg';
-import pngLogo from '../images/aboutUs/logoHeader.webp';
+import pngLogo from '../images/styleguideLogo4.webp'
 
 
 document.addEventListener("DOMContentLoaded", (e) => {

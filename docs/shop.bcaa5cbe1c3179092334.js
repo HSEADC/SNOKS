@@ -43,10 +43,9 @@
 
 ;// ./src/images/preview/logo.svg
 const logo_namespaceObject = __webpack_require__.p + "images/752f59445ba13b14576d.svg";
-;// ./src/images/aboutUs/logoHeader.webp
-const logoHeader_namespaceObject = __webpack_require__.p + "images/dfe2dfcce3cd6ec99721.webp";
-;// ./src/js/factsAboutSleepingInNature.js
-
+;// ./src/images/styleguideLogo4.webp
+const styleguideLogo4_namespaceObject = __webpack_require__.p + "images/67da518f863ea8300aaa.webp";
+;// ./src/js/shop.js
 
 
 document.addEventListener("DOMContentLoaded", function (e) {
@@ -60,31 +59,31 @@ document.addEventListener("DOMContentLoaded", function (e) {
   // phoneBurger
 
   if (window.innerHeight > window.innerWidth) {
-    document.querySelector("main").style.marginTop = "17vw";
+    document.querySelector("main").style.marginTop = "25vw";
     document.querySelector("#mobileNav").style.display = "block";
     var flagNav = false;
-    var burger = document.querySelector("#burger");
+    var burger = document.querySelector(".burger");
     document.querySelector(".o_menubarContainer").style.display = "none";
     burger.addEventListener("click", function () {
       burger.classList.toggle("open");
       if (!flagNav) {
         flagNav = true;
         document.querySelector("#mobileNav").style.backgroundColor = "var(--blue)";
-        document.querySelector(".s_mobileNavigation").style.display = "block";
+        document.querySelector(".burgerNav").style.display = "block";
         setTimeout(function () {
-          document.querySelector(".s_mobileNavigation").style.opacity = "1";
+          document.querySelector(".burgerNav").style.opacity = "1";
           document.querySelector("#mobileLogo").style.backgroundImage = "url(\"".concat(logo_namespaceObject, "\")");
           document.querySelector("#mobileLogo").style.backgroundSize = "78% 78%";
           document.querySelector("#mobileLogo").style.backgroundPosition = "20% 50%";
         }, 0);
       } else {
         flagNav = false;
-        document.querySelector(".s_mobileNavigation").style.opacity = "0";
+        document.querySelector(".burgerNav").style.opacity = "0";
         document.querySelector("#mobileNav").style.backgroundColor = "var(--white)";
-        document.querySelector("#mobileLogo").style.backgroundImage = "url(\"".concat(logoHeader_namespaceObject, "\")");
-        document.querySelector("#mobileLogo").style.backgroundSize = "120% 100%";
+        document.querySelector("#mobileLogo").style.backgroundImage = "url(\"".concat(styleguideLogo4_namespaceObject, "\")");
+        document.querySelector("#mobileLogo").style.backgroundSize = "100% 100%";
         setTimeout(function () {
-          document.querySelector(".s_mobileNavigation").style.display = "none";
+          document.querySelector(".burgerNav").style.display = "none";
         }, 300);
       }
     });
@@ -93,58 +92,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
   }
 
   //
-
-  /* rate */
-
-  document.querySelector("#heart").addEventListener("click", function (e) {
-    document.querySelector("#heart").classList.add("picked");
-    console.log(document.getElementById("brokenHeart").className);
-    if (document.getElementById("brokenHeart").classList.contains("picked")) {
-      document.getElementById("brokenHeart").classList.remove("picked");
-    }
-  });
-  document.querySelector("#brokenHeart").addEventListener("click", function (e) {
-    document.querySelector("#brokenHeart").classList.add("picked");
-    if (document.querySelector("#heart").classList.contains("picked")) {
-      document.querySelector("#heart").classList.remove("picked");
-    }
-  });
-
-  /* */
-
-  /* anotherArticle */
-
-  document.querySelector("#anotherArticleBtn1").addEventListener("click", function (e) {
-    window.location.href = "../404.html";
-  });
-  document.querySelector("#anotherArticleBtn2").addEventListener("click", function (e) {
-    window.location.href = "../404.html";
-  });
-  document.querySelector("#anotherArticleBtn3").addEventListener("click", function (e) {
-    window.location.href = "../SNOKS/whyKidsBadSleeping.html";
-  });
-  document.querySelector("#anotherArticleBtn4").addEventListener("click", function (e) {
-    window.location.href = "../404.html";
-  });
-
-  /* */
-
-  /* rate */
-
-  document.querySelector("#heart").addEventListener("click", function (e) {
-    document.querySelector("#heart").classList.add("picked");
-    if (document.getElementById("brokenHeart").classList.contains("picked")) {
-      document.getElementById("brokenHeart").classList.remove("picked");
-    }
-  });
-  document.querySelector("#brokenHeart").addEventListener("click", function (e) {
-    document.querySelector("#brokenHeart").classList.add("picked");
-    if (document.querySelector("#heart").classList.contains("picked")) {
-      document.querySelector("#heart").classList.remove("picked");
-    }
-  });
-
-  /* */
 
   // resize reload
 
