@@ -1,6 +1,6 @@
 import '../index.css';
 import svgLogo from '../images/preview/logo.svg'
-import pngLogo from '../images/aboutUs/logoHeader.webp'
+import pngLogo from '../images/styleguideLogo4.webp'
 
 document.addEventListener("DOMContentLoaded", (e) => {
 
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 document.querySelector(".s_mobileNavigation").style.opacity="0";
                 document.querySelector("#mobileNav").style.backgroundColor="var(--white)"
                 document.querySelector("#mobileLogo").style.backgroundImage=`url("${pngLogo}")`
-                document.querySelector("#mobileLogo").style.backgroundSize="120% 100%"
+                document.querySelector("#mobileLogo").style.backgroundSize="100% 100%"
                 setTimeout(()=> {
                     document.querySelector(".s_mobileNavigation").style.display="none"
                 }, 300)

@@ -53,8 +53,8 @@ const article4_namespaceObject = __webpack_require__.p + "images/180f78a15dd77ec
 const article5_namespaceObject = __webpack_require__.p + "images/586c907768fcd456a940.webp";
 ;// ./src/images/preview/logo.svg
 const logo_namespaceObject = __webpack_require__.p + "images/752f59445ba13b14576d.svg";
-;// ./src/images/aboutUs/logoHeader.webp
-const logoHeader_namespaceObject = __webpack_require__.p + "images/dfe2dfcce3cd6ec99721.webp";
+;// ./src/images/styleguideLogo4.webp
+const styleguideLogo4_namespaceObject = __webpack_require__.p + "images/67da518f863ea8300aaa.webp";
 ;// ./src/index.js
 
 
@@ -289,8 +289,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
         flagNav = false;
         document.querySelector(".s_mobileNavigation").style.opacity = "0";
         document.querySelector("#mobileNav").style.backgroundColor = "var(--white)";
-        document.querySelector("#mobileLogo").style.backgroundImage = "url(\"".concat(logoHeader_namespaceObject, "\")");
-        document.querySelector("#mobileLogo").style.backgroundSize = "120% 100%";
+        document.querySelector("#mobileLogo").style.backgroundImage = "url(\"".concat(styleguideLogo4_namespaceObject, "\")");
+        document.querySelector("#mobileLogo").style.backgroundSize = "100% 100%";
         setTimeout(function () {
           document.querySelector(".s_mobileNavigation").style.display = "none";
         }, 300);

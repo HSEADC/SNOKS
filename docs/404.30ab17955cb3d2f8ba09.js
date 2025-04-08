@@ -43,9 +43,9 @@
 
 ;// ./src/images/preview/logo.svg
 const logo_namespaceObject = __webpack_require__.p + "images/752f59445ba13b14576d.svg";
-;// ./src/images/aboutUs/logoHeader.webp
-const logoHeader_namespaceObject = __webpack_require__.p + "images/dfe2dfcce3cd6ec99721.webp";
-;// ./src/js/preview.js
+;// ./src/images/styleguideLogo4.webp
+const styleguideLogo4_namespaceObject = __webpack_require__.p + "images/67da518f863ea8300aaa.webp";
+;// ./src/js/404.js
 
 
 
@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
   // phoneBurger
 
   if (window.innerHeight > window.innerWidth) {
-    document.querySelector("main").style.marginTop = "20vw";
     document.querySelector("#mobileNav").style.display = "block";
     var flagNav = false;
     var burger = document.querySelector("#burger");
@@ -69,15 +68,20 @@ document.addEventListener("DOMContentLoaded", function (e) {
       burger.classList.toggle("open");
       if (!flagNav) {
         flagNav = true;
-        document.querySelector("#mobileNav").style.backgroundColor = "transperent";
+        document.querySelector("#mobileNav").style.backgroundColor = "var(--blue)";
         document.querySelector(".s_mobileNavigation").style.display = "block";
         setTimeout(function () {
           document.querySelector(".s_mobileNavigation").style.opacity = "1";
+          document.querySelector("#mobileLogo").style.backgroundImage = "url(\"".concat(logo_namespaceObject, "\")");
+          document.querySelector("#mobileLogo").style.backgroundSize = "78% 78%";
+          document.querySelector("#mobileLogo").style.backgroundPosition = "20% 50%";
         }, 0);
       } else {
         flagNav = false;
         document.querySelector(".s_mobileNavigation").style.opacity = "0";
-        document.querySelector("#mobileNav").style.backgroundColor = "transperent";
+        document.querySelector("#mobileNav").style.backgroundColor = "var(--white)";
+        document.querySelector("#mobileLogo").style.backgroundImage = "url(\"".concat(styleguideLogo4_namespaceObject, "\")");
+        document.querySelector("#mobileLogo").style.backgroundSize = "100% 100%";
         setTimeout(function () {
           document.querySelector(".s_mobileNavigation").style.display = "none";
         }, 300);

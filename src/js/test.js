@@ -1,6 +1,7 @@
 import '../index.css';
 import svgLogo from '../images/preview/logo.svg';
-import pngLogo from '../images/aboutUs/logoHeader.webp';
+import pngLogo from '../images/styleguideLogo4.webp'
+
 import imgTest1 from '../images/tests/1.webp';
 import imgTest2 from '../images/tests/2.webp';
 import imgTest3 from '../images/tests/3.webp';
@@ -145,6 +146,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     console.log(answers, flag)
 
+
 /* phoneBurger */
     
     if (window.innerHeight > window.innerWidth) { 
@@ -169,7 +171,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 document.querySelector(".s_mobileNavigation").style.opacity="0";
                 document.querySelector("#mobileNav").style.backgroundColor="var(--white)"
                 document.querySelector("#mobileLogo").style.backgroundImage=`url("${pngLogo}")`
-                document.querySelector("#mobileLogo").style.backgroundSize="120% 100%"
+                document.querySelector("#mobileLogo").style.backgroundSize="100% 100%"
                 setTimeout(()=> {
                     document.querySelector(".s_mobileNavigation").style.display="none"
                 }, 300)
