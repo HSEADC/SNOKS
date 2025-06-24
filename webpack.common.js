@@ -8,16 +8,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    articles: './src/js/articles.js',
-    preview: './src/js/preview.js',
-    tests: '/src/js/tests.js',
-    styleguide: "./src/js/styleguide.js",
-    404: "./src/js/404.js",
-    shop: "./src/js/shop.js",
-    test: "./src/js/test.js",
-    whyKidsBadSleeping: "./src/js/whyKidsBadSleeping.js",
-    factsAboutSleepingInNature: "./src/js/factsAboutSleepingInNature.js",
+    index: './src/index.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -33,10 +24,24 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-proposal-class-properties']
+            plugins: ['@babel/plugin-syntax-dynamic-import']
           }
         }
       },
+
+{
+        test: /\.(webm|mp4|ogg|ogv)$/, // Add support for video files
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[hash].[ext]', // Output file naming
+              outputPath: 'videos', // Output directory for videos
+            },
+          },
+        ],
+      },
+
       {
         test: /\.js?$/,
         exclude: /node_modules/,
@@ -83,6 +88,8 @@ module.exports = {
           filename: 'images/[hash][ext][query]'
         }
       },
+
+
       {
         test: /\.(ttf|otf|woff2|woff|eot)$/i,
         type: 'asset/resource',
@@ -102,63 +109,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['index']
     }),
 
-    new HtmlWebpackPlugin({
-      template: './src/preview.html',
-      filename: './preview.html',
-      chunks: ["preview"],
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/articles.html',
-      filename: './articles.html',
-      chunks: ["articles"],
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/tests.html',
-      filename: './tests.html',
-      chunks: ["tests"],
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/styleguide.html',
-      filename: './styleguide.html',
-      chunks: ["styleguide"],
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/404.html',
-      filename: './404.html',
-      chunks: ["404"],
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/shop.html',
-      filename: './shop.html',
-      chunks: ["shop"],
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/test.html',
-      filename: './test.html',
-      chunks: ["test"],
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/whyKidsBadSleeping.html',
-      filename: './whyKidsBadSleeping.html',
-      chunks: ["whyKidsBadSleeping"],
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/factsAboutSleepingInNature.html',
-      filename: './factsAboutSleepingInNature.html',
-      chunks: ["factsAboutSleepingInNature"],
-    })
-
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, "./src/partials/analytics.html"),
+        location: "analytics",
+        template_filename: "*",
+        priority: "replace",
+      },
+    ]),
 
     
     // Article

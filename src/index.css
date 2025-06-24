@@ -1,13 +1,29 @@
 @import 'stylesheets/reset.scss';
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/vars.scss';
-@import 'stylesheets/basics.scss';
-/*@import 'stylesheets/index.scss';*/
+@import 'stylesheets/index.scss';
 
-@import 'components/atoms.scss';
-@import 'components/molecules.scss';
-@import 'components/collections.scss';
-@import 'components/organisms.scss';
-@import 'components/quarks.scss';
-@import 'components/superOrganisms.scss';
-@import 'components/wrappers.scss';
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+  font-family: "Unbounded";
+  font-size: 1.5vw;
+  font-weight: 400;
+  color: var(--black);
+  background-color: var(--white);
+  overflow-x: hidden;
+  }
+  
+  body::-webkit-scrollbar { width: 0; }
+  
+  ::selection {
+  background: var(--blue);
+
+}
