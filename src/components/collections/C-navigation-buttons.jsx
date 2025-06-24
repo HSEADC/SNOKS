@@ -23,10 +23,10 @@ const StyledWrapper = styled.section`
 function NavigationBtns() {
     return (
         <StyledWrapper> 
-          <Link className="navLink" to='/'><NavButton btnName="Главная"></NavButton></Link>
+          <Link className="navLink" to='/SNOKS/'><NavButton btnName="Главная"></NavButton></Link>
           <Link className="navLink" to='/articles'><NavButton btnName="Статьи"></NavButton></Link>
           <Link className="navLink" to='/tests'><NavButton btnName="Тесты"></NavButton></Link>
-          <Link className="navLink" to='/'><NavButton btnName="Магазин"></NavButton></Link>
+          <Link className="navLink" to='/SNOKS'><NavButton btnName="Магазин"></NavButton></Link>
         </StyledWrapper>
     );
   }

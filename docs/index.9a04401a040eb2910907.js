@@ -33778,7 +33778,7 @@ function getHydrationData(state, routes, getRouteInfo, location, basename, isSpa
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"66":"8a20dad0a7b1067835b3","204":"a01c574afc7e1f8ab902","448":"11e1c3870b9996c05bd3","656":"aae0f029dad396e56d46","751":"949723e880db83426b82"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"66":"95ebf57e4fa908009b2a","204":"a01c574afc7e1f8ab902","448":"e8bcda28b31562e605dd","656":"aae0f029dad396e56d46","751":"949723e880db83426b82"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -34220,17 +34220,17 @@ function SectionsCollection(props) {
     className: "O-main-sectionCard section1",
     src: "sectionImg1",
     title: "\u0421\u0442\u0430\u0442\u044C\u0438",
-    text: "\u041D\u0430\u0432\u0435\u0434\u0438 \u043D\u0430 \u043A\u0440\u0443\u0433, <br> \u0447\u0442\u043E\u0431\u044B \u0443\u0437\u043D\u0430\u0442\u044C \u0444\u0430\u043A\u0442!"
+    text: "\u041F\u0440\u043E\u0441\u0442\u044B\u0435 \u043E\u0431\u044A\u044F\u0441\u043D\u0435\u043D\u0438\u044F \u0438 \u043D\u0435\u043E\u0436\u0438\u0434\u0430\u043D\u043D\u044B\u0435 \u0444\u0430\u043A\u0442\u044B"
   }), /*#__PURE__*/react.createElement(O_main_sections_Card, {
     className: "O-main-sectionCard section2",
     src: "sectionImg2",
     title: "\u0422\u0435\u0441\u0442\u044B",
-    text: "\u041D\u0430\u0432\u0435\u0434\u0438 \u043D\u0430 \u043A\u0440\u0443\u0433, <br> \u0447\u0442\u043E\u0431\u044B \u0443\u0437\u043D\u0430\u0442\u044C \u0444\u0430\u043A\u0442!"
+    text: "\u041F\u0440\u043E\u0432\u0435\u0440\u044C \u0441\u0435\u0431\u044F \u0438 \u0441\u0432\u043E\u0439 \u0441\u043E\u043D"
   }), /*#__PURE__*/react.createElement(O_main_sections_Card, {
     className: "O-main-sectionCard section3",
     src: "sectionImg3",
     title: "\u041C\u0435\u0440\u0447",
-    text: "\u041D\u0430\u0432\u0435\u0434\u0438 \u043D\u0430 \u043A\u0440\u0443\u0433, <br> \u0447\u0442\u043E\u0431\u044B \u0443\u0437\u043D\u0430\u0442\u044C \u0444\u0430\u043A\u0442!"
+    text: "\u0423\u044E\u0442\u043D\u044B\u0435 \u0442\u043E\u0432\u0430\u0440\u044B \u0434\u043B\u044F \u0434\u043E\u043C\u0430 \u0438 \u0441\u043D\u0430"
   }));
 }
 /* harmony default export */ const C_main_sections = (SectionsCollection);
@@ -34425,7 +34425,7 @@ function S_main_shop_taggedTemplateLiteral(e, t) { return t || (t = e.slice(0)),
 
 
 
-var S_main_shop_StyledBlock = styled_components_browser_esm/* default */.Ay.section(S_main_shop_templateObject || (S_main_shop_templateObject = S_main_shop_taggedTemplateLiteral(["\n  width: 100%;\n  height: fit-content;\n  margin: 2vw auto;\n  border-radius: 2vw;\n  transition: all 0.3s ease-in-out;\n  margin-top: 17vw;\n\n  .A-main-shop-title {\n    font-size: 3.5vw;\n    font-weight: 600;\n    margin-bottom: 2vw;\n  }\n\n  .W-textAndBtn {\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    height: fit-content;\n    margin-bottom: 2vw;\n\n    .A-main-shop-text {\n      font-size: 2.2vw;\n  \n    span {\n      color: ", "\n    }\n  }\n  }\n\n\n"])), variables/* Pallete */.K["blue"]);
+var S_main_shop_StyledBlock = styled_components_browser_esm/* default */.Ay.section(S_main_shop_templateObject || (S_main_shop_templateObject = S_main_shop_taggedTemplateLiteral(["\n  width: 100%;\n  height: fit-content;\n  margin: 2vw auto;\n  border-radius: 2vw;\n  transition: all 0.3s ease-in-out;\n  margin-top: 17vw;\n\n  .A-main-shop-title {\n    font-size: 3.5vw;\n    font-weight: 600;\n    margin-bottom: 2vw;\n  }\n\n  .W-textAndBtn {\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    height: fit-content;\n    margin-bottom: 3vw;\n\n    .A-main-shop-text {\n      font-size: 2.2vw;\n  \n    span {\n      color: ", "\n    }\n  }\n  }\n\n\n"])), variables/* Pallete */.K["blue"]);
 function MainShop(props) {
   return /*#__PURE__*/react.createElement(S_main_shop_StyledBlock, {
     className: props["className"]
@@ -34457,7 +34457,7 @@ function Q_video_taggedTemplateLiteral(e, t) { return t || (t = e.slice(0)), Obj
 
 
 
-var Q_video_StyledLetter = styled_components_browser_esm/* default */.Ay.div(Q_video_templateObject || (Q_video_templateObject = Q_video_taggedTemplateLiteral(["\n    width: 100vw;\n    background-size: 100% 100%;\n    position: relative;\n    transition: all 0.3s ease;\n    left: -19vw;\n\n    .Q-borderUpper {\n      position: absolute;\n      top: -1vw;\n      left: 12.2vw;\n      width: 100%;\n      height: 8vw;\n      border-bottom-right-radius: 2vw;\n      border-bottom-left-radius: 2vw;\n      background-color: ", "\n    }\n\n    .Q-borderDown {\n      position: absolute;\n      bottom: -1vw;\n      left: 12.2vw;\n      width: 100%;\n      height: 8vw;\n      border-top-right-radius: 2vw;\n      border-top-left-radius: 2vw;\n      background-color: ", "\n    }\n\n    .Q-video {\n      width: 125vw;\n    }\n"])), variables/* Pallete */.K["white"], variables/* Pallete */.K["white"]);
+var Q_video_StyledLetter = styled_components_browser_esm/* default */.Ay.div(Q_video_templateObject || (Q_video_templateObject = Q_video_taggedTemplateLiteral(["\n    width: 100vw;\n    background-size: 100% 100%;\n    position: relative;\n    transition: all 0.3s ease;\n    left: -19vw;\n    margin-top: -3vw;\n\n    .Q-borderUpper {\n      position: absolute;\n      top: -2vw;\n      left: 12.2vw;\n      width: 100%;\n      height: 8vw;\n      border-bottom-right-radius: 2vw;\n      border-bottom-left-radius: 2vw;\n      background-color: ", "\n    }\n\n    .Q-borderDown {\n      position: absolute;\n      bottom: -1vw;\n      left: 12.2vw;\n      width: 100%;\n      height: 8vw;\n      border-top-right-radius: 2vw;\n      border-top-left-radius: 2vw;\n      background-color: ", "\n    }\n\n    .Q-video {\n      width: 125vw;\n    }\n"])), variables/* Pallete */.K["white"], variables/* Pallete */.K["white"]);
 function Video(props) {
   var id = (0,react.useId)();
   id = id.slice(1, id.length - 1);
@@ -34516,7 +34516,7 @@ function M_footer_email_taggedTemplateLiteral(e, t) { return t || (t = e.slice(0
 
 
 
-var M_footer_email_StyledContainter = styled_components_browser_esm/* default */.Ay.div(M_footer_email_templateObject || (M_footer_email_templateObject = M_footer_email_taggedTemplateLiteral(["\n  position: relative;\n  width: 50%;\n  margin: 5vw 0;\n  z-index: 1;\n\n  .W-shareIcons {\n    display: flex;\n    margin-top: 1vw;\n    justify-content: space-between;\n    width: 30%;\n\n    .A-socialMediaBtn  {\n      display: flex;\n      margin-top: 2vw;\n      justify-content: space-between;\n      width: 50%;\n      background-color: transparent;\n\n      .Q-icon {\n        width: 6vw;\n        height: 5vw;\n        pointer-events: none;\n      } \n    }\n  }\n\n  .A-emailText {\n    font-size: 2.2vw;\n    color: ", ";\n  }\n\n  .a_formInput {\n    border: 0.3vw solid white;\n    background-color: transparent;\n    width: 70%;\n    padding: 0.7vw;\n    border-radius: 1vw;\n    font-size: 1.5vw;\n    color: ", "\n  }\n\n  .a_formInput:focus {\n    outline: none;\n  }\n\n  #my-form {\n    position: relative;\n  }\n\n  .a_sendButton {\n    font-family: ", ";\n    position: absolute;\n    left: 17vw;\n    padding: 0.98vw 1.5vw;\n    font-size: 1.5vw;\n    font-weight: 500;\n    border: none;\n    border-radius: 1.5vw;\n    color: ", ";\n    background-color: ", ";\n  }\n  \n"])), variables/* Pallete */.K["white"], variables/* Pallete */.K['white'], variables/* Pallete */.K["fontP"], variables/* Pallete */.K["black"], variables/* Pallete */.K["white"]);
+var M_footer_email_StyledContainter = styled_components_browser_esm/* default */.Ay.div(M_footer_email_templateObject || (M_footer_email_templateObject = M_footer_email_taggedTemplateLiteral(["\n  position: relative;\n  width: 50%;\n  margin: 5vw 0;\n  z-index: 1;\n\n  .W-shareIcons {\n    display: flex;\n    margin-top: 1vw;\n    justify-content: space-between;\n    width: 30%;\n\n    .A-socialMediaBtn  {\n      display: flex;\n      margin-top: 2vw;\n      justify-content: space-between;\n      width: 50%;\n      background-color: transparent;\n\n      .Q-icon {\n        width: 5.5vw;\n        height: 4.5vw;\n        pointer-events: none;\n      } \n    }\n  }\n\n  .A-emailText {\n    font-size: 2.2vw;\n    color: ", ";\n  }\n\n  .a_formInput {\n    border: 0.2vw solid white;\n    background-color: transparent;\n    width: 70%;\n    padding: 0.7vw;\n    border-radius: 1vw;\n    font-size: 1.5vw;\n    color: ", "\n  }\n\n  .a_formInput:focus {\n    outline: none;\n  }\n\n  #my-form {\n    position: relative;\n  }\n\n  .a_sendButton {\n    font-family: ", ";\n    position: absolute;\n    left: 17vw;\n    padding: 0.8vw 1.5vw;\n    font-size: 1.5vw;\n    font-weight: 500;\n    border: none;\n    border-radius: 1.5vw;\n    color: ", ";\n    background-color: ", ";\n  }\n  \n"])), variables/* Pallete */.K["white"], variables/* Pallete */.K['white'], variables/* Pallete */.K["fontP"], variables/* Pallete */.K["black"], variables/* Pallete */.K["white"]);
 function FooterEmail() {
   return /*#__PURE__*/react.createElement(M_footer_email_StyledContainter, null, /*#__PURE__*/react.createElement(A_title, {
     className: "A-emailText",
@@ -34571,7 +34571,7 @@ function Footer(props) {
   }), /*#__PURE__*/react.createElement("div", {
     className: "C-pages"
   }, /*#__PURE__*/react.createElement(chunk_NL6KNZEE/* Link */.N_, {
-    to: "/"
+    to: "/SNOKS"
   }, /*#__PURE__*/react.createElement(A_text/* default */.A, {
     className: "a-textPage",
     textContent: "\u0413\u043B\u0430\u0432\u043D\u0430\u044F"
@@ -34627,7 +34627,7 @@ function P_main_taggedTemplateLiteral(e, t) { return t || (t = e.slice(0)), Obje
 
 
 var StyledPage = styled_components_browser_esm/* default */.Ay.section(P_main_templateObject || (P_main_templateObject = P_main_taggedTemplateLiteral(["\n  padding: 3vw 2vw 0 2vw;\n  background-color: ", ";\n"])), variables/* Pallete */.K["white"]);
-var StyledMain = styled_components_browser_esm/* default */.Ay.main(_templateObject2 || (_templateObject2 = P_main_taggedTemplateLiteral(["\n  width: 90%;\n  margin: auto;\n"])));
+var StyledMain = styled_components_browser_esm/* default */.Ay.main(_templateObject2 || (_templateObject2 = P_main_taggedTemplateLiteral(["\n  width: 90%;\n  margin: auto;\n  margin-bottom: 9vw;\n  \n"])));
 function Main() {
   return /*#__PURE__*/react.createElement(StyledPage, null, /*#__PURE__*/react.createElement(StyledMain, null, /*#__PURE__*/react.createElement(M_main_title_texts, null), /*#__PURE__*/react.createElement(Q_video, {
     src: _4444
@@ -34727,7 +34727,7 @@ var TestsCardPaged = /*#__PURE__*/react.lazy(function () {
   return __webpack_require__.e(/* import() */ 204).then(__webpack_require__.bind(__webpack_require__, 4204));
 });
 var P_tests_StyledPage = styled_components_browser_esm/* default */.Ay.section(P_tests_templateObject || (P_tests_templateObject = P_tests_taggedTemplateLiteral(["\n  padding: 10vw 0 2vw 0;\n  height: fit-content;\n  background-color: ", ";\n"])), variables/* Pallete */.K["white"]);
-var P_tests_StyledMain = styled_components_browser_esm/* default */.Ay.main(P_tests_templateObject2 || (P_tests_templateObject2 = P_tests_taggedTemplateLiteral(["\n  width: 90%;\n  margin: auto;\n  height: inherit;\n\n  .C-main-Tests-UI {\n    width: 100%;\n    display: flex;\n    flex-wrap: wrap;\n    animation: none;\n    position: inherit;\n    margin: 2vw auto;\n    justify-content: space-between;\n\n    .O-test-card {\n      margin-bottom: 2vw;\n    }\n\n    .O-test-card:hover {\n      width: 20vw;\n      height: 30vw;\n\n      .Q-cardBackground {\n        width: 100%;\n        height: 16vw;\n        bottom: 0;\n        margin: auto;\n        transition: all 0.3s ease-in-out;\n        border-radius: 2.5vw;\n        pointer-events: none;\n      }\n\n      .A-main-testTitle {\n        position: absolute;\n        font-size: 1.8vw;\n        font-weight: 600;\n        color: ", ";\n        top: 5vw;\n        left: 1.5vw;\n        pointer-events: none;\n        width: 90%;\n        transition: all 0.3s ease-in-out;\n      }\n\n      .A-main-testTime {\n        position: absolute;\n        font-size: 1.3vw;\n        font-weight: 400;\n        color: ", ";\n        top: 2vw;\n        left: 1.5vw;\n        opacity: 0.6;\n        pointer-events: none;\n        transition: all 0.3s ease-in-out;\n      }\n\n      .Q-clock {\n        width: 1.5vw;\n        height: 1.5vw;\n        position: absolute;\n        top: 1.8vw;\n        left: 10vw;\n        transition: all 0.3s ease-in-out;\n        pointer-events: none;\n      }\n    }\n  }\n\n"])), variables/* Pallete */.K["black"], variables/* Pallete */.K["black"]);
+var P_tests_StyledMain = styled_components_browser_esm/* default */.Ay.main(P_tests_templateObject2 || (P_tests_templateObject2 = P_tests_taggedTemplateLiteral(["\n  width: 90%;\n  margin: auto;\n  height: inherit;\n  \n\n  .C-main-Tests-UI {\n    width: 100%;\n    display: flex;\n    flex-wrap: wrap;\n    animation: none;\n    position: inherit;\n    margin: 2vw auto;\n    justify-content: space-between;\n\n    .O-test-card {\n      margin-bottom: 2vw;\n    }\n\n    .O-test-card:hover {\n      width: 20vw;\n      height: 30vw;\n\n      .Q-cardBackground {\n        width: 100%;\n        height: 16vw;\n        bottom: 0;\n        margin: auto;\n        transition: all 0.3s ease-in-out;\n        border-radius: 2.5vw;\n        pointer-events: none;\n      }\n\n      .A-main-testTitle {\n        position: absolute;\n        font-size: 1.8vw;\n        font-weight: 600;\n        color: ", ";\n        top: 5vw;\n        left: 1.5vw;\n        pointer-events: none;\n        width: 90%;\n        transition: all 0.3s ease-in-out;\n      }\n\n      .A-main-testTime {\n        position: absolute;\n        font-size: 1.3vw;\n        font-weight: 400;\n        color: ", ";\n        top: 2vw;\n        left: 1.5vw;\n        opacity: 0.6;\n        pointer-events: none;\n        transition: all 0.3s ease-in-out;\n      }\n\n      .Q-clock {\n        width: 1.5vw;\n        height: 1.5vw;\n        position: absolute;\n        top: 1.8vw;\n        left: 10vw;\n        transition: all 0.3s ease-in-out;\n        pointer-events: none;\n      }\n    }\n  }\n\n"])), variables/* Pallete */.K["black"], variables/* Pallete */.K["black"]);
 function Tests() {
   return /*#__PURE__*/react.createElement(P_tests_StyledPage, null, /*#__PURE__*/react.createElement(P_tests_StyledMain, {
     className: "main"
@@ -34760,7 +34760,7 @@ var ArticlesCardPaged = /*#__PURE__*/react.lazy(function () {
   return __webpack_require__.e(/* import() */ 448).then(__webpack_require__.bind(__webpack_require__, 6448));
 });
 var P_articles_StyledPage = styled_components_browser_esm/* default */.Ay.section(P_articles_templateObject || (P_articles_templateObject = P_articles_taggedTemplateLiteral(["\n  padding: 10vw 0 2vw 0;\n  height: fit-content;\n  background-color: ", ";\n"])), variables/* Pallete */.K["white"]);
-var P_articles_StyledMain = styled_components_browser_esm/* default */.Ay.main(P_articles_templateObject2 || (P_articles_templateObject2 = P_articles_taggedTemplateLiteral(["\n  width: 90%;\n  margin: auto;\n  height: inherit;\n\n  .C-articles-UI {\n    width: 100%;\n    display: flex;\n    flex-wrap: wrap;\n    animation: none;\n    position: inherit;\n    margin: 2vw auto;\n    justify-content: space-between;\n\n    .O-article-cardGenerated {\n      margin-bottom: 2vw;\n    }\n\n    .O-test-card:hover {\n      width: 20vw;\n      height: 30vw;\n\n      .Q-cardBackground {\n        width: 100%;\n        height: 16vw;\n        bottom: 0;\n        margin: auto;\n        transition: all 0.3s ease-in-out;\n        border-radius: 2.5vw;\n        pointer-events: none;\n      }\n\n      .A-main-testTitle {\n        position: absolute;\n        font-size: 1.8vw;\n        font-weight: 600;\n        color: ", ";\n        top: 5vw;\n        left: 1.5vw;\n        pointer-events: none;\n        width: 90%;\n        transition: all 0.3s ease-in-out;\n      }\n\n      .A-main-testTime {\n        position: absolute;\n        font-size: 1.3vw;\n        font-weight: 400;\n        color: ", ";\n        top: 2vw;\n        left: 1.5vw;\n        opacity: 0.6;\n        pointer-events: none;\n        transition: all 0.3s ease-in-out;\n      }\n\n      .Q-clock {\n        width: 1.5vw;\n        height: 1.5vw;\n        position: absolute;\n        top: 1.8vw;\n        left: 10vw;\n        transition: all 0.3s ease-in-out;\n        pointer-events: none;\n      }\n    }\n  }\n\n"])), variables/* Pallete */.K["black"], variables/* Pallete */.K["black"]);
+var P_articles_StyledMain = styled_components_browser_esm/* default */.Ay.main(P_articles_templateObject2 || (P_articles_templateObject2 = P_articles_taggedTemplateLiteral(["\n  width: 90%;\n  margin: auto;\n  height: inherit;\n  \n\n  .C-articles-UI {\n    width: 100%;\n    display: flex;\n    flex-wrap: wrap;\n    animation: none;\n    position: inherit;\n    margin: 2vw auto;\n    justify-content: space-between;\n\n    .O-article-cardGenerated {\n      margin-bottom: 2vw;\n    }\n\n    .O-test-card:hover {\n      width: 20vw;\n      height: 30vw;\n\n      .Q-cardBackground {\n        width: 100%;\n        height: 16vw;\n        bottom: 0;\n        margin: auto;\n        transition: all 0.3s ease-in-out;\n        border-radius: 2.5vw;\n        pointer-events: none;\n      }\n\n      .A-main-testTitle {\n        position: absolute;\n        font-size: 1.8vw;\n        font-weight: 600;\n        color: ", ";\n        top: 5vw;\n        left: 1.5vw;\n        pointer-events: none;\n        width: 90%;\n        transition: all 0.3s ease-in-out;\n      }\n\n      .A-main-testTime {\n        position: absolute;\n        font-size: 1.3vw;\n        font-weight: 400;\n        color: ", ";\n        top: 2vw;\n        left: 1.5vw;\n        opacity: 0.6;\n        pointer-events: none;\n        transition: all 0.3s ease-in-out;\n      }\n\n      .Q-clock {\n        width: 1.5vw;\n        height: 1.5vw;\n        position: absolute;\n        top: 1.8vw;\n        left: 10vw;\n        transition: all 0.3s ease-in-out;\n        pointer-events: none;\n      }\n    }\n  }\n\n"])), variables/* Pallete */.K["black"], variables/* Pallete */.K["black"]);
 function Articles() {
   return /*#__PURE__*/react.createElement(P_articles_StyledPage, null, /*#__PURE__*/react.createElement(P_articles_StyledMain, {
     className: "main"
@@ -35280,7 +35280,7 @@ var C_navigation_buttons_StyledWrapper = styled_components_browser_esm/* default
 function NavigationBtns() {
   return /*#__PURE__*/react.createElement(C_navigation_buttons_StyledWrapper, null, /*#__PURE__*/react.createElement(chunk_NL6KNZEE/* Link */.N_, {
     className: "navLink",
-    to: "/"
+    to: "/SNOKS/"
   }, /*#__PURE__*/react.createElement(A_navigation_button, {
     btnName: "\u0413\u043B\u0430\u0432\u043D\u0430\u044F"
   })), /*#__PURE__*/react.createElement(chunk_NL6KNZEE/* Link */.N_, {
@@ -35295,7 +35295,7 @@ function NavigationBtns() {
     btnName: "\u0422\u0435\u0441\u0442\u044B"
   })), /*#__PURE__*/react.createElement(chunk_NL6KNZEE/* Link */.N_, {
     className: "navLink",
-    to: "/"
+    to: "/SNOKS"
   }, /*#__PURE__*/react.createElement(A_navigation_button, {
     btnName: "\u041C\u0430\u0433\u0430\u0437\u0438\u043D"
   })));
@@ -35341,7 +35341,7 @@ var App = function App() {
     path: "/page404",
     element: /*#__PURE__*/react.createElement(P_404, null)
   }), /*#__PURE__*/react.createElement(chunk_NL6KNZEE/* Route */.qh, {
-    path: "/SNOKS/",
+    path: "/SNOKS",
     element: /*#__PURE__*/react.createElement(P_main, null)
   })));
 };

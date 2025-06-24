@@ -26,7 +26,7 @@ const StyledBlock = styled.section`
     display: flex;
     justify-content: space-between;
     height: fit-content;
-    margin-bottom: 2vw;
+    margin-bottom: 3vw;
 
     .A-main-shop-text {
       font-size: 2.2vw;
