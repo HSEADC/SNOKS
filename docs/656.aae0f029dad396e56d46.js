@@ -222,7 +222,7 @@ function W_main_UI_taggedTemplateLiteral(e, t) { return t || (t = e.slice(0)), O
 
 
 var FactsCards = /*#__PURE__*/react.lazy(function () {
-  return __webpack_require__.e(/* import() */ 163).then(__webpack_require__.bind(__webpack_require__, 3505));
+  return __webpack_require__.e(/* import() */ 751).then(__webpack_require__.bind(__webpack_require__, 1208));
 });
 
 // "Ленивая" загрузка компонента

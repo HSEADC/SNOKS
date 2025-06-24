@@ -25,7 +25,7 @@ const StyledCollection = styled.div`
   position: absolute;
   transition: all 0.3s ease-in-out;
   left: -28vw;
-  animation: scroll 7.5s linear infinite;
+  animation: scroll 9.5s linear infinite;
   transition: all 0.5 ease-in-out;
 
   &:hover {

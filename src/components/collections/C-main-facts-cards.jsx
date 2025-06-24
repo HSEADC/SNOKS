@@ -27,7 +27,7 @@ import img1 from '../images/Intersect-2.webp'
 import img2 from '../images/Intersect-4.webp'
 import img3 from '../images/Intersect-3.webp'
 import img4 from '../images/Intersect.webp'
-import img5 from '../images/Intersect-2.webp'
+import img5 from '../images/44444.webp'
 
 let cards = {
   1: {
