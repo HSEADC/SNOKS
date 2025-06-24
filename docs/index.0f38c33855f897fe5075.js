@@ -35341,7 +35341,7 @@ var App = function App() {
     path: "/page404",
     element: /*#__PURE__*/react.createElement(P_404, null)
   }), /*#__PURE__*/react.createElement(chunk_NL6KNZEE/* Route */.qh, {
-    path: "/",
+    path: "/SNOKS/",
     element: /*#__PURE__*/react.createElement(P_main, null)
   })));
 };
