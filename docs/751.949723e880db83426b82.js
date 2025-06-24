@@ -1,7 +1,7 @@
 "use strict";
-(self["webpackChunkstatic_site_08_24"] = self["webpackChunkstatic_site_08_24"] || []).push([[163],{
+(self["webpackChunkstatic_site_08_24"] = self["webpackChunkstatic_site_08_24"] || []).push([[751],{
 
-/***/ 3505:
+/***/ 1208:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -28,6 +28,8 @@ const Intersect_4_namespaceObject = __webpack_require__.p + "images/97009be1f9f8
 const Intersect_3_namespaceObject = __webpack_require__.p + "images/261376d808e976832060.webp";
 ;// ./src/components/images/Intersect.webp
 const Intersect_namespaceObject = __webpack_require__.p + "images/417aa1ccc840c43da54e.webp";
+;// ./src/components/images/44444.webp
+const _44444_namespaceObject = __webpack_require__.p + "images/b750947f965c078fc432.webp";
 ;// ./src/components/collections/C-main-facts-cards.jsx
 var _templateObject;
 function _taggedTemplateLiteral(e, t) { return t || (t = e.slice(0)), Object.freeze(Object.defineProperties(e, { raw: { value: Object.freeze(t) } })); }
@@ -74,7 +76,7 @@ var cards = {
     "id": "fact4"
   },
   5: {
-    "img": Intersect_2_namespaceObject,
+    "img": _44444_namespaceObject,
     "title": "Цвета",
     "text": "Примерно 12% людей видят сны только в черно-белом цвете",
     "id": "fact5"

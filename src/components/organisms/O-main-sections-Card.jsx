@@ -36,8 +36,9 @@ const StyledBlock = styled.section`
 
   svg {
     position: absolute;
-    bottom: -6vw;
-    left: -7%;
+    bottom: -2vw;
+    left: -2%;
+    width: 36vw;
     pointer-events: none;
   }
 

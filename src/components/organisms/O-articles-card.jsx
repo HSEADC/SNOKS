@@ -32,7 +32,7 @@ const StyledBlock = styled.section`
 
   .Q-cardBackground {
     width: 100%;
-    height: 26vw;
+    height: 29vw;
     bottom: 0;
     margin: auto;
     transition: all 0.3s ease-in-out;
@@ -54,7 +54,7 @@ const StyledBlock = styled.section`
   
   svg {
     position: absolute;
-    bottom: -14vw;
+    bottom: -10vw;
     left: -8vw;
     pointer-events: none;
   }
