@@ -1,286 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>О нас</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="SNOK(S)"/>
-    <link rel="icon" href="./images/favicon.png" type="image/png">
-    <meta property="og:description" content="Узнай больше о нашем медиа, посвящённом сну и сновидениям!"/>
-    <meta property="og:image" content="https://ibb.co/55LDw1H"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content= "https://hseadc.github.io/SNOKS/index.html" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <link rel="preload"href="./fonts/Unbounded/bold/Unbounded-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload"href="./fonts/druktextwidecyr/druktextwidecyr-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <analytics></analytics>
+    <title>React App</title>
   </head>
-  <body class="aboutUs">
-    
-    <div class="m_preloader" id="preloader">
-      <video class="q_logoAnimation" src="./images/preloadVid.webm" muted autoplay></video>
-    </div>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-    <header>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-      <nav class="o_menubarContainer" id="pcNav">
-        <ul class="w_headerNavigationList">
-          <li>
-            <form action="./preview.html">
-                <button><div class="a_navigationLogo"></div></button>
-            </form>
-          </li>
-          <li><a class="a_navigationCategory choosenA" href="./index.html">о нас</a></li>
-          <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
-          <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
-          <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
-          <li><a class="a_navigationCategory" href="./404.html">магазин</a></li>
-        </ul>
-      </nav>
-
-
-      <nav class="o_menubarContainer" id="mobileNav">
-        <ul class="w_headerNavigationList">
-          <li>
-            <form action="./preview.html">
-                <button><div class="a_navigationLogo" id="mobileLogo"></div></button>
-            </form>
-          </li>
-
-          <li>
-              <button class="q_burgerIcon" type="checkbox" id="burger" name="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button> 
-          </li>
-        </ul>
-      </nav>
-
-
-      <section class="s_mobileNavigation"> 
-
-        <ul class="c_mobileNavigation">
-          <li><a class="a_navigationCategory" href="./index.html">о нас</a></li>
-          <li><a class="a_navigationCategory" href="./styleguide.html">стайлгайд</a></li>
-          <li><a class="a_navigationCategory" href="./articles.html">статьи</a></li>
-          <li><a class="a_navigationCategory" href="./tests.html">тесты</a></li>
-          <li><a class="a_navigationCategory" href="./404.html">магазин</a></li>
-        </ul>
-      </section>
-    
-    </header>
-
-    <main> 
-
-        <section class="o_aboutUsTitle">
-          <h1 class="a_aboutUsTitle">SNOK(S) — <span class="blueText">медиа</span><br> про
-            сон и сновидения</h1>
-          <div class="w_underTitleTexts">
-            <p class="a_textUnderTitle">значения образов<br> в сновидениях</p>
-            <p class="a_textUnderTitle">улучшение качества<br> сна и жизни</p>
-            <p class="a_textUnderTitle">познание себя и раскрытие<br> своего внутреннего мира</p>
-          </div>
-        </section>
-
-        <div class="q_backgroundBorderRadius upRound"></div>
-
-        <section class="o_mainAboutUsContainer">
-          <video class="q_aboutUsVideo" src="./images/aboutUs/aboutUs.webm" video autoplay loop muted playsinline webkit-playinginline></video>
-          <div class="m_aboutUsCard">
-            <h4 class="a_aboutUsCardTitle">о нас</h4>
-            <p class="a_aboutUsCardTexts">Наш проект родился из желания 
-              помочь людям соприкоснуться <br>с уникальным миром
-              подсознания.</p>
-            <p class="a_aboutUsCardTextLearnMore">подробнее</p>
-          </div>
-        </section> 
-
-        <div class="q_backgroundBorderRadius downRound"></div>
-
-        <section class="m_h2Container why">
-          <h2 class="a_subTitle">П&nbsp;&nbsp;&nbsp;&nbsp;чему м&nbsp;&nbsp;&nbsp;&nbsp;е это снится?<br>Есть ли какой-то с&nbsp;&nbsp;&nbsp;&nbsp;ысл<br> в моих сн&nbsp;&nbsp;&nbsp;&nbsp;х?</h2>
-          <img class="q_decorationLetter" id="o" src="./images/aboutUs/0.webp">
-          <img class="q_decorationLetter" id="h" src="./images/aboutUs/n.webp">
-          <img class="q_decorationLetter" id="m" src="./images/aboutUs/m.webp">
-          <img class="q_decorationLetter" id="a" src="./images/aboutUs/a.webp">
-        </section>
-
-        <!--
-
-        <p class="miniText">
-          Мы тоже размышляли над этим. Изучая<br>
-          психологию, культуру и научные подходы, <br>
-          мы пришли к выводу, что сновидения — это<br> <span>не случайные образы</span>, а 
-          сон — крайне<br>
-          <span>важная часть нашей жизни</span>.
-        </p>
-
-        -->
-
-        <section class="m_missionText">
-          <img class="q_decorationBracketLeft" src="./images/leftPillow.webp">
-          <p class="a_missionText">Наша <span class="blueText">миссия</span> — создание платформы, 
-            которая поможет каждому разобраться в своих
-             сновидениях и глубже понять природу самого сна.</p>
-          <img class="q_decorationBracketRight" src="./images/rightPillow.webp">
-        </section>
-
-        <section class="s_factsContainer">
-
-          <div class="w_facts">
-            <div class="m_factsText">
-              <h3 class="a_aboutUsSubTitle facts">факты <br>про сон <br></h3>
-              <p class="a_factsInstructionText"> Наведи/Нажми на круг, чтобы<br> узнать факт!</p>
-            </div>
-            <div class="m_factCard"> 
-
-              <div class="m_factCardTexts" id="factText1">
-                <h4 class="a_factHeader">Обучение</h4>
-                <p class="a_factText">Во время сна наши знания<br>
-                   переходят из кратковременной<br>
-                   памяти в долговременную</p>
-              </div>
-
-              <div class="m_factCardTexts" id="factText2">
-                <h4 class="a_factHeader">Нехватка сна</h4>
-                <p class="a_factText">Хроническая нехватка сна ведёт <br> 
-                  к расстройствам слуха, зрения,<br>
-                  повышенной тревожности,<br>
-                  нарушению обмена веществ,<br> 
-                  нервным тикам и общей слабости</p>
-              </div>
-
-              <div class="m_factCardTexts" id="factText3">
-                <h4 class="a_factHeader">Время</h4>
-                <p class="a_factText">Примерно четверть всей своей<br>
-                   жизни мы проводим во сне</p>
-              </div>
-
-              <div class="m_factCardTexts" id="factText4">
-                <h4 class="a_factHeader">Забывчивость</h4>
-                <p class="a_factText">Через 5 минут после пробуждения<br>
-                  мы забываем до 50% снов, а через 10<br>
-                  минут — до 90%.</p>
-              </div>
-
-              <div class="m_factCardTexts" id="factText5">
-                <h4 class="a_factHeader">Цвета</h4>
-                <p class="a_factText">Примерно 12% людей видят сны<br>
-                   только в черно-белом цвете.</p>
-              </div>
-
-              <div class="m_factCardTexts" id="factText6">
-                <h4 class="a_factHeader">Цвета</h4>
-                <p class="a_factText">Примерно 12% людей видят сны<br>
-                   только в черно-белом цвете.</p>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="c_factCirclesRow">
-
-            <div class="m_factCircle" id="btn1">
-              <img class="a_factTextCircle" id="btnText1" src="./images/fact1.svg">
-              <div class="a_factsButton" id="btnCircle1"></div>
-            </div>
-
-            <div class="m_factCircle" id="btn2">
-              <img class="a_factTextCircle" id="btnText2" src="./images/fact2.svg">
-              <div class="a_factsButton" id="btnCircle2"></div>
-            </div>
-
-            <div class="m_factCircle" id="btn3">
-              <img class="a_factTextCircle" id="btnText3" src="./images/fact3.svg">
-              <div class="a_factsButton" id="btnCircle3"></div>
-            </div>
-
-            <div class="m_factCircle" id="btn4">
-              <img class="a_factTextCircle" id="btnText4" src="./images/fact4.svg">
-              <div class="a_factsButton" id="btnCircle4"></div>
-            </div>
-
-            <div class="m_factCircle" id="btn5">
-              <img class="a_factTextCircle" id="btnText5" src="./images/fact5.svg">
-              <div class="a_factsButton" id="btnCircle5"></div>
-            </div>
-
-            <div class="m_factCircle" id="btn6">
-              <img class="a_factTextCircle" id="btnText6" src="./images/fact5.svg">
-              <div class="a_factsButton" id="btnCircle6"></div>
-            </div>
-
-          </div>
-        </section>
-
-        <div class="q_backgroundBorderRadius upRound"></div>
-
-        <section class="m_3dTextScreenSecond">
-          <video class="q_3dTextVideo" src="./images/aboutUs/3dTextScreen.webm" video autoplay loop muted playsinline webkit-playinginline></video>
-          <!--<p class="a_first3DText">сон — это время, когда мы<br> возвращаемся к себе</p>
-          <p class="a_second3DText">сон — это время, когда мы<br> возвращаемся к себе</p>-->
-        </section>
-
-        <div class="q_backgroundBorderRadius downRound"></div>
-
-        <section class="s_articlesAboutUsContainer"> 
-          <h3 class="a_aboutUsSubTitle articles">статьи</h3>
-          <div class="o_articlesSlider">
-            
-            <img class="a_arrowNavigation arLeft" src="./images/leftPillow.webp">
-
-            <form action="#">
-              <button class="m_aboutUsArticleCard">
-                <div class="m_articleInnerCard">
-                  <h4 class="a_articleInnerCardName">10 фактов 
-                    о дневном сне</h4>
-                </div>
-              </button>
-            </form>
-
-            <img class="a_arrowNavigation arRight" src="./images/rightPillow.webp">
-
-          </div>
-
-          <div class="a_sliderSwitcher">
-            <div class="q_sliderbuttton" id="circlePick1"></div>
-            <div class="q_sliderbuttton" id="circlePick2"></div>
-            <div class="q_sliderbuttton picked" id="circlePick3"></div>
-            <div class="q_sliderbuttton" id="circlePick4"></div>
-            <div class="q_sliderbuttton" id="circlePick5"></div>
-          </div>
-        </section>
-
-    </main>
-
-    <footer class="s_footerContainer">
-      <p class="a_footerCategoryTip">
-        <span class="a_footerCategoryName">Создатели</span><br><br>
-
-        Антипенко Екатерина<br>
-        Иосифова Виола<br>
-        Яковлева Анна
-      </p>
-
-      <p class="a_socialMediaTag"><span class="a_footerCategoryName">@snoksmedia<br>
-        HSEADC 2024</span></p>
-        
-      <p class="a_footerCategoryTip">
-        <span class="a_footerCategoryName">Контакты</span><br><br>
-  
-        @Kate097a<br>
-        @fwrrq<br>
-        @thisisandi
-      </p>
-     
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+      <script>
+      var form = document.getElementById("my-form");
+      
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+              'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            status.innerHTML = "Спасибо за внимание!";
+            status.style.position="absolute"
+            form.reset()
+          } else {
+            response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+              } else {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+              }
+            })
+          }
+        }).catch(error => {
+          status.innerHTML = "Oops! There was a problem submitting your form"
+        });
+      }
+      form.addEventListener("submit", handleSubmit)
     </script>
-    
   </body>
 </html>
-
