@@ -19,6 +19,7 @@ const StyledMain = styled.main`
   width: 90%;
   margin: auto;
   height: inherit;
+  
 
   .C-main-Tests-UI {
     width: 100%;

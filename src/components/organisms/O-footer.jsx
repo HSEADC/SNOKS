@@ -48,7 +48,7 @@ function Footer(props) {
 
         <FooterEmail className=""></FooterEmail>
         <div className="C-pages">
-          <Link to='/'><Text className="a-textPage" textContent="Главная"></Text></Link>
+          <Link to='/SNOKS'><Text className="a-textPage" textContent="Главная"></Text></Link>
           <Link to='/Tests'><Text className="a-textPage" textContent="Тесты"></Text></Link>
           <Link to='/Articles'><Text className="a-textPage" textContent="Статьи"></Text></Link>
           <Text className="a-textPage" textContent="Магазин"></Text>

@@ -10,10 +10,11 @@ const StyledLetter = styled.div`
     position: relative;
     transition: all 0.3s ease;
     left: -19vw;
+    margin-top: -3vw;
 
     .Q-borderUpper {
       position: absolute;
-      top: -1vw;
+      top: -2vw;
       left: 12.2vw;
       width: 100%;
       height: 8vw;

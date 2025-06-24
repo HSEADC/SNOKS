@@ -28,8 +28,8 @@ const StyledContainter = styled.div`
       background-color: transparent;
 
       .Q-icon {
-        width: 6vw;
-        height: 5vw;
+        width: 5.5vw;
+        height: 4.5vw;
         pointer-events: none;
       } 
     }
@@ -41,7 +41,7 @@ const StyledContainter = styled.div`
   }
 
   .a_formInput {
-    border: 0.3vw solid white;
+    border: 0.2vw solid white;
     background-color: transparent;
     width: 70%;
     padding: 0.7vw;
@@ -62,7 +62,7 @@ const StyledContainter = styled.div`
     font-family: ${Pallete["fontP"]};
     position: absolute;
     left: 17vw;
-    padding: 0.98vw 1.5vw;
+    padding: 0.8vw 1.5vw;
     font-size: 1.5vw;
     font-weight: 500;
     border: none;

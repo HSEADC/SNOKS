@@ -21,6 +21,8 @@ const StyledPage = styled.section`
 const StyledMain = styled.main`
   width: 90%;
   margin: auto;
+  margin-bottom: 9vw;
+  
 `;
 
 function Main() {

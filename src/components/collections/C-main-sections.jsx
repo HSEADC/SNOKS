@@ -68,9 +68,9 @@ function bigger(e) {
 function SectionsCollection(props) {
   return (
       <StyledCollection className={props["className"]} onMouseMove={bigger}> 
-          <SectionMain className="O-main-sectionCard section1" src="sectionImg1" title="Статьи" text="Наведи на круг, <br> чтобы узнать факт!"></SectionMain>
-          <SectionMain className="O-main-sectionCard section2" src="sectionImg2" title="Тесты" text="Наведи на круг, <br> чтобы узнать факт!"></SectionMain>
-          <SectionMain className="O-main-sectionCard section3" src="sectionImg3" title="Мерч" text="Наведи на круг, <br> чтобы узнать факт!"></SectionMain>
+          <SectionMain className="O-main-sectionCard section1" src="sectionImg1" title="Статьи" text="Простые объяснения и неожиданные факты"></SectionMain>
+          <SectionMain className="O-main-sectionCard section2" src="sectionImg2" title="Тесты" text="Проверь себя и свой сон"></SectionMain>
+          <SectionMain className="O-main-sectionCard section3" src="sectionImg3" title="Мерч" text="Уютные товары для дома и сна"></SectionMain>
       </StyledCollection>
   );
 }

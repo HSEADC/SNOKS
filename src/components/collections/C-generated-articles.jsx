@@ -31,7 +31,6 @@ const StyledCollection = styled.div`
     width: 100%;
     display: flex;
     margin: 7vw 0 3vw 0;
-    flex-wrap: wrap;
 
 
     .A-tagBtn {
@@ -86,7 +85,7 @@ const StyledCollection = styled.div`
     
 
     .A-description {
-      font-size: 1.8vw;
+      font-size: 1.3vw;
       width: 45%;
       margin-bottom: 3vw;
     }
@@ -122,7 +121,7 @@ const StyledCollection = styled.div`
       width: 43vw;
 
       .A-tagArticle {
-        font-size: 2.5vw;
+        font-size: 1.5vw;
         padding: 1vw 2vw;
         right: 2vw;
         left: inherit;
